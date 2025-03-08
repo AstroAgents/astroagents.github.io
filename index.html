@@ -815,10 +815,33 @@
         }
         
         .table-container {
-            overflow-x: auto;
+            overflow-x: scroll;
             max-width: 100%;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        /* Custom scrollbar styling for better visibility */
+        .table-container::-webkit-scrollbar {
+            height: 12px;
+        }
+        
+        .table-container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
+        }
+        
+        .table-container::-webkit-scrollbar-thumb {
+            background-color: var(--accent-color);
+            border-radius: 6px;
+            border: 3px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        /* For Firefox */
+        .table-container {
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-color) rgba(0, 0, 0, 0.05);
         }
         
         .evaluation-table {
