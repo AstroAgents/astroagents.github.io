@@ -992,7 +992,7 @@ button.clicked {
 
 .evaluation-table td:last-child {
     padding: 8px 10px;
-    width: 25%;
+    width: 100%;
 }
 
 .evaluation-table .score-bar-container {
