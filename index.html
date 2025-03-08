@@ -22,6 +22,238 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
+        .earth-container {
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+            overflow: hidden;
+            animation: subtle-quake 6s 5.39s infinite, subtle-quake 8s 7.19s infinite, subtle-quake 7s 6.29s infinite, subtle-quake 9s 8.09s infinite, subtle-quake 5s 4.49s infinite;
+        }
+        
+        .earth-image {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            opacity: 0.85;
+            filter: drop-shadow(0 -10px 20px rgba(0, 100, 255, 0.3));
+            animation: earth-flash 6s 5.39s infinite, earth-flash 8s 7.19s infinite, earth-flash 7s 6.29s infinite, earth-flash 9s 8.09s infinite, earth-flash 5s 4.49s infinite;
+        }
+        
+        /* Adjust meteorite animations to appear to fall toward Earth */
+        .meteorite {
+            animation-name: meteor-fall;
+            z-index: 2; /* Ensure meteorites appear above Earth but below content */
+            position: absolute;
+            filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.6));
+            animation-iteration-count: infinite;
+        }
+        
+        .meteorite img {
+            width: 100%;
+            height: auto;
+            max-width: 40px;
+            transition: filter 0.1s;
+        }
+        
+        @keyframes meteor-fall {
+            0% {
+                transform: translate(-20vw, -10vh) rotate(15deg) scale(0.3);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(30vw, 95vh) rotate(45deg) scale(0.6);
+                opacity: 0;
+            }
+        }
+        
+        /* Create different paths for different meteorites */
+        .meteorite-1 {
+            animation-duration: 6s;
+            animation-delay: 0s;
+            left: 10%;
+            animation-name: meteor-fall-1;
+        }
+        
+        .meteorite-2 {
+            animation-duration: 8s;
+            animation-delay: 2s;
+            left: 30%;
+            animation-name: meteor-fall-2;
+        }
+        
+        .meteorite-3 {
+            animation-duration: 7s;
+            animation-delay: 1s;
+            left: 50%;
+            animation-name: meteor-fall-3;
+        }
+        
+        .meteorite-4 {
+            animation-duration: 9s;
+            animation-delay: 3s;
+            left: 70%;
+            animation-name: meteor-fall-4;
+        }
+        
+        .meteorite-5 {
+            animation-duration: 5s;
+            animation-delay: 4s;
+            left: 20%;
+            animation-name: meteor-fall-5;
+        }
+        
+        /* Custom path for each meteorite to match impact positions */
+        @keyframes meteor-fall-1 {
+            0% {
+                transform: translate(-20vw, -10vh) rotate(15deg) scale(0.3);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            89% {
+                opacity: 0.8;
+                transform: translate(14.5vw, 94vh) rotate(45deg) scale(0.6);
+            }
+            90% {
+                opacity: 1;
+                transform: translate(15vw, 95vh) rotate(45deg) scale(0.7);
+            }
+            91% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(45deg) scale(0.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(45deg) scale(0);
+            }
+        }
+        
+        @keyframes meteor-fall-2 {
+            0% {
+                transform: translate(-25vw, -15vh) rotate(20deg) scale(0.3);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            89% {
+                opacity: 0.8;
+                transform: translate(14.5vw, 94vh) rotate(40deg) scale(0.6);
+            }
+            90% {
+                opacity: 1;
+                transform: translate(15vw, 95vh) rotate(40deg) scale(0.7);
+            }
+            91% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(40deg) scale(0.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(40deg) scale(0);
+            }
+        }
+        
+        @keyframes meteor-fall-3 {
+            0% {
+                transform: translate(-15vw, -5vh) rotate(10deg) scale(0.3);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            89% {
+                opacity: 0.8;
+                transform: translate(14.5vw, 94vh) rotate(35deg) scale(0.6);
+            }
+            90% {
+                opacity: 1;
+                transform: translate(15vw, 95vh) rotate(35deg) scale(0.7);
+            }
+            91% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(35deg) scale(0.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(35deg) scale(0);
+            }
+        }
+        
+        @keyframes meteor-fall-4 {
+            0% {
+                transform: translate(-10vw, -8vh) rotate(5deg) scale(0.3);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            89% {
+                opacity: 0.8;
+                transform: translate(14.5vw, 94vh) rotate(30deg) scale(0.6);
+            }
+            90% {
+                opacity: 1;
+                transform: translate(15vw, 95vh) rotate(30deg) scale(0.7);
+            }
+            91% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(30deg) scale(0.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(30deg) scale(0);
+            }
+        }
+        
+        @keyframes meteor-fall-5 {
+            0% {
+                transform: translate(-30vw, -12vh) rotate(25deg) scale(0.3);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            89% {
+                opacity: 0.8;
+                transform: translate(14.5vw, 94vh) rotate(50deg) scale(0.6);
+            }
+            90% {
+                opacity: 1;
+                transform: translate(15vw, 95vh) rotate(50deg) scale(0.7);
+            }
+            91% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(50deg) scale(0.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(15vw, 95vh) rotate(50deg) scale(0);
+            }
+        }
+        
+        .meteorites-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
         .hero-button i {
             margin-right: 8px;
             font-size: 1.1em;
@@ -54,6 +286,14 @@
             .hero-button {
                 padding: 8px 15px;
                 font-size: 0.9em;
+            }
+            
+            .earth-image {
+                max-width: 200%;
+            }
+            
+            .earth-container {
+                bottom: -5%;
             }
         }
         
@@ -256,11 +496,319 @@
             background-color: #f8f8f8;
             border-radius: 6px;
         }
+        
+        .hero-content {
+            z-index: 5; /* Ensure hero content stays on top */
+            position: relative;
+        }
+        
+        /* Make sure stars are visible but behind meteorites */
+        .background-star {
+            z-index: 1;
+        }
+        
+        /* Ensure the stars background is behind everything else */
+        .stars-background {
+            z-index: 0;
+        }
+        
+        /* Impact animations for meteorite collisions with Earth */
+        .impact {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,165,0,0.8) 30%, rgba(255,69,0,0.4) 70%, rgba(255,0,0,0) 100%);
+            transform: scale(0);
+            opacity: 0;
+            z-index: 3;
+            filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
+            position: relative; /* Ensure impacts can contain debris */
+        }
+        
+        .impact-1 {
+            left: 25%;
+            top: 0;
+            animation: impact 6s 5.39s infinite;
+        }
+        
+        .impact-2 {
+            left: 45%;
+            top: 5%;
+            animation: impact 8s 7.19s infinite;
+        }
+        
+        .impact-3 {
+            left: 65%;
+            top: -5%;
+            animation: impact 7s 6.29s infinite;
+        }
+        
+        .impact-4 {
+            left: 85%;
+            top: 0;
+            animation: impact 9s 8.09s infinite;
+        }
+        
+        .impact-5 {
+            left: 35%;
+            top: 10%;
+            animation: impact 5s 4.49s infinite;
+        }
+        
+        @keyframes impact {
+            0%, 85% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            90% {
+                transform: scale(0.5);
+                opacity: 0.7;
+            }
+            91% {
+                transform: scale(8);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(15);
+                opacity: 0;
+            }
+        }
+        
+        /* Earth quake animation */
+        @keyframes subtle-quake {
+            0%, 90%, 100% {
+                transform: translateX(0);
+            }
+            91%, 93%, 95%, 97% {
+                transform: translateX(-5px);
+            }
+            92%, 94%, 96%, 98% {
+                transform: translateX(5px);
+            }
+            99% {
+                transform: translateX(-1px);
+            }
+        }
+        
+        /* Debris/Sparks from impacts */
+        .debris {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            opacity: 0;
+            z-index: 4;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.4);
+        }
+        
+        .impact-1 .debris-1 {
+            animation: debris-fly-1 6s 5.39s infinite;
+        }
+        
+        .impact-1 .debris-2 {
+            animation: debris-fly-2 6s 5.39s infinite;
+        }
+        
+        .impact-1 .debris-3 {
+            animation: debris-fly-3 6s 5.39s infinite;
+        }
+        
+        .impact-2 .debris-1 {
+            animation: debris-fly-1 8s 7.19s infinite;
+        }
+        
+        .impact-2 .debris-2 {
+            animation: debris-fly-2 8s 7.19s infinite;
+        }
+        
+        .impact-2 .debris-3 {
+            animation: debris-fly-3 8s 7.19s infinite;
+        }
+        
+        .impact-3 .debris-1 {
+            animation: debris-fly-1 7s 6.29s infinite;
+        }
+        
+        .impact-3 .debris-2 {
+            animation: debris-fly-2 7s 6.29s infinite;
+        }
+        
+        .impact-3 .debris-3 {
+            animation: debris-fly-3 7s 6.29s infinite;
+        }
+        
+        .impact-4 .debris-1 {
+            animation: debris-fly-1 9s 8.09s infinite;
+        }
+        
+        .impact-4 .debris-2 {
+            animation: debris-fly-2 9s 8.09s infinite;
+        }
+        
+        .impact-4 .debris-3 {
+            animation: debris-fly-3 9s 8.09s infinite;
+        }
+        
+        .impact-5 .debris-1 {
+            animation: debris-fly-1 5s 4.49s infinite;
+        }
+        
+        .impact-5 .debris-2 {
+            animation: debris-fly-2 5s 4.49s infinite;
+        }
+        
+        .impact-5 .debris-3 {
+            animation: debris-fly-3 5s 4.49s infinite;
+        }
+        
+        @keyframes debris-fly-1 {
+            0%, 90% {
+                transform: translate(0, 0) scale(0.5);
+                opacity: 0;
+            }
+            91% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(30px, -50px) scale(0.2);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes debris-fly-2 {
+            0%, 90% {
+                transform: translate(0, 0) scale(0.5);
+                opacity: 0;
+            }
+            91% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-40px, -40px) scale(0.2);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes debris-fly-3 {
+            0%, 90% {
+                transform: translate(0, 0) scale(0.5);
+                opacity: 0;
+            }
+            91% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-15px, -60px) scale(0.2);
+                opacity: 0;
+            }
+        }
+        
+        /* Make impact areas a bit more visible */
+        .impact {
+            position: relative;
+        }
+        
+        /* Add a glow effect to meteorites when they collide */
+        .meteorite img {
+            width: 100%;
+            height: auto;
+            max-width: 40px;
+            transition: filter 0.1s;
+        }
+        
+        /* Flash animation for meteorites on impact */
+        .meteorite-1 img {
+            animation: meteorite-flash 6s 5.39s infinite;
+        }
+        
+        .meteorite-2 img {
+            animation: meteorite-flash 8s 7.19s infinite;
+        }
+        
+        .meteorite-3 img {
+            animation: meteorite-flash 7s 6.29s infinite;
+        }
+        
+        .meteorite-4 img {
+            animation: meteorite-flash 9s 8.09s infinite;
+        }
+        
+        .meteorite-5 img {
+            animation: meteorite-flash 5s 4.49s infinite;
+        }
+        
+        @keyframes meteorite-flash {
+            0%, 89% {
+                filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.6));
+            }
+            90% {
+                filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1)) brightness(2);
+            }
+            91% {
+                filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+            }
+            100% {
+                filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+            }
+        }
+        
+        /* Add reflection to Earth on impact */
+        @keyframes earth-flash {
+            0%, 89% {
+                filter: drop-shadow(0 -10px 20px rgba(0, 100, 255, 0.3));
+            }
+            90% {
+                filter: drop-shadow(0 -10px 30px rgba(255, 165, 0, 0.8));
+            }
+            92% {
+                filter: drop-shadow(0 -10px 20px rgba(0, 100, 255, 0.3));
+            }
+            100% {
+                filter: drop-shadow(0 -10px 20px rgba(0, 100, 255, 0.3));
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Hero Section with Moving Background -->
     <section class="hero-section">
+        <!-- Earth image at the bottom of the hero section -->
+        <div class="earth-container">
+            <img src="images/earth.svg" alt="Earth" class="earth-image">
+            
+            <!-- Impact animations -->
+            <div class="impact impact-1">
+                <div class="debris debris-1"></div>
+                <div class="debris debris-2"></div>
+                <div class="debris debris-3"></div>
+            </div>
+            <div class="impact impact-2">
+                <div class="debris debris-1"></div>
+                <div class="debris debris-2"></div>
+                <div class="debris debris-3"></div>
+            </div>
+            <div class="impact impact-3">
+                <div class="debris debris-1"></div>
+                <div class="debris debris-2"></div>
+                <div class="debris debris-3"></div>
+            </div>
+            <div class="impact impact-4">
+                <div class="debris debris-1"></div>
+                <div class="debris debris-2"></div>
+                <div class="debris debris-3"></div>
+            </div>
+            <div class="impact impact-5">
+                <div class="debris debris-1"></div>
+                <div class="debris debris-2"></div>
+                <div class="debris debris-3"></div>
+            </div>
+        </div>
+        
         <!-- White stars randomly placed throughout the hero section -->
         <img src="images/star-svgrepo-com.svg" class="background-star" style="position: absolute; top: 15%; left: 10%; width: 20px; z-index: 1; filter: brightness(0) invert(1);">
         <img src="images/star-svgrepo-com.svg" class="background-star" style="position: absolute; top: 25%; left: 85%; width: 15px; z-index: 1; filter: brightness(0) invert(1);">
