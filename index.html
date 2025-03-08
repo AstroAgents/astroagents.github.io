@@ -1,1 +1,603 @@
-Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroAgents - Scientific Analysis Workflow</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section with Moving Background -->
+    <section class="hero-section">
+        <a href="#main-content" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+            <span>Explore the workflow</span>
+        </a>
+        
+        <div class="stars-background"></div>
+        <!-- Animated Meteorites -->
+        <div class="meteorites-container">
+            <div class="meteorite meteorite-1">
+                <img src="images/meteorite-svgrepo-com.svg" alt="Meteorite">
+            </div>
+            <div class="meteorite meteorite-2">
+                <img src="images/meteorites-svgrepo-com.svg" alt="Meteorites">
+            </div>
+            <div class="meteorite meteorite-3">
+                <img src="images/meteorite-svgrepo-com.svg" alt="Meteorite">
+            </div>
+            <div class="meteorite meteorite-4">
+                <img src="images/meteorites-svgrepo-com.svg" alt="Meteorites">
+            </div>
+            <div class="meteorite meteorite-5">
+                <img src="images/meteorite-svgrepo-com.svg" alt="Meteorite">
+            </div>
+        </div>
+        <div class="hero-content">
+            
+            <h1 class="project-title">AstroAgents</h1>
+            <h2 class="project-subtitle">Multi-Agent Scientific Analysis for Astrobiology</h2>
+            
+            <div class="project-figure">
+                <img src="images/Fig1.png" alt="AstroAgents Workflow Diagram" class="hero-image">
+            </div>
+            
+            <div class="authors">
+                <p>John Doe, Jane Smith, Alex Johnson</p>
+                <p class="workshop-name">ICLR 2025 Workshop on AI for Scientific Discovery</p>
+            </div>
+        </div>
+    </section>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="AstroAgents Logo" class="logo">
+        </div>
+        <div class="controls">
+            <div class="model-selector">
+                <label for="model-select">Model:</label>
+                <select id="model-select">
+                    <option value="gemini">Gemini 2.0 Flash</option>
+                    <option value="claude">Claude 3.5 Sonnet</option>
+                </select>
+            </div>
+            <div class="iteration-selector">
+                <button id="prev-iteration" title="Previous Iteration"><i class="fas fa-arrow-left"></i></button>
+                <span id="iteration-display">Iteration 1</span>
+                <button id="next-iteration" title="Next Iteration"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="workflow-container">
+            <div class="agent-navigation">
+                <button class="agent-nav-btn active" data-agent="data-analyst">
+                    <div class="agent-icon data-analyst-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span>Data Analyst</span>
+                </button>
+                <button class="agent-nav-btn" data-agent="planner">
+                    <div class="agent-icon planner-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <span>Planner</span>
+                </button>
+                <button class="agent-nav-btn" data-agent="scientist-1">
+                    <div class="agent-icon scientist-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <span>Scientist 1</span>
+                </button>
+                <button class="agent-nav-btn" data-agent="scientist-2">
+                    <div class="agent-icon scientist-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <span>Scientist 2</span>
+                </button>
+                <button class="agent-nav-btn" data-agent="scientist-3">
+                    <div class="agent-icon scientist-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <span>Scientist 3</span>
+                </button>
+                <button class="agent-nav-btn" data-agent="accumulator">
+                    <div class="agent-icon accumulator-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <span>Accumulator</span>
+                </button>
+                <button class="agent-nav-btn" data-agent="literature">
+                    <div class="agent-icon literature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <span>Literature Review</span>
+                </button>
+                <button class="agent-nav-btn" data-agent="critic">
+                    <div class="agent-icon critic-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <span>Critic</span>
+                </button>
+            </div>
+
+            <div class="agent-content-container">
+                <!-- Data Analyst Agent Content -->
+                <div class="agent-content active" id="data-analyst">
+                    <div class="agent-header">
+                        <div class="agent-icon data-analyst-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h2>Data Analyst</h2>
+                    </div>
+                    <div class="agent-description">
+                        <ul>
+                            <li>Identifies significant patterns</li>
+                            <li>Highlights unexpected findings</li>
+                            <li>Discovers possible contamination</li>
+                        </ul>
+                    </div>
+                    <div class="agent-io">
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="data-table">
+                                <h4>Mass Spectrometry Data:</h4>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>M/Z</th>
+                                            <th>RTs</th>
+                                            <th>Compound</th>
+                                            <th>Samples</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>128.17</td>
+                                            <td>(68 min, 1.2s)</td>
+                                            <td>Naphthalene</td>
+                                            <td>Orgueil Lignite</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>142.20</td>
+                                            <td>(72 min, 1.4s)</td>
+                                            <td>Methylnaphthalene</td>
+                                            <td>Orgueil, Murchison</td>
+                                        </tr>
+                                        <tr>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                            <td>...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <div class="gemini-content">
+                                    <p>Analysis of the mass spectrometry data reveals:</p>
+                                    <ul>
+                                        <li>Significant PAH distribution patterns in meteorite samples (IDs 1-8)</li>
+                                        <li>Unexpected oxygen-containing compounds in several meteorite samples (IDs 14, 27, 30)</li>
+                                        <li>Possible terrestrial contamination in samples 3 and 5</li>
+                                    </ul>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <p>Mass spectrometry data analysis indicates:</p>
+                                    <ul>
+                                        <li>Distinctive PAH distribution signatures across meteorite samples (IDs 1-8), with notable concentration gradients</li>
+                                        <li>Unexpected oxygen-containing compounds detected in meteorite samples with statistical significance (p<0.01) in IDs 14, 27, 30</li>
+                                        <li>Samples 3 and 5 show isotopic ratios suggesting possible terrestrial contamination</li>
+                                    </ul>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <div class="gemini-content">
+                                    <p>Further analysis after initial feedback:</p>
+                                    <ul>
+                                        <li>Confirmed PAH patterns consistent with extraterrestrial origin</li>
+                                        <li>Identified additional sulfur-containing compounds (IDs 42-45)</li>
+                                        <li>Ruled out contamination in sample 3, confirmed for sample 5</li>
+                                    </ul>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <p>Follow-up analysis incorporating feedback demonstrates:</p>
+                                    <ul>
+                                        <li>PAH patterns exhibit D/H ratios (0.92-1.23) consistent with extraterrestrial formation processes</li>
+                                        <li>Mass fragments corresponding to novel organosulfur compounds detected in IDs 42-45, with characteristic fragmentation patterns</li>
+                                        <li>Sample 3 shows pristine extraterrestrial signature (99.3% confidence), while sample 5 contains 8.2% terrestrial material</li>
+                                    </ul>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planner Agent Content -->
+                <div class="agent-content" id="planner">
+                    <div class="agent-header">
+                        <div class="agent-icon planner-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h2>Planner</h2>
+                    </div>
+                    <div class="agent-description">
+                        <p>Delegates specific areas within the input data across a team of three scientists for in-depth exploration and investigation</p>
+                    </div>
+                    <div class="agent-io">
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="input-content iteration-1">
+                                <p>Data analysis results from Data Analyst:</p>
+                                <ul>
+                                    <li>PAH distribution patterns (IDs 1-8)</li>
+                                    <li>Oxygen-containing compounds (IDs 14, 27, 30)</li>
+                                    <li>Possible contamination (samples 3, 5)</li>
+                                </ul>
+                            </div>
+                            <div class="input-content iteration-2" style="display: none;">
+                                <p>Updated data analysis from Data Analyst:</p>
+                                <ul>
+                                    <li>Confirmed PAH patterns of extraterrestrial origin</li>
+                                    <li>New sulfur-containing compounds (IDs 42-45)</li>
+                                    <li>Contamination status: sample 3 (negative), sample 5 (positive)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <p>Task delegation to scientists:</p>
+                                <ul>
+                                    <li><strong>Scientist 1:</strong> Analyze PAH distribution patterns in meteorites (IDs 1, 2...)</li>
+                                    <li><strong>Scientist 2:</strong> Investigate oxygen-containing compounds (IDs 14, 27, 30...)</li>
+                                    <li><strong>Scientist 3:</strong> Study distribution patterns of complex alkylated aromatics (IDs 15, 23...)</li>
+                                </ul>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <p>Updated task delegation:</p>
+                                <ul>
+                                    <li><strong>Scientist 1:</strong> Continue PAH analysis with focus on formation mechanisms</li>
+                                    <li><strong>Scientist 2:</strong> Extend investigation to include sulfur compounds (IDs 42-45)</li>
+                                    <li><strong>Scientist 3:</strong> Compare alkylated aromatics between meteorite classes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other agent content sections would follow the same pattern -->
+                
+                <!-- Scientist 1 Content -->
+                <div class="agent-content" id="scientist-1">
+                    <div class="agent-header">
+                        <div class="agent-icon scientist-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h2>Scientist 1</h2>
+                    </div>
+                    <div class="agent-description">
+                        <p>Analyzes PAH distribution patterns in meteorites</p>
+                    </div>
+                    <div class="agent-io">
+                        <!-- Content for Scientist 1 -->
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="input-content iteration-1">
+                                <p>Task from Planner: Analyze PAH distribution patterns in meteorites (IDs 1, 2...)</p>
+                                <p>Relevant data points:</p>
+                                <ul>
+                                    <li>ID 1: Naphthalene (128.17 m/z)</li>
+                                    <li>ID 2: Methylnaphthalene (142.20 m/z)</li>
+                                    <li>IDs 3-8: Various PAH compounds</li>
+                                </ul>
+                            </div>
+                            <div class="input-content iteration-2" style="display: none;">
+                                <p>Updated task: Continue PAH analysis with focus on formation mechanisms</p>
+                                <p>Additional data:</p>
+                                <ul>
+                                    <li>Ratios of alkylated to non-alkylated PAHs</li>
+                                    <li>Comparison with interstellar medium compositions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <p>Hypothesis: The distribution of PAHs in the Orgueil meteorite suggests formation through circumstellar condensation rather than interstellar processes.</p>
+                                <p>Evidence:</p>
+                                <ul>
+                                    <li>Prevalence of 2-3 ring PAHs over larger structures</li>
+                                    <li>Specific isomer distributions consistent with high-temperature formation</li>
+                                </ul>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <p>Refined Hypothesis: PAHs in carbonaceous chondrites formed through multiple pathways:</p>
+                                <ul>
+                                    <li>Primary formation via circumstellar condensation</li>
+                                    <li>Secondary processing in the protoplanetary disk</li>
+                                    <li>Possible contribution from Fischer-Tropsch type reactions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scientist 2 Content -->
+                <div class="agent-content" id="scientist-2">
+                    <!-- Similar structure as Scientist 1 -->
+                    <div class="agent-header">
+                        <div class="agent-icon scientist-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h2>Scientist 2</h2>
+                    </div>
+                    <div class="agent-description">
+                        <p>Investigates sulfur-containing and oxygen-containing compounds</p>
+                    </div>
+                    <div class="agent-io">
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="input-content iteration-1">
+                                <p>Task from Planner: Investigate oxygen-containing compounds (IDs 14, 27, 30...)</p>
+                                <p>Relevant data points on oxygenated species found in meteorite samples</p>
+                            </div>
+                            <div class="input-content iteration-2" style="display: none;">
+                                <p>Updated task: Extend investigation to include sulfur compounds (IDs 42-45)</p>
+                                <p>New data on sulfur-containing organic molecules</p>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <p>Hypothesis: Oxygen-containing compounds in meteorites originate from aqueous alteration processes on the parent body.</p>
+                                <ul>
+                                    <li>Evidence of hydroxylation reactions</li>
+                                    <li>Correlation with other aqueous alteration markers</li>
+                                </ul>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <p>Refined Hypothesis: Both oxygen and sulfur compounds reflect parent body processing:</p>
+                                <ul>
+                                    <li>Oxygen compounds primarily from aqueous alteration</li>
+                                    <li>Sulfur compounds show evidence of both primordial incorporation and secondary processing</li>
+                                    <li>Possible microbial contribution cannot be ruled out for certain compounds</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scientist 3 Content -->
+                <div class="agent-content" id="scientist-3">
+                    <!-- Similar structure as Scientists 1 & 2 -->
+                    <div class="agent-header">
+                        <div class="agent-icon scientist-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h2>Scientist 3</h2>
+                    </div>
+                    <div class="agent-description">
+                        <p>Studies distribution patterns of complex alkylated aromatics and their derivatives</p>
+                    </div>
+                    <div class="agent-io">
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="input-content iteration-1">
+                                <p>Task from Planner: Study distribution patterns of complex alkylated aromatics (IDs 15, 23...)</p>
+                            </div>
+                            <div class="input-content iteration-2" style="display: none;">
+                                <p>Updated task: Compare alkylated aromatics between meteorite classes</p>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <p>Hypothesis: The alkylation patterns observed suggest extensive post-accretionary processing in the meteorite parent body.</p>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <p>Refined Hypothesis: Different meteorite classes show distinctive alkylation patterns that correlate with their thermal histories.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accumulator Agent Content -->
+                <div class="agent-content" id="accumulator">
+                    <div class="agent-header">
+                        <div class="agent-icon accumulator-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h2>Accumulator Agent</h2>
+                    </div>
+                    <div class="agent-description">
+                        <ul>
+                            <li>Concatenate hypotheses</li>
+                            <li>Discard repetitive hypotheses</li>
+                        </ul>
+                    </div>
+                    <div class="agent-io">
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="input-content iteration-1">
+                                <p>Hypotheses from scientists:</p>
+                                <ol>
+                                    <li>PAH distribution suggests circumstellar condensation origin</li>
+                                    <li>Oxygen compounds originate from aqueous alteration processes</li>
+                                    <li>Alkylation patterns suggest extensive post-accretionary processing</li>
+                                </ol>
+                            </div>
+                            <div class="input-content iteration-2" style="display: none;">
+                                <p>Refined hypotheses from scientists:</p>
+                                <ol>
+                                    <li>PAHs formed through multiple pathways (circumstellar, disk processing, Fischer-Tropsch)</li>
+                                    <li>Oxygen and sulfur compounds reflect parent body processing</li>
+                                    <li>Different meteorite classes show distinctive alkylation patterns</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <p>Consolidated hypothesis:</p>
+                                <p>The organic matter in carbonaceous chondrites reflects a complex history involving:</p>
+                                <ol>
+                                    <li>Primary formation of PAHs in circumstellar environments</li>
+                                    <li>Aqueous alteration on the parent body leading to oxygen incorporation</li>
+                                    <li>Post-accretionary processing affecting alkylation patterns</li>
+                                </ol>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <p>Refined consolidated hypothesis:</p>
+                                <p>Meteoritic organic matter evolution involves:</p>
+                                <ol>
+                                    <li>Multiple formation pathways for primary PAHs</li>
+                                    <li>Parent body processing introducing both oxygen and sulfur functionalities</li>
+                                    <li>Thermal history dependent modifications reflected in alkylation patterns</li>
+                                    <li>Possible biological contributions cannot be ruled out for certain compounds</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Literature Review Agent Content -->
+                <div class="agent-content" id="literature">
+                    <div class="agent-header">
+                        <div class="agent-icon literature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h2>Literature Review</h2>
+                    </div>
+                    <div class="agent-description">
+                        <p>Provides a summary based on literature for each hypothesis</p>
+                    </div>
+                    <div class="agent-io">
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="input-content iteration-1">
+                                <p>Consolidated hypothesis from Accumulator Agent about organic matter in carbonaceous chondrites</p>
+                            </div>
+                            <div class="input-content iteration-2" style="display: none;">
+                                <p>Refined consolidated hypothesis with multiple formation pathways and potential biological contributions</p>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <p>Literature support:</p>
+                                <ul>
+                                    <li>Pizzarello & Cooper (2001) support circumstellar PAH formation</li>
+                                    <li>Cronin & Chang (1993) describe aqueous alteration processes in meteorite parent bodies</li>
+                                    <li>Sephton (2002) discusses post-accretionary processing evidence</li>
+                                </ul>
+                                <p>Gaps identified: Limited experimental data on high-temperature PAH formation pathways</p>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <p>Updated literature support:</p>
+                                <ul>
+                                    <li>Cody & Alexander (2005) provide evidence for multiple PAH formation pathways</li>
+                                    <li>Glavin et al. (2018) demonstrate sulfur incorporation mechanisms</li>
+                                    <li>Aponte et al. (2019) discuss potential biological contributions versus abiotic chemistry</li>
+                                </ul>
+                                <p>Remaining gaps: Quantitative models for parent body processing still incomplete</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Critic Agent Content -->
+                <div class="agent-content" id="critic">
+                    <div class="agent-header">
+                        <div class="agent-icon critic-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h2>Critic</h2>
+                    </div>
+                    <div class="agent-description">
+                        <p>Evaluates the generated hypotheses and suggests improvements</p>
+                    </div>
+                    <div class="agent-io">
+                        <div class="agent-input">
+                            <h3>Input</h3>
+                            <div class="input-content iteration-1">
+                                <p>Literature-supported hypothesis and identified gaps from Literature Review</p>
+                            </div>
+                            <div class="input-content iteration-2" style="display: none;">
+                                <p>Updated literature-supported hypothesis and remaining gaps</p>
+                            </div>
+                        </div>
+                        <div class="agent-output">
+                            <h3>Output</h3>
+                            <div class="output-content iteration-1">
+                                <div class="gemini-content">
+                                    <p>Critique and recommendations:</p>
+                                    <ul>
+                                        <li>Hypothesis generally well-supported but lacks quantitative constraints</li>
+                                        <li>Further investigation needed on potential sulfur-containing compounds</li>
+                                        <li>Isotopic measurements would strengthen origin arguments</li>
+                                        <li>Consider comparative analysis between different meteorite classes</li>
+                                    </ul>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <p>Critical evaluation and suggested refinements:</p>
+                                    <ul>
+                                        <li>The hypothesis presents a coherent framework but requires quantitative constraints on formation temperatures (estimated range: 700-1200K)</li>
+                                        <li>Sulfur chemistry appears underexplored - recommend targeted analysis of thiol and thiophene derivatives in samples</li>
+                                        <li>δD and δ13C isotopic measurements would provide definitive constraints on formation environment</li>
+                                        <li>Hypothesis would benefit from comparative analysis across CM, CI, and CV chondrite classes to establish formation conditions</li>
+                                    </ul>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
+                            </div>
+                            <div class="output-content iteration-2" style="display: none;">
+                                <div class="gemini-content">
+                                    <p>Final assessment:</p>
+                                    <ul>
+                                        <li>Refined hypothesis addresses most previous limitations</li>
+                                        <li>Biological contribution claims require more rigorous evidence</li>
+                                        <li>Future work should focus on quantitative parent body processing models</li>
+                                        <li>Propose laboratory experiments to test specific formation mechanisms</li>
+                                    </ul>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <p>Final evaluation and future research directions:</p>
+                                    <ul>
+                                        <li>The refined hypothesis successfully addresses 76% of previously identified limitations</li>
+                                        <li>Claims regarding potential biological contributions remain speculative; recommend compound-specific isotopic analysis to distinguish biotic from abiotic signatures</li>
+                                        <li>Numerical modeling of parent body processing is essential - suggest applying thermal gradient models with aqueous alteration parameters</li>
+                                        <li>Laboratory validation through hydrothermal synthesis experiments at 150-300°C under reducing conditions would test proposed formation pathways</li>
+                                    </ul>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AstroAgents - ICLR 2025</p>
+        <p>Website made with <i class="fas fa-heart" style="color: var(--accent-color);"></i> with Cursor + Claude 3.7 Sonnet-thinking</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
