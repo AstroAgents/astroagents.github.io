@@ -6,6 +6,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const starsBackground = document.querySelector('.stars-background');
     const meteoritesContainer = document.querySelector('.meteorites-container');
     
+    // Sticky Header Implementation
+    const header = document.querySelector('header');
+    const body = document.body;
+    
+    function handleStickyHeader() {
+        if (heroSection) {
+            const heroSectionHeight = heroSection.offsetHeight;
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > heroSectionHeight - 100) {
+                header.classList.add('sticky');
+                body.classList.add('sticky-header');
+            } else {
+                header.classList.remove('sticky');
+                body.classList.remove('sticky-header');
+            }
+        }
+    }
+    
+    // Initialize sticky header
+    window.addEventListener('scroll', handleStickyHeader);
+    
+    // Check initial position
+    handleStickyHeader();
+    
     // Create additional star layers for parallax effect
     if (heroSection && starsBackground) {
         // Create medium stars

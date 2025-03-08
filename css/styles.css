@@ -479,6 +479,32 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 1000;
+    transition: position 0.3s ease, top 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Add padding to body when header is sticky */
+body.sticky-header {
+    padding-top: 80px; /* Adjust based on your header height */
 }
 
 .logo-container {
@@ -1075,37 +1101,38 @@ button.clicked {
 /* Main Navigation */
 .main-navigation {
     display: flex;
-    justify-content: center;
-    background-color: var(--background-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 10px 0;
-    margin-bottom: 20px;
-    z-index: 100; /* Ensure it's above other elements */
+    justify-content: flex-end;
+    margin-left: auto;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    z-index: 100;
 }
 
 .main-nav-btn {
-    background-color: transparent;
+    background-color: #4a9de7;
     border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 16px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 14px;
     font-weight: 600;
-    color: var(--text-color);
+    color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
     border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative; /* For potential debugging */
-    z-index: 101; /* Make buttons clickable */
-    pointer-events: auto !important; /* Force clickability */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
 }
 
 .main-nav-btn:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    text-decoration: none; /* Ensure no underlining on hover */
+    background-color: #3a8bd7;
 }
 
 .main-nav-btn.active {
-    background-color: var(--secondary-color);
+    background-color: #4a9de7;
     color: white;
 }
 
