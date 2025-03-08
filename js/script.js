@@ -210,10 +210,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Update content based on iteration
     function updateIterationContent() {
-        // Update input content for all agents
+        // Update content for all agents
         document.querySelectorAll('.agent-content').forEach(agentContent => {
             const agentId = agentContent.id;
             
+            // No need to toggle input content anymore since we have a single input for all iterations
+            // Keep this commented out for reference
+            /*
             // Toggle visibility of input content based on iteration
             const inputContents = agentContent.querySelectorAll('.input-content');
             inputContents.forEach(content => {
@@ -224,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     content.style.display = 'none';
                 }
             });
+            */
             
             // Toggle visibility of output content based on iteration
             const outputContents = agentContent.querySelectorAll('.output-content');

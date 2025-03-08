@@ -22,6 +22,164 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
+        /* CSS for the analyst context section */
+        .analyst-context {
+            background-color: rgba(240, 240, 255, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--accent-color);
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+        
+        .analyst-context h5 {
+            color: var(--accent-color);
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .analyst-context ol {
+            padding-left: 20px;
+        }
+        
+        .analyst-context li {
+            margin-bottom: 5px;
+        }
+        
+        .analysis-instructions {
+            background-color: rgba(255, 255, 240, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #c9b458;
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        /* CSS for the planner context section */
+        .planner-context {
+            background-color: rgba(250, 245, 240, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--agent-planner);
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+        
+        .planner-context h5 {
+            color: var(--agent-planner);
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .planner-context ol {
+            padding-left: 20px;
+        }
+        
+        .planner-context li {
+            margin-bottom: 5px;
+        }
+        
+        .task-instructions {
+            background-color: rgba(255, 245, 235, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid var(--agent-planner);
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        /* CSS for the scientist context section */
+        .scientist-context {
+            background-color: rgba(240, 250, 255, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--agent-scientist);
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+        
+        .scientist-context h5 {
+            color: var(--agent-scientist);
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .scientist-context ol {
+            padding-left: 20px;
+        }
+        
+        .scientist-context li {
+            margin-bottom: 5px;
+        }
+        
+        .spacer {
+            height: 15px;
+        }
+        
+        .important-note {
+            background-color: rgba(255, 245, 245, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #e74c3c;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        
+        /* CSS for the accumulator context section */
+        .accumulator-context {
+            background-color: rgba(245, 245, 255, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--agent-accumulator);
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+        
+        .accumulator-context h5 {
+            color: var(--agent-accumulator);
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .accumulator-context ol {
+            padding-left: 20px;
+        }
+        
+        .accumulator-context li {
+            margin-bottom: 5px;
+        }
+        
+        .format-instructions {
+            background-color: rgba(245, 245, 250, 0.9);
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 15px;
+            border: 1px dashed #aaa;
+        }
+        
+        .json-format {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+        
         .earth-container {
             position: absolute;
             bottom: -10%;
@@ -772,6 +930,82 @@
                 filter: drop-shadow(0 -10px 20px rgba(0, 100, 255, 0.3));
             }
         }
+        
+        /* CSS for the critic context section */
+        .critic-context {
+            background-color: rgba(250, 245, 250, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--agent-critic);
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+        
+        .critic-context h5 {
+            color: var(--agent-critic);
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .critic-context ol {
+            padding-left: 20px;
+        }
+        
+        .critic-context ul {
+            padding-left: 20px;
+        }
+        
+        .critic-context li {
+            margin-bottom: 5px;
+        }
+        
+        .critique-instructions {
+            background-color: rgba(255, 245, 250, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid var(--agent-critic);
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        /* CSS for the literature context section */
+        .literature-context {
+            background-color: rgba(245, 250, 245, 0.9);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--agent-literature);
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+        
+        .literature-context h5 {
+            color: var(--agent-literature);
+            margin-top: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .literature-context ol {
+            padding-left: 20px;
+        }
+        
+        .literature-context li {
+            margin-bottom: 5px;
+        }
+        
+        .literature-instructions {
+            background-color: rgba(240, 255, 240, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid var(--agent-literature);
+            font-style: italic;
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
@@ -977,40 +1211,65 @@
                             <h3>Input</h3>
                             <div class="data-table">
                                 <h4>Mass Spectrometry Data:</h4>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>M/Z</th>
-                                            <th>RTs</th>
-                                            <th>Compound</th>
-                                            <th>Samples</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>128</td>
-                                            <td>(68 min, 1.2s)</td>
-                                            <td>Naphthalene</td>
-                                            <td>Orgueil Lignite</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>142</td>
-                                            <td>(72 min, 1.4s)</td>
-                                            <td>Methylnaphthalene</td>
-                                            <td>Orgueil, Murchison</td>
-                                        </tr>
-                                        <tr>
-                                            <td>...</td>
-                                            <td>...</td>
-                                            <td>...</td>
-                                            <td>...</td>
-                                            <td>...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                                <div class="analyst-context">
+                                    <h5>Analyst Role:</h5>
+                                    <p>You are a sophisticated analytical scientist specializing in astrobiological data analysis, with deep expertise in meteorites. Your knowledge is based on but not limited to the following:</p>
+                                    
+                                    <h5>Background Context:</h5>
+                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                    
+                                    <h5>Your tasks include:</h5>
+                                    <ol>
+                                        <li>Identifying significant patterns and trends in the dataset, especially PAH distributions and alkylation patterns.</li>
+                                        <li>Identifying possible environmental contamination in the samples, considering terrestrial vs. extraterrestrial signatures.</li>
+                                        <li>Highlighting unexpected or unusual findings, particularly regarding temperature indicators.</li>
+                                        <li>Comparing data subsets where relevant, especially between different meteorite classes.</li>
+                                        <li><strong>MOST IMPORTANTLY:</strong> Incorporating critic feedback to guide your analysis.</li>
+                                    </ol>
+                                    
+                                    <h5>Input Data:</h5>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>M/Z</th>
+                                                <th>RTs</th>
+                                                <th>Compound</th>
+                                                <th>Samples</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>128</td>
+                                                <td>(68 min, 1.2s)</td>
+                                                <td>Naphthalene</td>
+                                                <td>Orgueil Lignite</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>142</td>
+                                                <td>(72 min, 1.4s)</td>
+                                                <td>Methylnaphthalene</td>
+                                                <td>Orgueil, Murchison</td>
+                                            </tr>
+                                            <tr>
+                                                <td>...</td>
+                                                <td>...</td>
+                                                <td>...</td>
+                                                <td>...</td>
+                                                <td>...</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <h5>Critic Feedback:</h5>
+                                    <p><strong>CRITIC FEEDBACK GOES HERE</strong></p>
+                                    
+                                    <p class="analysis-instructions">Provide a refined analysis based on the above, with special emphasis on addressing critic feedback.
+                                    Pay particular attention to rewarded aspects and avoid patterns similar to criticized aspects.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
@@ -1057,21 +1316,43 @@
                     <div class="agent-io">
                         <div class="agent-input">
                             <h3>Input</h3>
-                            <div class="input-content iteration-1">
-                                <p>Data analysis results from Data Analyst:</p>
-                                <ul>
-                                    <li>PAH distribution patterns (IDs 1-8)</li>
-                                    <li>Oxygen-containing compounds (IDs 14, 27, 30)</li>
-                                    <li>Possible contamination (samples 3, 5)</li>
-                                </ul>
-                            </div>
-                            <div class="input-content iteration-2" style="display: none;">
-                                <p>Updated data analysis from Data Analyst:</p>
-                                <ul>
-                                    <li>Confirmed PAH patterns of extraterrestrial origin</li>
-                                    <li>New sulfur-containing compounds (IDs 42-45)</li>
-                                    <li>Contamination status: sample 3 (negative), sample 5 (positive)</li>
-                                </ul>
+                            <div class="planner-context">
+                                <h5>Planner Role:</h5>
+                                <p>You are an experienced scientific planner and coordinator. Based on the data analysis provided below, your task is to delegate specific areas within the input data across a team of three scientists for in-depth exploration and investigation.</p>
+                                
+                                <h5>Input Data:</h5>
+                                <p><strong>INPUT DATA GOES HERE</strong></p>
+                                
+                                <h5>Data Analysis:</h5>
+                                <p><strong>DATA ANALYST OUTPUT GOES HERE</strong></p>
+                                
+                                <h5>Important:</h5>
+                                <ol>
+                                    <li>Just focus on the data analysis and divide the among three agents.</li>
+                                    <li>The agents are not able to run tools, they only generate hypotheses based on the area that you delegate to them.</li>
+                                    <li>Make sure to include the ID of the compounds in the task split.</li>
+                                    <li>DO NOT include GC or environmental contamination in your task split, the user already knows about it.</li>
+                                    <li>DO NOT assign any tasks about making the data better and doing further analysis.</li>
+                                </ol>
+                                
+                                <p class="task-instructions">Based on the above, provide specific instructions for each of the three scientists, clearly indicating what aspect of the data they should focus on.</p>
+                                
+                                <div class="format-instructions">
+                                    <p>Your response must be ONLY a valid JSON object with the following format, with no additional text before or after:</p>
+                                    
+                                    <pre class="json-format">
+{
+    "Agent1_instructions": "Detailed instructions for 
+    what Scientist 1 should focus on.",
+    "Agent2_instructions": "Detailed instructions for
+    what Scientist 2 should focus on.",
+    "Agent3_instructions": "Detailed instructions for
+    what Scientist 3 should focus on."
+}
+                                    </pre>
+                                    
+                                    <p>Ensure the JSON is properly formatted.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
@@ -1104,8 +1385,6 @@
                     </div>
                 </div>
 
-                <!-- Other agent content sections would follow the same pattern -->
-                
                 <!-- Scientist 1 Content -->
                 <div class="agent-content" id="scientist-1">
                     <div class="agent-header">
@@ -1121,22 +1400,54 @@
                         <!-- Content for Scientist 1 -->
                         <div class="agent-input">
                             <h3>Input</h3>
-                            <div class="input-content iteration-1">
-                                <p>Task from Planner: Analyze PAH distribution patterns in meteorites (IDs 1, 2...)</p>
-                                <p>Relevant data points:</p>
-                                <ul>
-                                    <li>ID 1: Naphthalene (128.17 m/z)</li>
-                                    <li>ID 2: Methylnaphthalene (142.20 m/z)</li>
-                                    <li>IDs 3-8: Various PAH compounds</li>
-                                </ul>
-                            </div>
-                            <div class="input-content iteration-2" style="display: none;">
-                                <p>Updated task: Continue PAH analysis with focus on formation mechanisms</p>
-                                <p>Additional data:</p>
-                                <ul>
-                                    <li>Ratios of alkylated to non-alkylated PAHs</li>
-                                    <li>Comparison with interstellar medium compositions</li>
-                                </ul>
+                            <div class="input-content">
+                                <div class="scientist-context">
+                                    <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>You are Scientist <strong>1</strong>.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
+                                    
+                                    <p>Your job is to:</p>
+                                    <ol>
+                                        <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
+                                        <li>You must be original and novel, while considering established formation mechanisms.</li>
+                                        <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
+                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                    </ol>
+                                    
+                                    <h5>Background Context:</h5>
+                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                    
+                                    <h5>Input Data:</h5>
+                                    <p><strong>INPUT DATA GOES HERE</strong></p>
+                                    
+                                    <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
+                                    <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
+                                    <pre class="json-format">
+{
+    "hypothesis": [
+        {
+            "id": "Format it like H_one, H_two, etc.",
+            "statement": "Explain the hypothesis
+            fully and in detail here.",
+            "key_datapoints": "List of compounds
+            and samples that support the hypothesis,
+            directly point to ID or compound/sample name."
+        }
+    ]
+}
+                                    </pre>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
@@ -1184,13 +1495,54 @@
                     <div class="agent-io">
                         <div class="agent-input">
                             <h3>Input</h3>
-                            <div class="input-content iteration-1">
-                                <p>Task from Planner: Investigate oxygen-containing compounds (IDs 14, 27, 30...)</p>
-                                <p>Relevant data points on oxygenated species found in meteorite samples</p>
-                            </div>
-                            <div class="input-content iteration-2" style="display: none;">
-                                <p>Updated task: Extend investigation to include sulfur compounds (IDs 42-45)</p>
-                                <p>New data on sulfur-containing organic molecules</p>
+                            <div class="input-content">
+                                <div class="scientist-context">
+                                    <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>You are Scientist <strong>2</strong>.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
+                                    
+                                    <p>Your job is to:</p>
+                                    <ol>
+                                        <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
+                                        <li>You must be original and novel, while considering established formation mechanisms.</li>
+                                        <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
+                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                    </ol>
+                                    
+                                    <h5>Background Context:</h5>
+                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                    
+                                    <h5>Input Data:</h5>
+                                    <p><strong>INPUT DATA GOES HERE</strong></p>
+                                    
+                                    <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
+                                    <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
+                                    <pre class="json-format">
+{
+    "hypothesis": [
+        {
+            "id": "Format it like H_one, H_two, etc.",
+            "statement": "Explain the hypothesis
+            fully and in detail here.",
+            "key_datapoints": "List of compounds
+            and samples that support the hypothesis,
+            directly point to ID or compound/sample name."
+        }
+    ]
+}
+                                    </pre>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
@@ -1238,11 +1590,54 @@
                     <div class="agent-io">
                         <div class="agent-input">
                             <h3>Input</h3>
-                            <div class="input-content iteration-1">
-                                <p>Task from Planner: Study distribution patterns of complex alkylated aromatics (IDs 15, 23...)</p>
-                            </div>
-                            <div class="input-content iteration-2" style="display: none;">
-                                <p>Updated task: Compare alkylated aromatics between meteorite classes</p>
+                            <div class="input-content">
+                                <div class="scientist-context">
+                                    <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>You are Scientist <strong>3</strong>.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
+                                    
+                                    <p>Your job is to:</p>
+                                    <ol>
+                                        <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
+                                        <li>You must be original and novel, while considering established formation mechanisms.</li>
+                                        <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
+                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                    </ol>
+                                    
+                                    <h5>Background Context:</h5>
+                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                    
+                                    <h5>Input Data:</h5>
+                                    <p><strong>INPUT DATA GOES HERE</strong></p>
+                                    
+                                    <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
+                                    <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
+                                    <pre class="json-format">
+{
+    "hypothesis": [
+        {
+            "id": "Format it like H_one, H_two, etc.",
+            "statement": "Explain the hypothesis
+            fully and in detail here.",
+            "key_datapoints": "List of compounds
+            and samples that support the hypothesis,
+            directly point to ID or compound/sample name."
+        }
+    ]
+}
+                                    </pre>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
@@ -1292,21 +1687,41 @@
                     <div class="agent-io">
                         <div class="agent-input">
                             <h3>Input</h3>
-                            <div class="input-content iteration-1">
-                                <p>Hypotheses from scientists:</p>
-                                <ol>
-                                    <li>PAH distribution suggests circumstellar condensation origin</li>
-                                    <li>Oxygen compounds originate from aqueous alteration processes</li>
-                                    <li>Alkylation patterns suggest extensive post-accretionary processing</li>
-                                </ol>
-                            </div>
-                            <div class="input-content iteration-2" style="display: none;">
-                                <p>Refined hypotheses from scientists:</p>
-                                <ol>
-                                    <li>PAHs formed through multiple pathways (circumstellar, disk processing, Fischer-Tropsch)</li>
-                                    <li>Oxygen and sulfur compounds reflect parent body processing</li>
-                                    <li>Different meteorite classes show distinctive alkylation patterns</li>
-                                </ol>
+                            <div class="input-content">
+                                <div class="accumulator-context">
+                                    <p>You are an expert astrobiologist and scientific reviewer tasked with evaluating multiple hypotheses generated by different astrobiology scientists. Your job is to combine concatenate the hypotheses and conclusions from the three scientists and discard any repetitive hypotheses.</p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>You have received the following hypotheses from three separate scientists:</p>
+                                    
+                                    <p><strong>A JSON LISTING ALL HYPOTHESES GENERATED GOES HERE.</strong></p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>Your task is to:</p>
+                                    <ol>
+                                        <li>Review each hypothesis critically</li>
+                                        <li>Concatenate the hypotheses and conclusions from the three scientists</li>
+                                        <li>Discard repetitive hypotheses</li>
+                                        <li>Make sure to include more than one hypothesis in the final hypothesis list</li>
+                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                    </ol>
+                                    
+                                    <p>Provide your response ONLY as a valid JSON object in the following format, with no additional text before or after:</p>
+                                    <pre class="json-format">
+{
+    "hypothesis": [
+        {
+            "id": "Use a format like H_final_one, H_final_two, etc.",
+            "statement": "Don't change the hypothesis statement",
+            "key_datapoints": "Don't change the key datapoints"
+        }
+    ]
+}
+                                    </pre>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
@@ -1353,11 +1768,28 @@
                     <div class="agent-io">
                         <div class="agent-input">
                             <h3>Input</h3>
-                            <div class="input-content iteration-1">
-                                <p>Consolidated hypothesis from Accumulator Agent about organic matter in carbonaceous chondrites</p>
-                            </div>
-                            <div class="input-content iteration-2" style="display: none;">
-                                <p>Refined consolidated hypothesis with multiple formation pathways and potential biological contributions</p>
+                            <div class="input-content">
+                                <div class="literature-context">
+                                    <p>You are a specialized literature review agent analyzing scientific literature search results.</p>
+                                    
+                                    <p>Your tasks include:</p>
+                                    <ol>
+                                        <li>Analyzing the search results provided below.</li>
+                                        <li>Extracting and synthesizing key insights.</li>
+                                        <li>Formatting your summary clearly and concisely.</li>
+                                        <li>Highlighting significant findings and noting any conflicting evidence.</li>
+                                    </ol>
+                                    
+                                    <h5>Query:</h5>
+                                    
+                                    <p><strong>THE LIST OF HYPOTHESIS STATEMENTS GOES HERE.</strong></p>
+                                    
+                                    <h5>Search Results:</h5>
+                                    
+                                    <p><strong>SEARCH RESULTS GOES HERE.</strong></p>
+                                    
+                                    <p class="literature-instructions">Provide a well-organized summary addressing the query, key discoveries, research gaps, and include any relevant citations.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
@@ -1404,11 +1836,88 @@
                     <div class="agent-io">
                         <div class="agent-input">
                             <h3>Input</h3>
-                            <div class="input-content iteration-1">
-                                <p>Literature-supported hypothesis and identified gaps from Literature Review</p>
-                            </div>
-                            <div class="input-content iteration-2" style="display: none;">
-                                <p>Updated literature-supported hypothesis and remaining gaps</p>
+                            <div class="input-content">
+                                <div class="critic-context">
+                                    <p>You are an expert scientist in astrobiology and prebiotic chemistry, with deep expertise in PAH analysis and meteoritic organic chemistry.</p>
+                                    
+                                    <h5>Background Context:</h5>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p>Your task is to provide a detailed, scientifically rigorous critique of the proposed hypothesis and the associated data analysis. Note that if the <strong>hypotheses</strong> are not exactly aligned with the data, you should discard the hypothesis and generate a new one.</p>
+                                    
+                                    <p>Your critique must include:</p>
+                                    
+                                    <ol>
+                                        <li>
+                                            <strong>Alignment with the data:</strong>
+                                            <ul>
+                                                <li>Assess the alignment of the hypothesis with the data.</li>
+                                                <li>Evaluate if the proposed mechanisms align with observed PAH distributions and temperature indicators.</li>
+                                                <li>Consider if the hypothesis accounts for both chemical and physical processes in meteorite parent bodies.</li>
+                                                <li>If the hypothesis is not exactly aligned with the data, you should discard it and generate a new one.</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li>
+                                            <strong>Scientific Evaluation:</strong>
+                                            <ul>
+                                                <li>Assess the theoretical foundations and empirical basis of each hypothesis.</li>
+                                                <li>Evaluate temperature constraints implied by PAH distributions.</li>
+                                                <li>Consider parent body processes like aqueous alteration.</li>
+                                                <li>Identify any assumptions that may not be well supported by the data.</li>
+                                                <li>Point out specific weaknesses in the data analysis or experimental design.</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li>
+                                            <strong>Integration with Literature:</strong>
+                                            <ul>
+                                                <li>Critically compare the hypothesis against current research findings.</li>
+                                                <li>Evaluate consistency with known PAH formation mechanisms.</li>
+                                                <li>Consider implications of PAH distributions for formation conditions.</li>
+                                                <li>Identify gaps in the existing literature that the hypothesis addresses or ignores.</li>
+                                                <li>Propose additional sources or studies that could reinforce or challenge the claims.</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>IMPORTANT:</strong> Novelty and originality are highly rewarded based on literature review. Punish <strong>hypotheses</strong> that are not novel or original.</li>
+                                        <li>Punish hypothesis statements that are vague and too general. Reward specific and detailed <strong>hypotheses</strong> based on the data and analysis.</li>
+                                        <li>Avoid suggesting any improvements to the input data. Only critique the <strong>hypotheses</strong>.</li>
+                                    </ol>
+                                    
+                                    <h5>Input Data:</h5>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p><strong>INPUT DATA</strong></p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <h5>Literature Review:</h5>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p><strong>LITERATURE REVIEW GOES HERE</strong></p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <h5>Hypothesis:</h5>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p><strong>ACCUMULATED HYPOTHESES GOES HERE</strong></p>
+                                    
+                                    <div class="spacer"></div>
+                                    
+                                    <p class="critique-instructions">Provide your critique in a clear and structured format, ensuring that your comments are actionable and aimed at improving the hypothesis and data analysis.</p>
+                                    
+                                    <p>Your scientific critique:</p>
+                                </div>
                             </div>
                         </div>
                         <div class="agent-output">
