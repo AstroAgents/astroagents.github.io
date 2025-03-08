@@ -1201,9 +1201,11 @@
                     </div>
                     <div class="agent-description">
                         <ul>
-                            <li>Identifies significant patterns</li>
-                            <li>Highlights unexpected findings</li>
-                            <li>Discovers possible contamination</li>
+                            <li>Examines mass spectrometry data to uncover key patterns</li>
+                            <li>Identifies significant patterns and trends in the dataset</li>
+                            <li>Highlights unexpected findings and anomalies</li>
+                            <li>Recognizes potential environmental contamination</li>
+                            <li>Refines analysis based on critic feedback</li>
                         </ul>
                     </div>
                     <div class="agent-io">
@@ -1311,7 +1313,7 @@
                         <h2>Planner</h2>
                     </div>
                     <div class="agent-description">
-                        <p>Delegates specific areas within the input data across a team of three scientists for in-depth exploration and investigation</p>
+                        <p>Based on data analysis from the data analyst agent, delegates specific segments of the input data to a team of three scientist agents for in-depth exploration and focus. Generates detailed instructions for each scientist in a structured JSON format.</p>
                     </div>
                     <div class="agent-io">
                         <div class="agent-input">
@@ -1394,7 +1396,7 @@
                         <h2>Scientist 1</h2>
                     </div>
                     <div class="agent-description">
-                        <p>Analyzes PAH distribution patterns in meteorites</p>
+                        <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
                     </div>
                     <div class="agent-io">
                         <!-- Content for Scientist 1 -->
@@ -1490,7 +1492,7 @@
                         <h2>Scientist 2</h2>
                     </div>
                     <div class="agent-description">
-                        <p>Investigates sulfur-containing and oxygen-containing compounds</p>
+                        <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
                     </div>
                     <div class="agent-io">
                         <div class="agent-input">
@@ -1585,7 +1587,7 @@
                         <h2>Scientist 3</h2>
                     </div>
                     <div class="agent-description">
-                        <p>Studies distribution patterns of complex alkylated aromatics and their derivatives</p>
+                        <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
                     </div>
                     <div class="agent-io">
                         <div class="agent-input">
@@ -1680,8 +1682,9 @@
                     </div>
                     <div class="agent-description">
                         <ul>
-                            <li>Concatenate hypotheses</li>
-                            <li>Discard repetitive hypotheses</li>
+                            <li>Processes the combined output from all three scientist agents</li>
+                            <li>Performs hypothesis deduplication by identifying and consolidating substantially similar hypotheses</li>
+                            <li>Ensures a streamlined and non-redundant set of hypotheses for further investigation</li>
                         </ul>
                     </div>
                     <div class="agent-io">
@@ -1763,7 +1766,7 @@
                         <h2>Literature Review</h2>
                     </div>
                     <div class="agent-description">
-                        <p>Provides a summary based on literature for each hypothesis</p>
+                        <p>Utilizes Semantic Scholar to locate relevant research papers for each hypothesis, retrieving and analyzing up to five pertinent paper snippets per query. Processes search results by extracting key insights, synthesizing information, and presenting a clear, concise summary while highlighting significant findings and potential conflicts.</p>
                     </div>
                     <div class="agent-io">
                         <div class="agent-input">
@@ -1831,7 +1834,7 @@
                         <h2>Critic</h2>
                     </div>
                     <div class="agent-description">
-                        <p>Evaluates the generated hypotheses and suggests improvements</p>
+                        <p>Evaluates each hypothesis based on its consistency with experimental data, scientific rigor, theoretical basis from selected papers, and integration with external literature gathered by the literature review agent. Particularly focuses on assessing the novelty and specificity of claims, providing structured feedback to guide the next round of hypothesis refinement.</p>
                     </div>
                     <div class="agent-io">
                         <div class="agent-input">
