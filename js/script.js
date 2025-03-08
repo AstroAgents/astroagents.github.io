@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // State
     let currentIteration = 1;
-    const maxIterations = 2; // Set the maximum number of iterations
+    // Use a function to get the max iterations instead of a hardcoded value
     let currentModel = 'gemini'; // Default model
     
     // Initialize
@@ -177,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     nextIterationBtn.addEventListener('click', () => {
+        // Get the maximum iteration dynamically
+        const maxIterations = getMaxIterations();
         if (currentIteration < maxIterations) {
             currentIteration++;
             updateIterationDisplay();
@@ -194,39 +196,78 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateIterationDisplay() {
         iterationDisplay.textContent = `Iteration ${currentIteration}`;
         
+        // Get the maximum iteration dynamically
+        const maxIterations = getMaxIterations();
+        
         // Disable/enable buttons based on current iteration
         prevIterationBtn.disabled = currentIteration === 1;
-        nextIterationBtn.disabled = currentIteration === maxIterations;
+        nextIterationBtn.disabled = currentIteration >= maxIterations;
         
         // Visual indication of disabled state
         prevIterationBtn.style.opacity = currentIteration === 1 ? '0.5' : '1';
-        nextIterationBtn.style.opacity = currentIteration === maxIterations ? '0.5' : '1';
+        nextIterationBtn.style.opacity = currentIteration >= maxIterations ? '0.5' : '1';
     }
     
     // Update content based on iteration
     function updateIterationContent() {
-        // Get all iteration content elements
-        const iterationContents = document.querySelectorAll('.input-content, .output-content');
-        
-        // First hide all by setting opacity to 0
-        iterationContents.forEach(content => {
-            content.style.opacity = '0';
-        });
-        
-        // After fade out completes, update display property
-        setTimeout(() => {
-            iterationContents.forEach(content => {
+        // Update input content for all agents
+        document.querySelectorAll('.agent-content').forEach(agentContent => {
+            const agentId = agentContent.id;
+            
+            // Toggle visibility of input content based on iteration
+            const inputContents = agentContent.querySelectorAll('.input-content');
+            inputContents.forEach(content => {
+                // Check if this content matches the current iteration
                 if (content.classList.contains(`iteration-${currentIteration}`)) {
                     content.style.display = 'block';
-                    // Trigger reflow
-                    void content.offsetWidth;
-                    // Fade in
-                    content.style.opacity = '1';
                 } else {
                     content.style.display = 'none';
                 }
             });
-        }, 300);
+            
+            // Toggle visibility of output content based on iteration
+            const outputContents = agentContent.querySelectorAll('.output-content');
+            outputContents.forEach(content => {
+                // Check if this content matches the current iteration
+                if (content.classList.contains(`iteration-${currentIteration}`)) {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        });
+    }
+    
+    // Function to load model results (adapt your existing results-loader.js logic)
+    function loadModelResults(agentId, model, iteration, container) {
+        // This should integrate with your existing results-loader.js functionality
+        // Example implementation:
+        const filePath = `results_${model}_${model === 'gemini' ? 'flash2' : 'sonnet'}/${agentId.replace('-', '_')}_iteration_${iteration - 1}.txt`;
+        
+        fetch(filePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(text => {
+                // Remove the loading indicator
+                const loadingElem = container.querySelector('.loading');
+                if (loadingElem) {
+                    loadingElem.remove();
+                }
+                
+                // Insert content before the model badge
+                const modelBadge = container.querySelector('.model-badge');
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'agent-output-content';
+                contentDiv.innerHTML = text;
+                container.insertBefore(contentDiv, modelBadge);
+            })
+            .catch(error => {
+                container.innerHTML = `<p class="error">Failed to load results: ${error.message}</p><p class="model-badge ${model}">${model === 'gemini' ? 'Gemini 2.0 Flash' : 'Claude 3.5 Sonnet'}</p>`;
+            });
     }
     
     // Set model class on body
@@ -262,4 +303,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 200);
         });
     });
+
+    // Function to get the maximum iteration number from agentResultsConfig in results-loader.js
+    function getMaxIterations() {
+        // Default to 2 if agentResultsConfig isn't available yet
+        if (typeof window.agentResultsConfig === 'undefined') {
+            return 2;
+        }
+        
+        let maxIteration = 1;
+        // Loop through all agents in the config
+        Object.keys(window.agentResultsConfig).forEach(agentId => {
+            // Check claude configuration (could also check gemini)
+            if (window.agentResultsConfig[agentId] && window.agentResultsConfig[agentId]['claude']) {
+                Object.keys(window.agentResultsConfig[agentId]['claude']).forEach(iteration => {
+                    const iterNum = parseInt(iteration);
+                    if (iterNum > maxIteration) {
+                        maxIteration = iterNum;
+                    }
+                });
+            }
+        });
+        
+        return maxIteration;
+    }
 }); 

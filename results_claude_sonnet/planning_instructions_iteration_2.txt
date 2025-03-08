@@ -1,4 +1,5 @@
 📝 Planner Instructions:
+```json
 {
     "Agent1_instructions": "Focus on analyzing PAH distribution patterns and their methylated derivatives in meteorites vs terrestrial samples. Specifically examine: naphthalene (ID 1), 2-methyl naphthalene (ID 2), 1-methyl naphthalene (ID 8), trimethyl naphthalene (ID 15), fluoranthene (ID 12), pyrene (ID 13), phenanthrene/anthracene (ID 42), biphenyl (ID 43), and dimethylpyrene (ID 45). Compare their occurrence patterns between meteoritic and terrestrial samples to develop hypotheses about their formation mechanisms.",
     
@@ -6,3 +7,4 @@
     
     "Agent3_instructions": "Study partially reduced and alkylated compounds: toluene (ID 7), indane (ID 11), methylindan (ID 23), dimethyl cyclohexane (ID 25), 1,2,3,4-tetrahydro phenanthrene (ID 36), tetramethylindene (ID 20), and polysubstituted alkylnaphthalenes (IDs 32, 35, 37). Analyze their distribution patterns to understand reduction processes in different environments."
 }
+```

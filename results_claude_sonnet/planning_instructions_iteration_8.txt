@@ -1,4 +1,5 @@
 📝 Planner Instructions:
+```json
 {
     "Agent1_instructions": "Focus on analyzing PAH distribution patterns in meteorites. Specifically examine compounds with IDs 1, 2, 7, 8, 12, 13, 42, 43, 45. Develop hypotheses about the relationship between parent PAHs (naphthalene, fluoranthene, pyrene, phenanthrene, biphenyl) and their methylated derivatives across different meteorite samples. Consider how these distributions might reflect formation conditions in the early solar system.",
     
@@ -6,3 +7,4 @@
     
     "Agent3_instructions": "Study the distribution of complex cyclic and aromatic compounds in both meteoritic and soil samples. Focus on compounds with IDs 11, 23, 25, 32, 33, 35, 36, 37, 44. Compare the occurrence patterns of indane, acenaphthene, alkylnaphthalenes, and phenalene derivatives. Develop hypotheses about the different formation pathways of these compounds in abiotic versus biotic contexts."
 }
+```

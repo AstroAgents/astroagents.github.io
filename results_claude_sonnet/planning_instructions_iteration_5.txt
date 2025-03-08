@@ -1,4 +1,5 @@
 📝 Planner Instructions:
+```json
 {
     "Agent1_instructions": "Focus on analyzing PAH distribution patterns and methylation in meteorite samples. Specifically examine: naphthalene (ID 1), 2-methyl naphthalene (ID 2), 1-methyl naphthalene (ID 8), trimethyl naphthalene (ID 15), fluoranthene (ID 12), pyrene (ID 13), phenanthrene/anthracene (ID 42), biphenyl (ID 43), and dimethylpyrene (ID 45). Generate hypotheses about formation conditions based on methylation patterns and PAH distributions across different meteorite samples.",
     
@@ -6,3 +7,4 @@
     
     "Agent3_instructions": "Analyze the unique molecular signatures in biotic samples, focusing on: possible terpenes (IDs 4, 17, 18), ergost-14-ene (ID 28), and unknown compounds specific to soil samples (IDs 10, 16, 19, 38-41). Generate hypotheses about how these molecular patterns differ from meteoritic organic matter and what they reveal about biological processes in different environments."
 }
+```

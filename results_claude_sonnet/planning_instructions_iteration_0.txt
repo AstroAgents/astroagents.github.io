@@ -1,8 +1,8 @@
 📝 Planner Instructions:
+```json
 {
     "Agent1_instructions": "Focus on analyzing PAH distribution patterns in meteorite samples, specifically examining: 1) Basic PAHs like naphthalene (ID 1), fluoranthene (ID 12), and pyrene (ID 13), 2) Methylated PAHs including 2-methyl naphthalene (ID 2), 1-methyl naphthalene (ID 8), and trimethyl naphthalene (ID 15), 3) The relationship between these compounds specifically in CM2 chondrites (Murchison, ALH 83100, LON 94101). Generate hypotheses about formation mechanisms based on these PAH patterns.",
-    
     "Agent2_instructions": "Investigate sulfur-containing and oxygen-containing compounds in meteorites, including: 1) Dibenzo thiophene (ID 14), 1,2,4-Trithiolane (ID 27), 2) Oxygen-containing aromatics like 1H-Phenalen-1-one (ID 44), 3) Their co-occurrence patterns with other compounds, particularly in Orgueil and LEW 85311 samples. Develop hypotheses about the role of sulfur and oxygen in abiotic organic synthesis.",
-    
     "Agent3_instructions": "Examine unique molecular distributions in soil samples, focusing on: 1) Biologically-derived compounds like terpenes and sesquiterpenes (IDs 4, 17, 18), 2) Complex molecules found exclusively in soil samples like tetramethylindene (ID 20) and ergost-14-ene (ID 28), 3) Compare molecular patterns between extreme environment soils (Antarctica, Atacama) versus organic-rich soils. Generate hypotheses about biological versus abiotic molecular signatures."
 }
+```

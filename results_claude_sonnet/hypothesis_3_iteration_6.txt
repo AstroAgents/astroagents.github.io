@@ -1,4 +1,5 @@
 🧬 Scientist 3 hypothesis:
+```json
 {
     "hypothesis": [
         {
@@ -28,3 +29,4 @@
         }
     ]
 }
+```

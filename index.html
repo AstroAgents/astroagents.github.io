@@ -70,6 +70,192 @@
             background-color: rgba(244, 67, 54, 0.1);
             border-radius: 4px;
         }
+        
+        /* Content formatting styles */
+        .agent-content .agent-output ul,
+        .agent-content .agent-output ol {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        .agent-content .agent-output li {
+            margin-bottom: 5px;
+        }
+        
+        .agent-content .agent-output p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .agent-content .agent-output h1,
+        .agent-content .agent-output h2,
+        .agent-content .agent-output h3,
+        .agent-content .agent-output h4 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        /* JSON formatting styles */
+        .json-viewer {
+            font-family: monospace;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        .agent-instructions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .instruction-block {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .instruction-block h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 5px;
+        }
+        
+        .instruction-content {
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+        
+        .json-property {
+            margin-left: 20px;
+            line-height: 1.5;
+        }
+        
+        .json-array-item {
+            margin-left: 20px;
+            line-height: 1.5;
+        }
+        
+        .json-property-name {
+            color: #0366d6;
+        }
+        
+        .json-string {
+            color: #219547;
+        }
+        
+        .json-number {
+            color: #1a1aa6;
+        }
+        
+        .json-boolean {
+            color: #1a1aa6;
+        }
+        
+        .json-null, .json-undefined {
+            color: #7a7a7a;
+        }
+        
+        .json-error {
+            background-color: rgba(255, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        /* JSON error formatting */
+        .json-block {
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .json-error-label {
+            color: #d93025;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: rgba(217, 48, 37, 0.1);
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .json-raw {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            max-height: 200px;
+            overflow: auto;
+            white-space: pre-wrap;
+            margin-bottom: 15px;
+        }
+        
+        .json-fallback {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        
+        .json-fallback pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        
+        /* Improved JSON error display */
+        .json-error-label {
+            color: #d93025;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: rgba(217, 48, 37, 0.1);
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .instruction-block {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .json-note {
+            background-color: #f8f9fa;
+            border-left: 4px solid #74b9ff;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-style: italic;
+            color: #2c3e50;
+        }
+        
+        .json-block {
+            margin-bottom: 25px;
+        }
+        
+        /* Improve instruction block display */
+        .instruction-content {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            padding: 12px;
+            background-color: #f8f8f8;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
@@ -343,20 +529,28 @@
                         <div class="agent-output">
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
-                                <p>Task delegation to scientists:</p>
-                                <ul>
-                                    <li><strong>Scientist 1:</strong> Analyze PAH distribution patterns in meteorites (IDs 1, 2...)</li>
-                                    <li><strong>Scientist 2:</strong> Investigate oxygen-containing compounds (IDs 14, 27, 30...)</li>
-                                    <li><strong>Scientist 3:</strong> Study distribution patterns of complex alkylated aromatics (IDs 15, 23...)</li>
-                                </ul>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
-                                <p>Updated task delegation:</p>
-                                <ul>
-                                    <li><strong>Scientist 1:</strong> Continue PAH analysis with focus on formation mechanisms</li>
-                                    <li><strong>Scientist 2:</strong> Extend investigation to include sulfur compounds (IDs 42-45)</li>
-                                    <li><strong>Scientist 3:</strong> Compare alkylated aromatics between meteorite classes</li>
-                                </ul>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -400,20 +594,28 @@
                         <div class="agent-output">
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
-                                <p>Hypothesis: The distribution of PAHs in the Orgueil meteorite suggests formation through circumstellar condensation rather than interstellar processes.</p>
-                                <p>Evidence:</p>
-                                <ul>
-                                    <li>Prevalence of 2-3 ring PAHs over larger structures</li>
-                                    <li>Specific isomer distributions consistent with high-temperature formation</li>
-                                </ul>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
-                                <p>Refined Hypothesis: PAHs in carbonaceous chondrites formed through multiple pathways:</p>
-                                <ul>
-                                    <li>Primary formation via circumstellar condensation</li>
-                                    <li>Secondary processing in the protoplanetary disk</li>
-                                    <li>Possible contribution from Fischer-Tropsch type reactions</li>
-                                </ul>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -446,19 +648,28 @@
                         <div class="agent-output">
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
-                                <p>Hypothesis: Oxygen-containing compounds in meteorites originate from aqueous alteration processes on the parent body.</p>
-                                <ul>
-                                    <li>Evidence of hydroxylation reactions</li>
-                                    <li>Correlation with other aqueous alteration markers</li>
-                                </ul>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
-                                <p>Refined Hypothesis: Both oxygen and sulfur compounds reflect parent body processing:</p>
-                                <ul>
-                                    <li>Oxygen compounds primarily from aqueous alteration</li>
-                                    <li>Sulfur compounds show evidence of both primordial incorporation and secondary processing</li>
-                                    <li>Possible microbial contribution cannot be ruled out for certain compounds</li>
-                                </ul>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -489,10 +700,28 @@
                         <div class="agent-output">
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
-                                <p>Hypothesis: The alkylation patterns observed suggest extensive post-accretionary processing in the meteorite parent body.</p>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
-                                <p>Refined Hypothesis: Different meteorite classes show distinctive alkylation patterns that correlate with their thermal histories.</p>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -535,23 +764,28 @@
                         <div class="agent-output">
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
-                                <p>Consolidated hypothesis:</p>
-                                <p>The organic matter in carbonaceous chondrites reflects a complex history involving:</p>
-                                <ol>
-                                    <li>Primary formation of PAHs in circumstellar environments</li>
-                                    <li>Aqueous alteration on the parent body leading to oxygen incorporation</li>
-                                    <li>Post-accretionary processing affecting alkylation patterns</li>
-                                </ol>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
-                                <p>Refined consolidated hypothesis:</p>
-                                <p>Meteoritic organic matter evolution involves:</p>
-                                <ol>
-                                    <li>Multiple formation pathways for primary PAHs</li>
-                                    <li>Parent body processing introducing both oxygen and sulfur functionalities</li>
-                                    <li>Thermal history dependent modifications reflected in alkylation patterns</li>
-                                    <li>Possible biological contributions cannot be ruled out for certain compounds</li>
-                                </ol>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -581,22 +815,28 @@
                         <div class="agent-output">
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
-                                <p>Literature support:</p>
-                                <ul>
-                                    <li>Pizzarello & Cooper (2001) support circumstellar PAH formation</li>
-                                    <li>Cronin & Chang (1993) describe aqueous alteration processes in meteorite parent bodies</li>
-                                    <li>Sephton (2002) discusses post-accretionary processing evidence</li>
-                                </ul>
-                                <p>Gaps identified: Limited experimental data on high-temperature PAH formation pathways</p>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
-                                <p>Updated literature support:</p>
-                                <ul>
-                                    <li>Cody & Alexander (2005) provide evidence for multiple PAH formation pathways</li>
-                                    <li>Glavin et al. (2018) demonstrate sulfur incorporation mechanisms</li>
-                                    <li>Aponte et al. (2019) discuss potential biological contributions versus abiotic chemistry</li>
-                                </ul>
-                                <p>Remaining gaps: Quantitative models for parent body processing still incomplete</p>
+                                <div class="gemini-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
+                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                </div>
+                                <div class="claude-content">
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
+                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -627,45 +867,25 @@
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
                                 <div class="gemini-content">
-                                    <p>Critique and recommendations:</p>
-                                    <ul>
-                                        <li>Hypothesis generally well-supported but lacks quantitative constraints</li>
-                                        <li>Further investigation needed on potential sulfur-containing compounds</li>
-                                        <li>Isotopic measurements would strengthen origin arguments</li>
-                                        <li>Consider comparative analysis between different meteorite classes</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
                                     <p class="model-badge gemini">Gemini 2.0 Flash</p>
                                 </div>
                                 <div class="claude-content">
-                                    <p>Critical evaluation and suggested refinements:</p>
-                                    <ul>
-                                        <li>The hypothesis presents a coherent framework but requires quantitative constraints on formation temperatures (estimated range: 700-1200K)</li>
-                                        <li>Sulfur chemistry appears underexplored - recommend targeted analysis of thiol and thiophene derivatives in samples</li>
-                                        <li>δD and δ13C isotopic measurements would provide definitive constraints on formation environment</li>
-                                        <li>Hypothesis would benefit from comparative analysis across CM, CI, and CV chondrite classes to establish formation conditions</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
                                     <p class="model-badge claude">Claude 3.5 Sonnet</p>
                                 </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
                                 <div class="gemini-content">
-                                    <p>Final assessment:</p>
-                                    <ul>
-                                        <li>Refined hypothesis addresses most previous limitations</li>
-                                        <li>Biological contribution claims require more rigorous evidence</li>
-                                        <li>Future work should focus on quantitative parent body processing models</li>
-                                        <li>Propose laboratory experiments to test specific formation mechanisms</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
                                     <p class="model-badge gemini">Gemini 2.0 Flash</p>
                                 </div>
                                 <div class="claude-content">
-                                    <p>Final evaluation and future research directions:</p>
-                                    <ul>
-                                        <li>The refined hypothesis successfully addresses 76% of previously identified limitations</li>
-                                        <li>Claims regarding potential biological contributions remain speculative; recommend compound-specific isotopic analysis to distinguish biotic from abiotic signatures</li>
-                                        <li>Numerical modeling of parent body processing is essential - suggest applying thermal gradient models with aqueous alteration parameters</li>
-                                        <li>Laboratory validation through hydrothermal synthesis experiments at 150-300°C under reducing conditions would test proposed formation pathways</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
                                     <p class="model-badge claude">Claude 3.5 Sonnet</p>
                                 </div>
                             </div>
@@ -755,8 +975,8 @@
         <p>Website made with <i class="fas fa-heart" style="color: var(--accent-color);"></i> with Cursor + Claude 3.7 Sonnet-thinking</p>
     </footer>
 
-    <script src="js/script.js"></script>
     <script src="js/results-loader.js"></script>
+    <script src="js/script.js"></script>
     <script>
         // Toggle between models in the hypothesis evaluation table
         document.querySelectorAll('.model-btn').forEach(button => {

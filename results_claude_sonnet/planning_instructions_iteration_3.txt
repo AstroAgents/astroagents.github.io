@@ -1,4 +1,5 @@
 📝 Planner Instructions:
+```json
 {
     "Agent1_instructions": "Focus on analyzing PAH distribution patterns in meteorites. Specifically examine compounds with IDs 1, 2, 7, 8, 12, 13, 42, 43, 45. Compare the presence of basic PAHs (naphthalene, fluoranthene, pyrene) versus their methylated derivatives across different meteorite samples. Develop hypotheses about formation conditions based on these PAH distributions.",
     
@@ -6,3 +7,4 @@
     
     "Agent3_instructions": "Study the distribution patterns of organic compounds in extreme environment soils (Antarctica, Atacama, Rio Tinto). Focus on compounds with IDs 4, 5, 10, 16, 17, 18, 19, 20, 38, 39, 40, 41. Compare molecular distributions between different soil environments and develop hypotheses about preservation mechanisms in extreme conditions."
 }
+```
