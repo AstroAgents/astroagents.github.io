@@ -6,8 +6,8 @@ const agentResultsConfig = {
       2: 'results_claude_sonnet/analysis_iteration_2.txt'
     },
     gemini: {
-      1: 'results_gemini_flash2/data_analyst_iteration_1.txt',
-      2: 'results_gemini_flash2/data_analyst_iteration_2.txt'
+      1: 'results_gemini_flash2/analysis_iteration_1.txt',
+      2: 'results_gemini_flash2/analysis_iteration_2.txt'
     }
   },
   'planner': {
