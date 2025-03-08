@@ -1,0 +1,30 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "ID 2,8 (methylnaphthalenes) found in meteorites Orgueil, ALH 83100, Murchison; ID 15 (trimethylnaphthalene) in Orgueil, Jbilet Winselwan, LEW 85311; notably absent in soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of dibenzothiophene with high molecular weight PAHs (fluoranthene and pyrene) specifically in meteorite samples suggests a linked formation pathway involving sulfur incorporation during abiotic PAH synthesis in space.",
+            "key_datapoints": "ID 14 (dibenzothiophene), ID 12 (fluoranthene), ID 13 (pyrene) all found in meteorites like Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The exclusive presence of terpene-like compounds in soil samples but not in meteorites indicates these compounds are reliable biomarkers for distinguishing biological from abiotic organic matter sources.",
+            "key_datapoints": "ID 4, 17, 18 (possible terpenes) found only in biological samples like Iceland Soil, Atacama, Utah soil; absent in all meteorite samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of 1,2,4-trithiolane specifically in meteorite samples suggests that cyclic organosulfur compounds form through unique abiotic processes in space involving the incorporation of multiple sulfur atoms into small organic frameworks.",
+            "key_datapoints": "ID 27 (1,2,4-trithiolane) found only in meteorites Aguas Zarcas and LEW 85311; absent in all soil samples"
+        },
+        {
+            "id": "H_five",
+            "statement": "The co-occurrence of phenanthrene/anthracene with their oxygenated derivatives (1H-Phenalen-1-one/9H-Fluoren-9-one) specifically in meteorites suggests an abiotic oxidation pathway that operates in space but not in terrestrial environments.",
+            "key_datapoints": "ID 42 (phenanthrene/anthracene) and ID 44 (1H-Phenalen-1-one/9H-Fluoren-9-one) found together in Orgueil and LEW 85311 meteorites"
+        }
+    ]
+}

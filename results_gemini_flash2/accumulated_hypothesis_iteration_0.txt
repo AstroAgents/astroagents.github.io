@@ -1,0 +1,59 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of specific PAHs (Fluoranthene and Pyrene) in Antarctic meteorites (ALH 83100, LON 94101, LEW 85311) suggests a common formation environment or source for these organic compounds in the early solar system before incorporation into distinct meteorite parent bodies.  The detection of these compounds indicates that these molecules can survive the processes of meteorite formation and delivery to Earth.",
+            "key_datapoints": "Fluoranthene (C16H10) and Pyrene (C16H10) are detected in ALH 83100, LON 94101, and LEW 85311 (ID 12 and 13)"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of Naphthalene (C10H8) and 2-Methyl naphthalene (C11H10) in Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, and LEW 85311 indicates that these PAHs are either co-synthesized or that the methylation of naphthalene is a common diagenetic process occurring on the parent bodies of these meteorites. The presence of both compounds in both biotic and abiotic samples suggests that the presence of these two compounds is not a good indicator of life.",
+            "key_datapoints": "Naphthalene (C10H8) and 2-Methyl naphthalene (C11H10) presence in Orgueil, ALH 83100, LON 94101, Aguas Zarcas, Murchison, Jbilet Winselwan, LEW 85311, Green River Shale soil, and Lignite Soil (ID 1 and 2)"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of 1,2,4-Trithiolane (C2H4S3) in Aguas Zarcas and LEW 85311 suggests that there was low-temperature aqueous alteration occurring on the parent asteroids that led to the formation of these specific organosulfur compounds. This further suggests that the original organic make-up of the parent bodies for Aguas Zarcas and LEW 85311 may be similar.",
+            "key_datapoints": "1,2,4-Trithiolane (C2H4S3) is detected in Aguas Zarcas and LEW 85311 (ID 27)"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "Aqueous alteration on carbonaceous chondrite parent bodies may preferentially incorporate smaller, more soluble aromatic compounds like naphthalene, methylindan, and biphenyl into the aqueously altered regions, leading to their increased presence in aqueously altered meteorites like Orgueil, ALH 83100, LON 94101, and LEW 85311.  This is evidenced by those meteorites showing the common presence of naphthalene (ID 1), 2-Methyl naphthalene (ID 2),  1-Methyl naphthalene (ID 8), Indane (ID 11) and Biphenyl (ID 43).",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), 1-Methyl naphthalene (ID 8), Indane (ID 11), Biphenyl (ID 43), Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_final_five",
+            "statement": "Terrestrial soils (Iceland, Atacama, GSFC, Utah) show unique organic compounds, including possible terpenes or sesquiterpenes, due to their unique environments and biomes, but these compounds are not prevalent in the meteorite samples.",
+            "key_datapoints": "Possible terpene or sesquiterpene (IDs 4, 17, 18), Polysubstituted alkylbenzene with formula C12H18 (ID 5), Tetrame thylindene (ID 20), Iceland Soil, Atacama, Utah soil Soil, GSFC soil Soil, Murchison Soil"
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The presence of specific compounds such as Dichlorobenzene and a Bicyclo derivative in Murchison and Orgueil, which are absent from other samples, indicates the distinctiveness of the organic inventory of these two meteorites and the potential for unique formation pathways or source materials.",
+            "key_datapoints": "Dichlorobenzene (ID 29), Bicyclo[2.2.1]heptan-2-one, 1,7,7-trimethyl-, (1S)- (ID 30), Orgueil, Murchison"
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The absence of toluene (C7H8) in Aguas Zarcas and Jbilet Winselwan, while present in the other carbonaceous chondrites (ALH 83100, LON 94101, Murchison, and LEW 85311) indicates that aqueous or thermal alteration processes might have altered or removed the compound, or that original source material for these meteorites was different. Furthermore, the presence of Toluene might suggest formation at lower temperatures, thus not requiring high energy input.",
+            "key_datapoints": "Toluene (C7H8) is present in ALH 83100, LON 94101, Murchison, and LEW 85311 but absent in Aguas Zarcas and Jbilet Winselwan."
+        },
+        {
+            "id": "H_final_eight",
+            "statement": "The co-occurrence of dibenzo thiophene (C12H8S),  Trimethyl naphthalene (C13H14), 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O)  and  Dimethylpyrene (C18H14) in Orgueil and LEW 85311, while not detected in other meteorites, suggests that these sulfur and oxygen containing compounds may be formed in the same conditions, potentially during aqueous alteration. The absence in other samples can be explained by: 1) their removal by subsequent higher degrees of aqueous alteration, or 2) a requirement for specific elemental composition to be present.",
+            "key_datapoints": "Dibenzo thiophene (C12H8S),  Trimethyl naphthalene (C13H14), 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O)  and  Dimethylpyrene (C18H14) are present in Orgueil and LEW 85311."
+        },
+        {
+            "id": "H_final_nine",
+            "statement": "The presence of the same possible terpene or sesquiterpene (low confidence) in both Iceland Soil and Rio Tinto Soil suggests convergent production pathways for these molecules under disparate environmental conditions (cold and volcanic vs. acidic and high-iron). This suggests that these abiotic processes are highly robust and not dependent on specific conditions.",
+            "key_datapoints": "Possible terpene or sesquiterpene (low confidence) is found in both Iceland Soil and Rio Tinto Soil."
+        },
+        {
+            "id": "H_final_ten",
+            "statement": "The detection of the same unknown (m/z 154.0) in both Green River Shale soil and Lignite Soil may suggest a shared diagenetic pathway transforming precursor molecules into this unknown over long periods of time. The presence of this unknown could be an indicator for the presence of mature organic matter.",
+            "key_datapoints": "An unknown with m/z 154.0 is present in both Green River Shale soil and Lignite Soil."
+        },
+        {
+            "id": "H_final_eleven",
+            "statement": "The co-occurrence of 1,2,4-Trithiolane with Naphthalene, 2-Methyl naphthalene, 1-Methyl naphthalene, Indane, Fluoranthene, and Pyrene in Aguas Zarcas, LEW 85311, and Orgueil suggests that sulfur-containing compounds such as 1,2,4-Trithiolane are also incorporated during aqueous alteration of the meteorites in addition to the lighter carbon compounds.",
+            "key_datapoints": "1,2,4-Trithiolane (ID 27), Naphthalene, 2-Methyl naphthalene, 1-Methyl naphthalene, Indane, Fluoranthene, Pyrene, Aguas Zarcas, LEW 85311, Orgueil"
+        }
+    ]
+}

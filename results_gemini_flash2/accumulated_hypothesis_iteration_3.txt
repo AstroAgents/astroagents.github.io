@@ -1,0 +1,54 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of both 1-Methyl naphthalene and 2-Methyl naphthalene in Orgueil, ALH 83100, and Murchison suggests a common formation environment and/or similar parent body processes for these meteorites, evidenced by the co-existence of alkylated and non-alkylated PAHs; this contrasts with formation processes involving just one isomer.",
+            "key_datapoints": "1-Methyl naphthalene (ID 8), 2-Methyl naphthalene (ID 2), Orgueil, ALH 83100, Murchison, LEW 85311."
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of Naphthalene, 2-Methyl naphthalene, and 1-Methyl naphthalene in Orgueil, ALH 83100, LON 94101, and LEW 85311, all of which are Antarctic samples, indicates that these compounds are either resistant to Antarctic weathering or are indicative of a common extraterrestrial source that predates the Antarctic depositional environment. The common detection suggests preservation occurs regardless of specific Antarctic conditions.",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), 1-Methyl naphthalene (ID 8), Orgueil, ALH 83100, LON 94101, LEW 85311, Antarctic Soil."
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The detection of Dimethyl cyclohexane (ID 25) in LEW 85311 and EET 96029 suggests a similar formation or alteration pathway between these two Antarctic meteorites, potentially related to unique local conditions on their respective parent bodies or Antarctic terrestrial alteration processes.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25),  LEW 85311, EET 96029, Antarctic meteorites."
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The identification of Indane (C9H10) (ID 11) and Fluoranthene (C16H10) (ID 12) in ALH 83100, LON 94101, and LEW 85311 suggests a common formation history or alteration process affecting these Antarctic CM2 meteorites, influencing the distribution of specific PAHs beyond just naphthalene derivatives.",
+            "key_datapoints": "Indane (C9H10) (ID 11), Fluoranthene (C16H10) (ID 12), ALH 83100, LON 94101, LEW 85311, Antarctic meteorites"
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The detection of 1,2,4-Trithiolane (C2H4S3) only in the aqueously altered meteorites Aguas Zarcas and LEW 85311 suggests that this organosulfur molecule is produced or concentrated under aqueous conditions.  Its absence from Orgueil, ALH 83100, LON 94101, Murchison, and Jbilet Winselwan indicates that its formation may be sensitive to specific environmental conditions, such as pH or redox potential, that are not universally present in aqueously altered meteorites.",
+            "key_datapoints": "Aguas Zarcas, LEW 85311, 1,2,4-Trithiolane (C2H4S3)"
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The identification of Dichlorobenzene (C6H4Cl2) specifically in the Orgueil and Murchison meteorites but absent from the other meteorites suggests that past exposure to chlorine-rich fluids or processes may have uniquely affected the halogenation of the aromatic compounds in these meteorites, compared to the other meteorites.",
+            "key_datapoints": "Dichlorobenzene (C6H4Cl2), Orgueil, Murchison"
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The presence of toluene (ID 7, MW 92) in ALH 83100, LON 94101, Murchison, and LEW 85311, but not in other meteorites, suggests a unique formation or preservation environment specific to the parent bodies of these meteorites or a localized alteration event affecting only these samples. Given that toluene is a relatively simple aromatic hydrocarbon, its presence could indicate either abiotic synthesis pathways or the degradation of more complex organic molecules, with the similar occurrence across CM chondrites indicating similar aqueous alteration",
+            "key_datapoints": "Toluene (ID 7, MW 92): ALH 83100, LON 94101, Murchison, LEW 85311."
+        },
+        {
+            "id": "H_final_eight",
+            "statement": "The co-occurrence of fluoranthene (ID 12, MW 202) and pyrene (ID 13, MW 202) in ALH 83100, LON 94101, and LEW 85311, suggests that these meteorites originated from a parent body where both PAHs were synthesized or preserved under similar conditions. Since these compounds are structurally isomeric, similar formation conditions are probable.",
+            "key_datapoints": "Fluoranthene (ID 12, MW 202): ALH 83100, LON 94101, LEW 85311; Pyrene (ID 13, MW 202): LON 94101, LEW 85311, Orgueil."
+        },
+        {
+            "id": "H_final_nine",
+            "statement": "The co-occurrence of Dichlorobenzene (ID 29, MW 146) and Bicyclo[2.2.1]heptan-2-one, 1,7,7-trimethyl-, (1S)- (ID 30, MW 108) exclusively in Orgueil and Murchison suggests a shared origin or similar formation pathway for these compounds on the parent bodies of these meteorites. Given that both are highly studied and both are CM, it could have a unique CM chemistry.",
+            "key_datapoints": "Dichlorobenzene (ID 29, MW 146): Orgueil, Murchison; Bicyclo[2.2.1]heptan-2-one, 1,7,7-trimethyl-, (1S)- (ID 30, MW 108): Orgueil, Murchison."
+        },
+        {
+            "id": "H_final_ten",
+            "statement": "The presence of 1H-Phenalen-1-one or 9H-Fluoren-9-one (ID 44, MW 180) exclusively in Orgueil and LEW 85311, and the presence of Biphenyl (ID 43, MW 154) also in the same meteorites, suggests a unique chemical environment or alteration history shared by these samples, potentially indicating a similar formation region within the early solar system. Given their related structures, this may indicate a similar source.",
+            "key_datapoints": "1H-Phenalen-1-one or 9H-Fluoren-9-one (ID 44, MW 180): Orgueil, LEW 85311; Biphenyl (ID 43, MW 154): Orgueil, LEW 85311."
+        }
+    ]
+}

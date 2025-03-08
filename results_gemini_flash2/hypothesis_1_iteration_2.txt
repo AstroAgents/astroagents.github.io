@@ -1,0 +1,32 @@
+🧬 Scientist 1 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "Aqueous alteration on carbonaceous chondrite parent bodies leads to the degradation of larger PAHs into smaller, more volatile compounds, which are then lost to space or become localized in regions of low aqueous activity. The increase in smaller compounds results in lower m/z distributions in HR-L2MS analysis.",
+            "key_datapoints": "Chwichiya 002 (C3.00u): Dominance of C14H10, lack of larger PAHs. Ivuna (CI1) and NWA 12328 (CM1): Dominance of larger PAHs, low signal of smaller PAHs. See also the general trend of increased smaller PAH size with decreasing aqueous alteration."
+        },
+        {
+            "id": "H_two",
+            "statement": "Hydrothermal activity, through Fischer-Tropsch type reactions, produces a wide range of aliphatic and aromatic hydrocarbons and their derivatives, but has a limited effect on the production of specific biomarkers (such as the long chains of carbon structures).",
+            "key_datapoints": "High abundance of aliphatic hydrocarbons in Green River Shale soil and Lignite soil in contrast to smaller peaks from PAH signals."
+        },
+        {
+            "id": "H_three",
+            "statement": "The detection of oxygenated PAHs in the most aqueously altered meteorites indicates oxidative stress, which is consistent with the idea that oxidation is one of the most important factors in the degradation of organic matter in CCs.",
+            "key_datapoints": "Ivuna (CI1) and NWA 12328 (CM1) higher oxygenated PAHs peaks compared to other samples."
+        },
+        {
+            "id": "H_four",
+            "statement": "Terrestrial weathering introduces specific, easily identifiable contaminants (phthalates) into the samples, obscuring the signal from the original compounds. This contamination can be detected by the presence of specific high-intensity peaks in the GCxGC-HRMS data.",
+            "key_datapoints": "Rio Tinto Soil and GSFC soil show high intensity of the phthalate peak, indicating terrestrial contamination.  The presence of the 149.0m/z peak in Rio Tinto soil can be linked to known contaminations."
+        },
+        {
+            "id": "H_five",
+            "statement": "The presence of a high proportion of compounds with positive mass defects in organic-rich soils indicates the presence of heteroatoms, in particular nitrogen and oxygen, suggesting that these compounds are different from the PAHs found in meteorites.",
+            "key_datapoints": "Most of the peaks detected in Iceland soil, Rio Tinto Soil, GSFC soil Soil, and Utah Soil have positive mass defects, while the majority of the peaks detected in meteorites are hydrocarbon PAHs."
+        }
+    ]
+}
+```

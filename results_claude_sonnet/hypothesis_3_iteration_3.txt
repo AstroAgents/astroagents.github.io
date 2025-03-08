@@ -1,0 +1,30 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in the parent bodies rather than through biological activity.",
+            "key_datapoints": "IDs 2,8 (methylnaphthalenes) in Orgueil, ALH 83100, Murchison; ID 15 (trimethylnaphthalene) in Orgueil, Jbilet Winselwan, LEW 85311; absence of these compounds in soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of dibenzothiophene with fluoranthene and pyrene specifically in meteorite samples suggests a common formation pathway involving sulfur incorporation during high-temperature abiotic PAH synthesis in the solar nebula or parent bodies.",
+            "key_datapoints": "ID 14 (dibenzothiophene), ID 12 (fluoranthene), ID 13 (pyrene) found together in Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The exclusive presence of certain terpenes and sesquiterpenes in extreme environment soils (Iceland, Atacama) but not in meteorites indicates these compounds are reliable biomarkers for extremophilic life, even in harsh conditions that might resemble early Mars.",
+            "key_datapoints": "IDs 4, 17, 18 (terpenes/sesquiterpenes) found only in Iceland Soil, Atacama, and Rio Tinto Soil samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of 1,2,4-trithiolane specifically in meteorite samples suggests that sulfur-containing heterocycles form through abiotic processes in meteorite parent bodies, possibly through the interaction of organic matter with sulfur during aqueous alteration.",
+            "key_datapoints": "ID 27 (1,2,4-trithiolane) found only in Aguas Zarcas and LEW 85311 meteorites"
+        },
+        {
+            "id": "H_five",
+            "statement": "The detection of ergost-14-ene exclusively in soil samples indicates it is a reliable biomarker for eukaryotic life, as it is a degradation product of ergosterol found in fungi and some protists.",
+            "key_datapoints": "ID 28 (ergost-14-ene) found only in Lignite Soil and Murchison Soil"
+        }
+    ]
+}

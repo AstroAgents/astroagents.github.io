@@ -1,0 +1,30 @@
+🧬 Scientist 1 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalene) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "ID 2 (2-methylnaphthalene), ID 8 (1-methylnaphthalene), ID 15 (trimethylnaphthalene) found mainly in meteorites Orgueil, ALH 83100, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of organosulfur compounds (dibenzothiophene, trithiolane) exclusively in meteorite samples suggests a unique sulfur-based chemistry in the early solar system that is distinct from biological sulfur incorporation pathways.",
+            "key_datapoints": "ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of high molecular weight PAHs (fluoranthene, pyrene) exclusively in meteorites but not in soil samples indicates that these compounds form through high-temperature abiotic processes in space rather than biological processes.",
+            "key_datapoints": "ID 12 (fluoranthene) and ID 13 (pyrene) found only in meteorites ALH 83100, LON 94101, Orgueil, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The detection of ergost-14-ene exclusively in soil samples suggests it is a reliable biomarker for distinguishing biological from abiotic sources, as it is a known product of biological steroid synthesis.",
+            "key_datapoints": "ID 28 (ergost-14-ene) found only in Lignite Soil and Murchison Soil"
+        },
+        {
+            "id": "H_five",
+            "statement": "The presence of terpene-like compounds exclusively in soil samples (particularly from extreme environments like Iceland and Atacama) suggests these molecules are reliable biosignatures even in harsh conditions that might be analogous to other planetary environments.",
+            "key_datapoints": "ID 4, ID 17, ID 18 (possible terpenes/sesquiterpenes) found only in soil samples from Iceland, Atacama, Utah, and GSFC"
+        }
+    ]
+}

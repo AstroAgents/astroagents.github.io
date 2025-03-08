@@ -1,0 +1,32 @@
+🧬 Scientist 2 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "In CM2 chondrites, the degree of aqueous alteration correlates with the ratio of 1-Methyl naphthalene to 2-Methyl naphthalene, serving as a potential proxy for the extent of parent body processing. Specifically, a lower 1-Methyl naphthalene to 2-Methyl naphthalene ratio indicates higher degree of aqueous alteration.",
+            "key_datapoints": "CM2 chondrites, Naphthalene, 1-Methyl naphthalene, 2-Methyl naphthalene, ALH 83100, LON 94101, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_two",
+            "statement": "The presence of Indane (C9H10) in ALH 83100, LON 94101, and LEW 85311, suggests a unique formation pathway or source specific to the Antarctic CM chondrites that is distinct from the formation environment of Orgueil and other CM chondrites.",
+            "key_datapoints": "Indane (C9H10), ALH 83100, LON 94101, LEW 85311, Orgueil, Murchison, Aguas Zarcas, Jbilet Winselwan, EET 96029"
+        },
+        {
+            "id": "H_three",
+            "statement": "The co-occurrence of Fluoranthene (C16H10) and Pyrene (C16H10) with Dibenzo thiophene (C12H8S) in Orgueil, ALH 83100, and LEW 85311 points towards a shared origin or formation environment where sulfurization processes are active, leading to the incorporation of sulfur into aromatic compounds.",
+            "key_datapoints": "Fluoranthene (C16H10), Pyrene (C16H10), Dibenzo thiophene (C12H8S), Orgueil, ALH 83100, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The relatively low abundance of high mass PAHs (m/z > 280) in the analyzed samples suggests that the aqueous alteration processes may inhibit the formation and/or promote the breakdown of larger PAHs molecules.",
+            "key_datapoints": "m/z>280, PAH, all samples"
+        },
+        {
+            "id": "H_five",
+            "statement": "The presence of alkylated naphthalenes in both the biotic Green River Shale soil and the abiotic carbonaceous chondrites indicates that alkylation processes are not unique to biotic environments and may be influenced by abiotic factors such as aqueous alteration.",
+            "key_datapoints": "Alkylated naphthalenes, Green River Shale soil, Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311"
+        }
+    ]
+}
+```

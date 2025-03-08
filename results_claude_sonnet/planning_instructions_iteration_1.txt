@@ -1,0 +1,8 @@
+📝 Planner Instructions:
+{
+    "Agent1_instructions": "Focus on analyzing PAH distribution patterns across meteorite samples. Specifically examine: naphthalene (ID 1), 2-methyl naphthalene (ID 2), 1-methyl naphthalene (ID 8), fluoranthene (ID 12), pyrene (ID 13), trimethyl naphthalene (ID 15), phenanthrene/anthracene (ID 42), biphenyl (ID 43), and dimethylpyrene (ID 45). Develop hypotheses about the relationship between PAH complexity and meteorite type, particularly comparing Orgueil vs CM2 meteorites.",
+    
+    "Agent2_instructions": "Investigate sulfur-containing and oxygen-containing organic compounds in meteorites. Analyze: dibenzo thiophene (ID 14), 1,2,4-trithiolane (ID 27), 1H-Phenalen-1-one/9H-Fluoren-9-one (ID 44). Compare their distribution patterns between different meteorite classes, particularly focusing on why certain sulfur compounds appear in specific meteorite subsets. Also examine the relationship between these compounds and meteorite aqueous alteration levels.",
+    
+    "Agent3_instructions": "Study the distribution of alkyl-substituted aromatics and cyclic compounds: toluene (ID 7), indane (ID 11), methylindan (ID 23), dimethyl cyclohexane (ID 25), 1,2,3,4-tetrahydro phenanthrene (ID 36), dimethyl naphthalene (ID 37). Analyze patterns in alkylation levels across different meteorite samples and develop hypotheses about the relationship between alkylation patterns and meteorite classification."
+}

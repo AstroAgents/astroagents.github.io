@@ -1,0 +1,8 @@
+📝 Planner Instructions:
+{
+    "Agent1_instructions": "Focus on analyzing PAH distribution patterns and their methylation in meteorites. Specifically examine compounds with IDs 1, 2, 7, 8, 15, 32, 37, 42, 43, and 45. Compare the systematic presence of naphthalene derivatives and their methylated variants across different meteorite samples. Generate hypotheses about the formation mechanisms that could explain the observed methylation patterns in abiotic conditions.",
+    
+    "Agent2_instructions": "Investigate organosulfur compounds and their distribution patterns, focusing on compounds with IDs 14, 27, and related molecules. Analyze why these compounds appear exclusively in meteorite samples and are absent in soil samples. Develop hypotheses about the chemical pathways that could have led to sulfur incorporation in these molecules under early solar system conditions.",
+    
+    "Agent3_instructions": "Examine the unique molecular patterns in soil samples, particularly focusing on compounds with IDs 4, 5, 10, 17, 18, 19, 20, 28, 38, 39, 40, and 41. Compare the molecular distributions between extreme environment soils (Antarctica, Atacama) and organic-rich soils. Generate hypotheses about how different environmental conditions influence the preservation and distribution of organic compounds in these samples."
+}

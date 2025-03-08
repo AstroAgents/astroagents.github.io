@@ -1,0 +1,29 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of methylated naphthalenes (IDs 2, 8, 15) in meteorites but not in terrestrial soils suggests that abiotic methylation of PAHs occurs through distinct chemical pathways in space that are not prevalent in Earth's biosphere. This indicates a potential chemical marker for distinguishing abiotic from biotic organic matter.",
+            "key_datapoints": "ID 2 (2-Methyl naphthalene), ID 8 (1-Methyl naphthalene), ID 15 (Trimethyl naphthalene) found in Orgueil, ALH 83100, Murchison, LEW 85311 meteorites but absent in all soil samples"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of sulfur-containing aromatics (dibenzothiophene, trithiolane) exclusively in meteorite samples suggests that sulfur incorporation into PAHs was a significant abiotic process in the early solar system, possibly catalyzed by mineral surfaces under reducing conditions.",
+            "key_datapoints": "ID 14 (Dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-Trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of fluoranthene and pyrene (IDs 12, 13) exclusively in meteorites, coupled with their absence in terrestrial samples, suggests these 4-ring PAHs formed through specific high-temperature gas-phase reactions in the solar nebula rather than through biological processes.",
+            "key_datapoints": "ID 12 (Fluoranthene) in ALH 83100, LON 94101, LEW 85311; ID 13 (Pyrene) in Orgueil, LON 94101, LEW 85311; absent in all soil samples"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The exclusive presence of ergost-14-ene (ID 28) in soil samples suggests it serves as a reliable biomarker for distinguishing between biotic and abiotic organic matter sources, as it is likely derived from biological steroid synthesis pathways.",
+            "key_datapoints": "ID 28 found only in Lignite Soil and Murchison Soil, absent in all meteorite samples"
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The presence of terpene-like compounds exclusively in soil samples suggests these complex branched molecules require biological synthesis pathways and cannot form through abiotic processes in meteoritic parent bodies.",
+            "key_datapoints": "ID 4, ID 17, ID 18 (possible terpenes) found only in Iceland Soil, Atacama, Utah soil, GSFC soil"
+        }
+    ]
+}

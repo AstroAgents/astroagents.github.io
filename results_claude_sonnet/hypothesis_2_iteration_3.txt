@@ -1,0 +1,25 @@
+🧬 Scientist 2 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of 1,2,4-trithiolane (ID 27) exclusively in Aguas Zarcas and LEW 85311 meteorites, coupled with dibenzothiophene (ID 14) in Orgueil, ALH 83100, and LEW 85311, suggests that sulfur-based organic chemistry was active in distinct parent body environments, with some meteorites preserving more reduced sulfur species (trithiolanes) while others contain more thermally stable aromatic sulfur compounds (dibenzothiophenes).",
+            "key_datapoints": "ID 27 (1,2,4-trithiolane) in Aguas Zarcas and LEW 85311; ID 14 (dibenzothiophene) in Orgueil, ALH 83100, and LEW 85311"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of naphthalene (ID 1) with its methylated derivatives (IDs 2, 8, 15, 37) in meteorites but not in soil samples suggests that alkylation of aromatic compounds occurred through non-biological processes in the meteorite parent bodies. The progressive methylation pattern (mono-, di-, tri-methyl) indicates a systematic chemical process rather than random formation.",
+            "key_datapoints": "ID 1 (naphthalene), ID 2 (2-methyl naphthalene), ID 8 (1-methyl naphthalene), ID 15 (trimethyl naphthalene), ID 37 (dimethyl naphthalene) in meteorite samples"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of both fluoranthene (ID 12) and pyrene (ID 13) exclusively in meteorite samples, coupled with their dimethylated derivative (ID 45), indicates a high-temperature PAH formation pathway specific to extraterrestrial environments. The absence of these compounds in soil samples suggests they are not products of biological processes or terrestrial contamination.",
+            "key_datapoints": "ID 12 (fluoranthene) in ALH 83100, LON 94101, LEW 85311; ID 13 (pyrene) in Orgueil, LON 94101, LEW 85311; ID 45 (dimethylpyrene) in Orgueil, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The exclusive detection of 1,2,3,4-tetrahydro phenanthrene (ID 36) in Orgueil and Jbilet Winselwan, along with phenanthrene/anthracene (ID 42), suggests a specific hydrogenation pathway in certain meteorite parent bodies that resulted in partial reduction of aromatic systems. This indicates distinct redox conditions in different parent bodies during organic synthesis.",
+            "key_datapoints": "ID 36 (1,2,3,4-tetrahydro phenanthrene) in Orgueil and Jbilet Winselwan; ID 42 (phenanthrene/anthracene) in Orgueil, LEW 85311"
+        }
+    ]
+}

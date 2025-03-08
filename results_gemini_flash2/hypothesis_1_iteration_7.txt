@@ -1,0 +1,47 @@
+🧬 Scientist 1 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of specific organic compounds, particularly low molecular weight PAHs and alkylbenzenes, in both abiotic (meteorite) and biotic (terrestrial soil) samples suggest that these compounds may be a common product of both abiotic and biotic processes. Note that the source of energy that drives these processes are very distinct.",
+            "key_datapoints": "Naphthalene, 2-Methyl naphthalene, 1-Methyl naphthalene, toluene, Indane, Dimethyl cyclohexane, Methylindan, Dichlorobenzene; Presence in Orgueil, ALH 83100, LON 94101, LEW 85311, Green River Shale soil, Lignite Soil, Iceland Soil, Atacama Soil, Utah Soil, and GSFC soil."
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of fluoranthene and pyrene in both abiotic and biotic samples implies a common formation pathway independent of biological origin. Their consistent presence in the analyzed samples suggests these PAHs are either very stable, easily formed, or both.",
+            "key_datapoints": "Fluoranthene and Pyrene; presence in ALH 83100, LON 94101, LEW 85311, and in Orgueil."
+        },
+        {
+            "id": "H_three",
+            "statement": "The prevalence of the internal contaminant at m/z 355.0, 416.0, 249.0, and 432.0 in a variety of biotic and abiotic samples indicates a limitation in the method used. The internal contaminant is not a result of the sample matrix.",
+            "key_datapoints": "m/z 355.0, 416.0, 249.0, 432.0; presence in Iceland Soil, Jarosite Soil, Antarctica Soil, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil, Orgueil, Murchison, LEW 85311, ALH 83100, LON 94101, Aguas Zarcas, Jbilet Winselwan, EET 96029."
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of certain higher-mass features in the meteoritic samples and some terrestrial samples but not all, such as dimethylpyrene (C18H14), which are not observed in all samples may suggest that the formation of these compounds is matrix-dependent and is not a general outcome of the synthesis of PAHs, or may be below detection limits.",
+            "key_datapoints": "Dimethylpyrene (C18H14); presence in Orgueil and LEW 85311."
+        },
+        {
+            "id": "H_five",
+            "statement": "The identification of potential terpene or sesquiterpene fragments (low confidence) in some of the soil samples, especially those from Iceland and Rio Tinto, may suggest that the soil samples have a biological origin.",
+            "key_datapoints": "m/z 138.0 (Iceland Soil, Atacama, Utah soil Soil, GSFC soil Soil); m/z 70.0 and 95.0 (Iceland Soil, Rio Tinto Soil)."
+        },
+        {
+            "id": "H_six",
+            "statement": "The presence of specific compounds, such as dimethyl cyclohexane, in certain samples but not others might suggest that the presence of these compounds depends on the method of extraction or pre-processing.",
+            "key_datapoints": "Dimethyl cyclohexane (C8H16); presence in LEW 85311 and EET 96029."
+        },
+        {
+            "id": "H_seven",
+            "statement": "The detection of 1,2,4-Trithiolane (C2H4S3) in Aguas Zarcas and LEW 85311 indicates the presence of sulfur-containing compounds in these meteorites, which could be related to aqueous alteration processes or sulfur cycling on the parent bodies.",
+            "key_datapoints": "1,2,4-Trithiolane (C2H4S3); presence in Aguas Zarcas and LEW 85311."
+        },
+        {
+            "id": "H_eight",
+            "statement": "The co-occurrence of both possible and non-specific matches in the samples may suggest that the matches for Ergost-14-ene, (5?)- (C28H48) and Bicyclo[2.2.1]heptan-2-one, 1,7,7-trimethyl-, (1S)- (C10H16O) is a product of the column and has nothing to do with the sample itself, but a byproduct of the machine. This byproduct would be an indication that more advanced testing is needed.",
+            "key_datapoints": "Ergost-14-ene, (5?)- (C28H48) in Lignite Soil, Murchison Soil ,and Bicyclo[2.2.1]heptan-2-one, 1,7,7-trimethyl-, (1S)- (C10H16O) in Orgueil, Murchison"
+        }
+    ]
+}
+```

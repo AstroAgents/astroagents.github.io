@@ -1,0 +1,74 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of specific compounds like Dimethyl cyclohexane (C8H16), Methylindan (C10H12), and 1,2,3,4-tetrahydro phenanthrene (C14H14) in Antarctic meteorites (ALH 83100, LON 94101, LEW 85311) suggests that even under extreme environmental conditions, certain cyclic aliphatic and aromatic hydrocarbons can be preserved over long periods. This could be due to their inherent stability or presence within protective mineral matrices.",
+            "key_datapoints": "Dimethyl cyclohexane (C8H16), Methylindan (C10H12), 1,2,3,4-tetrahydro phenanthrene (C14H14), ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of Naphthalene (C10H8), 2-Methyl naphthalene (C11H10), 1-Methyl naphthalene (C11H10), Pyrene (C16H10), and Fluoranthene (C16H10) in both the Orgueil meteorite (CI1) and the studied Antarctic meteorites (ALH 83100, LON 94101, LEW 85311) indicates a shared formation environment or source material within the early solar system. It also suggests that aqueous alteration was not strong enough to remove these compounds.",
+            "key_datapoints": "Naphthalene (C10H8), 2-Methyl naphthalene (C11H10), 1-Methyl naphthalene (C11H10), Pyrene (C16H10), Fluoranthene (C16H10), Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The detection of similar compounds (Dimethyl cyclohexane, Possible terpene or sesquiterpene) in Iceland Soil, Atacama Desert soil, and GSFC soil suggests a common origin and/or similar formation pathways for specific organic compounds in geologically diverse soils. If such compounds were found on another planetary body, they would not be strong biosignatures.",
+            "key_datapoints": "Dimethyl cyclohexane (C8H16), Possible terpene or sesquiterpene, Iceland Soil, Atacama Desert soil, GSFC soil"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The detection of toluene, methylnaphthalenes, acenaphthene, dibenzothiophene, and trimethylnaphthalene in Orgueil and LEW 85311 suggests a common origin or similar formation pathways for these PAHs in both samples. The presence of these compounds suggests that these PAHs are relatively stable and can be preserved under different environmental conditions.",
+            "key_datapoints": "Toluene, Methylnaphthalenes, Acenaphthene, Dibenzo thiophene, Trimethyl naphthalene, Orgueil, LEW 85311"
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The detection of 1,2,4-Trithiolane (C2H4S3) in Aguas Zarcas and LEW 85311, both CM2 chondrites, suggests similar parent body processes were present in the formation and evolution. The presence of this sulfur compound can be correlated with aqueous alteration.",
+            "key_datapoints": "1,2,4-Trithiolane (C2H4S3), Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The presence of various compounds only in the biotic samples, such as Ergost-14-ene, (5?)- (C28H48) in Lignite Soil and Murchison Soil, suggests that these compounds are potential indicators of biology. The presence of these compounds and their absence from the abiotic samples in the dataset could be used as a benchmark for future space exploration missions.",
+            "key_datapoints": "Ergost-14-ene, (5?)- (C28H48), Lignite Soil, Murchison Soil"
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "Aqueous alteration on carbonaceous chondrite parent bodies preferentially incorporates smaller PAHs (e.g., Naphthalene, Toluene) into the meteorite, while depleting the larger PAHs, as those PAHs are more likely to undergo aqueous reactions and be removed. This is supported by the observation that Orgueil, a highly aqueously altered meteorite, contains Naphthalene and Toluene, but lacks Fluoranthene and Pyrene.",
+            "key_datapoints": "Orgueil contains Naphthalene (ID 1) and Toluene (ID 7), but lacks Fluoranthene and Pyrene (both ID 12 and 13)."
+        },
+        {
+            "id": "H_final_eight",
+            "statement": "The presence of Dimethyl Cyclohexane (C8H16) specifically in LEW 85311 and EET 96029 suggests that this compound may be a product of a specific alteration pathway that these Antarctic CM2 meteorites experienced, distinct from other CM2 meteorites. This could be due to unique terrestrial alteration processes related to the Antarctic environment, or it could be due to a unique aqueous alteration environment that has been altered or erased in other meteorites.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25) is only found in LEW 85311 and EET 96029."
+        },
+        {
+            "id": "H_final_nine",
+            "statement": "The co-occurrence of Fluoranthene (ID 12) or Pyrene (ID 13) and 1,2,4-Trithiolane (C2H4S3, ID 27) in ALH 83100 and LEW 85311 suggests that this sulfur-containing compound may be a product of aqueous alteration of fluoranthene and pyrene.",
+            "key_datapoints": "1,2,4-Trithiolane (ID 27) is present in ALH 83100 and LEW 85311 which also contain Fluoranthene (ID 12) or Pyrene (ID 13)."
+        },
+        {
+            "id": "H_final_ten",
+            "statement": "The co-occurrence of multiple unknown compounds in Iceland Soil, Atacama, and GSFC soil suggests that these soils share similar depositional environments and/or source material.  This is based on the fact that they all contain ID 4, 5, and 10, which are uncharacterized species.",
+            "key_datapoints": "ID 4, 5, and 10 occur in Iceland Soil, Atacama, and GSFC soil."
+        },
+        {
+            "id": "H_final_eleven",
+            "statement": "The high presence of oxygen-containing PAHs in Ivuna suggests parent body aqueous alteration involved oxidation processes that enriched oxygen-containing PAHs relative to standard PAHs. This is supported by the limited presence of oxygen-containing PAHs in other samples, suggesting aqueous alteration was either less prominent, or different in nature.",
+            "key_datapoints": "Ivuna, C14H10O, C16H10O"
+        },
+        {
+            "id": "H_final_twelve",
+            "statement": "The detection of 1,2,4-Trithiolane in Aguas Zarcas and LEW 85311, but the absence of dimethyl cyclohexane, indicates that there were unique sulfurization processes on their parent body. The presence of the specific trithiolane indicates that sulfurization was selective and that there were specific conditions on the parent bodies to form it. The high concentration of dimethyl cyclohexane in LEW 85311 and EET 96029 compared to the other meteorites suggests a distinct formation or preservation environment of small, volatile alicyclics on their parent body.",
+            "key_datapoints": "1,2,4-Trithiolane, Dimethyl cyclohexane, Aguas Zarcas, LEW 85311, EET 96029"
+        },
+        {
+            "id": "H_final_thirteen",
+            "statement": "The presence of toluene and 1-methyl naphthalene in the Orgueil and Murchison meteorites, and the absence of indane, fluoranthene, pyrene, and dibenzo thiophene, is indicative of high levels of aqueous alteration on the parent body. The higher water solubility of toluene and 1-methyl naphthalene would allow these compounds to be easily mobilized and detected, while the other compounds, due to their lower solubility, would be less prominent.",
+            "key_datapoints": "Orgueil, Murchison, Toluene, 1-Methyl naphthalene, Indane, Fluoranthene, Pyrene, Dibenzo thiophene"
+        },
+        {
+            "id": "H_final_fourteen",
+            "statement": "The co-occurrence of acenaphthene, dimethyl pyrene and polysubstituted alkylnaphthalene in ALH 83100 and LEW 85311 suggests a shared petrogenesis or parent body fluid alteration history where these compounds were produced together. The presence of indane, fluoranthene, pyrene, and dibenzo thiophene in these samples, but absence in the other carbonaceous chondrites suggests unique formation conditions.",
+            "key_datapoints": "ALH 83100, LEW 85311, Acenaphthene, Dimethylpyrene, Polysubstituted alkylnaphthalene, Indane, Fluoranthene, Pyrene, Dibenzo thiophene"
+        }
+    ]
+}

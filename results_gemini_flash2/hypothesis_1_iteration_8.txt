@@ -1,0 +1,32 @@
+🧬 Scientist 1 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The co-occurrence of naphthalene (ID 1) and 2-methyl naphthalene (ID 2) in meteorites (Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311) and a terrestrial shale (Green River Shale soil) suggests a common formation or preservation mechanism across diverse environments. This could imply that relatively simple PAHs are either easily synthesized abiotically or are robust enough to persist despite geological processing on Earth and different parent body alteration on asteroids.",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311, Green River Shale soil"
+        },
+        {
+            "id": "H_two",
+            "statement": "The presence of the GC column contaminant (ID 3) in both biotic (Iceland Soil, Jarosite Soil, Antarctica Soil, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil) and abiotic (Orgueil, Murchison, LEW 85311) samples indicates that the preparation method and the GC column have a non-negligible effect in the detection of high m/z features. This could be due to the thermal decomposition of the GC column during the experiment.",
+            "key_datapoints": "GC column contaminant (ID 3), Iceland Soil, Jarosite Soil, Antarctica Soil, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil, Orgueil, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The co-occurrence of Toluene (ID 7), 1-Methyl naphthalene (ID 8), Fluoranthene (ID 12), Pyrene (ID 13) and Dibenzo thiophene (ID 14) in meteorites (Orgueil, ALH 83100, LON 94101, Murchison, LEW 85311) suggests a shared origin in the interstellar medium, where they were formed under similar conditions. The absence of large PAHs is consistent with the low temperature formation of these compounds.",
+            "key_datapoints": "Toluene (ID 7), 1-Methyl naphthalene (ID 8), Fluoranthene (ID 12), Pyrene (ID 13), Dibenzo thiophene (ID 14), Orgueil, ALH 83100, LON 94101, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of Dimethyl cyclohexane (ID 25) in LEW 85311 and EET 96029 could indicate the presence of short side chains in larger PAHs. The process could be caused by the cracking of larger PAH molecules, which would be consistent with both hydrothermal and UV irradiation.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25), LEW 85311, EET 96029"
+        },
+        {
+            "id": "H_five",
+            "statement": "The presence of 1,2,3,4-tetrahydro phenanthrene (ID 36) in Orgueil and Jbilet Winselwan suggests that the partial hydrogenation of aromatics is a common process in meteorites, irrespective of their alteration history. The hydrogenation could occur through gas-grain reactions in the interstellar medium or by aqueous alteration on the meteorite parent body.",
+            "key_datapoints": "1,2,3,4-tetrahydro phenanthrene (ID 36), Orgueil, Jbilet Winselwan"
+        }
+    ]
+}
+```

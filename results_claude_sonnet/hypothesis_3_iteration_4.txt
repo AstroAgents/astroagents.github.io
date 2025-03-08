@@ -1,0 +1,25 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of partially hydrogenated PAHs (like 1,2,3,4-tetrahydrophenanthrene) alongside their fully aromatic counterparts (phenanthrene) in meteorites suggests a low-temperature formation pathway for PAHs in the early solar system, rather than high-temperature combustion which would favor fully aromatic species.",
+            "key_datapoints": "ID 36 (1,2,3,4-tetrahydrophenanthrene) and ID 42 (phenanthrene) in Orgueil and other meteorites"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of organosulfur compounds (1,2,4-trithiolane) with PAHs specifically in meteorites but not in terrestrial samples indicates that sulfur played a crucial role in PAH formation or preservation in the early solar system, possibly through sulfur-radical mediated reactions.",
+            "key_datapoints": "ID 27 (1,2,4-trithiolane) in Aguas Zarcas and LEW 85311; ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The selective distribution of methylated naphthalenes (1-methyl vs 2-methyl) in meteorites suggests stereoselective formation processes in the early solar system, as opposed to random methylation which would yield equal isomer distributions.",
+            "key_datapoints": "ID 2 (2-methylnaphthalene) and ID 8 (1-methylnaphthalene) distributions across meteorite samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of both ketone-containing PAHs (1H-Phenalen-1-one) and reduced PAHs in meteorites indicates alternating oxidizing and reducing conditions during PAH formation in the solar nebula or on parent bodies.",
+            "key_datapoints": "ID 44 (1H-Phenalen-1-one) and ID 36 (1,2,3,4-tetrahydrophenanthrene) in Orgueil and other meteorites"
+        }
+    ]
+}

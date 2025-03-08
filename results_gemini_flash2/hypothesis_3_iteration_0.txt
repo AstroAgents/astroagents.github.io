@@ -1,0 +1,37 @@
+🧬 Scientist 3 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of both 1-Methyl naphthalene (C11H10) and 2-Methyl naphthalene (C11H10) in Orgueil, ALH 83100, Murchison, and LEW 85311, suggests a common origin of these PAHs, likely from the parent body before aqueous alteration processes could significantly differentiate the isomers. The detection of both isomers requires a relatively pristine sample (not subjected to extreme alteration that would destroy one or both isomers).",
+            "key_datapoints": "1-Methyl naphthalene (C11H10) and 2-Methyl naphthalene (C11H10) are present in Orgueil, ALH 83100, Murchison, and LEW 85311."
+        },
+        {
+            "id": "H_two",
+            "statement": "The absence of toluene (C7H8) in Aguas Zarcas and Jbilet Winselwan, while present in the other carbonaceous chondrites (ALH 83100, LON 94101, Murchison, and LEW 85311) indicates that aqueous or thermal alteration processes might have altered or removed the compound, or that original source material for these meteorites was different. Furthermore, the presence of Toluene might suggest formation at lower temperatures, thus not requiring high energy input.",
+            "key_datapoints": "Toluene (C7H8) is present in ALH 83100, LON 94101, Murchison, and LEW 85311 but absent in Aguas Zarcas and Jbilet Winselwan."
+        },
+        {
+            "id": "H_three",
+            "statement": "The co-occurrence of dibenzo thiophene (C12H8S),  Trimethyl naphthalene (C13H14), 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O)  and  Dimethylpyrene (C18H14) in Orgueil and LEW 85311, while not detected in other meteorites, suggests that these sulfur and oxygen containing compounds may be formed in the same conditions, potentially during aqueous alteration. The absence in other samples can be explained by: 1) their removal by subsequent higher degrees of aqueous alteration, or 2) a requirement for specific elemental composition to be present.",
+            "key_datapoints": "Dibenzo thiophene (C12H8S),  Trimethyl naphthalene (C13H14), 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O)  and  Dimethylpyrene (C18H14) are present in Orgueil and LEW 85311."
+        },
+        {
+            "id": "H_four",
+            "statement": "The detection of similar internal contaminants in the biotic and abiotic samples suggest that common laboratory procedures can lead to contamination. The presence of Internal contaminant from the GC column in both the abiotic samples (ALH 83100, LON 94101, Aguas Zarcas, Jbilet Winselwan, EET 96029) and biotic samples (Iceland Soil, GSFC soil Soil) indicates that the identified compounds are most likely modern laboratory contaminants.",
+            "key_datapoints": "Internal contaminant from the GC column is present in both biotic and abiotic samples. Specifically, it appears in Iceland Soil, ALH 83100, LON 94101, Aguas Zarcas, Jbilet Winselwan, EET 96029 and GSFC soil Soil."
+        },
+          {
+            "id": "H_five",
+            "statement": "The presence of the same possible terpene or sesquiterpene (low confidence) in both Iceland Soil and Rio Tinto Soil suggests convergent production pathways for these molecules under disparate environmental conditions (cold and volcanic vs. acidic and high-iron). This suggests that these abiotic processes are highly robust and not dependent on specific conditions.",
+            "key_datapoints": "Possible terpene or sesquiterpene (low confidence) is found in both Iceland Soil and Rio Tinto Soil."
+        },
+        {
+            "id": "H_six",
+            "statement": "The detection of the same unknown (m/z 154.0) in both Green River Shale soil and Lignite Soil may suggest a shared diagenetic pathway transforming precursor molecules into this unknown over long periods of time. The presence of this unknown could be an indicator for the presence of mature organic matter.",
+            "key_datapoints": "An unknown with m/z 154.0 is present in both Green River Shale soil and Lignite Soil."
+        }
+    ]
+}
+```

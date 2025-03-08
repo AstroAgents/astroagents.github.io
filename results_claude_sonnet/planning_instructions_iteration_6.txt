@@ -1,0 +1,8 @@
+📝 Planner Instructions:
+{
+    "Agent1_instructions": "Focus on analyzing PAH distribution patterns in meteoritic samples. Specifically examine compounds with IDs 1, 2, 7, 8, 12, 13, 42, 43 to investigate the relationship between parent PAHs (naphthalene, fluoranthene, pyrene, phenanthrene, biphenyl) and their methylated derivatives. Generate hypotheses about formation mechanisms based on these PAH patterns across different meteorite classes.",
+    
+    "Agent2_instructions": "Investigate sulfur-containing organic compounds and their relationships with other molecular species. Analyze compounds with IDs 14, 27, 32, 33, 35, 36, 37 to explore the distribution of sulfur-bearing molecules (dibenzothiophene, trithiolane) and their co-occurrence with other organic compounds. Develop hypotheses about the chemical evolution of sulfur-containing organics in meteoritic samples.",
+    
+    "Agent3_instructions": "Study the distribution patterns of organic compounds in extreme environment soils (Antarctica, Atacama, Rio Tinto) versus organics-rich soils. Compare compounds with IDs 4, 5, 10, 16, 17, 18, 19, 20, 28, 38, 39, 40, 41 to develop hypotheses about preservation mechanisms and biological versus abiotic origins of organic compounds in different soil environments."
+}

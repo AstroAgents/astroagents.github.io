@@ -1,0 +1,32 @@
+🧬 Scientist 1 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylnaphthalene isomers (2-Methyl naphthalene and 1-Methyl naphthalene) in Orgueil suggests a potential commonality in the formation environment of smaller PAHs in some carbonaceous chondrites, but differences in processing or source material are indicated by the absence of similar isomers in other carbonaceous chondrites (ALH 83100, Murchison, and LEW 85311).",
+            "key_datapoints": "Presence of both 2-Methyl naphthalene (ID 2) and 1-Methyl naphthalene (ID 8) in Orgueil, but only 2-Methyl naphthalene (ID 2) present in ALH 83100, Murchison, and LEW 85311."
+        },
+        {
+            "id": "H_two",
+            "statement": "The similar presence of dimethyl cyclohexane (C8H16) in LEW 85311 and EET 96029 suggests that these Antarctic meteorites may originate from a similar parent body or experienced similar alteration processes affecting smaller, more volatile molecules.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25) is exclusively present in LEW 85311 and EET 96029."
+        },
+        {
+            "id": "H_three",
+            "statement": "The co-occurrence of specific 'internal contaminants' (416.0, 355.0, and 249.0 m/z) in several disparate samples (Iceland Soil, ALH 83100, LON 94101, Aguas Zarcas, Jbilet Winselwan, EET 96029, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil) indicates that the distribution of these contaminants is not random and may reflect shared handling or processing conditions.",
+            "key_datapoints": "Presence of the same internal contaminants (ID 6, ID 3, and ID 22) in multiple biotic and abiotic samples, including the meteorites and terrestrial soils."
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of Indane (C9H10) in ALH 83100, LON 94101, and LEW 85311 suggests a shared formation or alteration pathway for smaller aromatic hydrocarbons in these Antarctic meteorites, distinct from Orgueil, Aguas Zarcas, and Jbilet Winselwan, where it is absent.",
+            "key_datapoints": "Exclusive presence of Indane (ID 11) in ALH 83100, LON 94101, and LEW 85311, while absent in Orgueil, Aguas Zarcas, and Jbilet Winselwan."
+        },
+        {
+            "id": "H_five",
+            "statement": "The detection of the sulfur-containing molecule 1,2,4-Trithiolane (C2H4S3) in Aguas Zarcas and LEW 85311 suggests similar sulfur incorporation pathways under aqueous alteration conditions on their respective parent bodies, despite their different terrestrial histories.",
+            "key_datapoints": "1,2,4-Trithiolane (ID 27) detected only in Aguas Zarcas and LEW 85311."
+        },
+        {
+            "id": "H_six",
+            "statement": "The presence of tetr

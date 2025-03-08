@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroAgents - Scientific Analysis Workflow</title>
+    <title>AstroAgents - A Multi-Agent AI for Hypothesis Generation from Mass Spectrometry Data</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -55,6 +55,20 @@
                 padding: 8px 15px;
                 font-size: 0.9em;
             }
+        }
+        
+        /* Loading and error styles */
+        .loading {
+            color: #888;
+            font-style: italic;
+        }
+        
+        .error {
+            color: #f44336;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(244, 67, 54, 0.1);
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -242,14 +256,14 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>128.17</td>
+                                            <td>128</td>
                                             <td>(68 min, 1.2s)</td>
                                             <td>Naphthalene</td>
                                             <td>Orgueil Lignite</td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td>142.20</td>
+                                            <td>142</td>
                                             <td>(72 min, 1.4s)</td>
                                             <td>Methylnaphthalene</td>
                                             <td>Orgueil, Murchison</td>
@@ -269,41 +283,25 @@
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
                                 <div class="gemini-content">
-                                    <p>Analysis of the mass spectrometry data reveals:</p>
-                                    <ul>
-                                        <li>Significant PAH distribution patterns in meteorite samples (IDs 1-8)</li>
-                                        <li>Unexpected oxygen-containing compounds in several meteorite samples (IDs 14, 27, 30)</li>
-                                        <li>Possible terrestrial contamination in samples 3 and 5</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
                                     <p class="model-badge gemini">Gemini 2.0 Flash</p>
                                 </div>
                                 <div class="claude-content">
-                                    <p>Mass spectrometry data analysis indicates:</p>
-                                    <ul>
-                                        <li>Distinctive PAH distribution signatures across meteorite samples (IDs 1-8), with notable concentration gradients</li>
-                                        <li>Unexpected oxygen-containing compounds detected in meteorite samples with statistical significance (p<0.01) in IDs 14, 27, 30</li>
-                                        <li>Samples 3 and 5 show isotopic ratios suggesting possible terrestrial contamination</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
                                     <p class="model-badge claude">Claude 3.5 Sonnet</p>
                                 </div>
                             </div>
                             <div class="output-content iteration-2" style="display: none;">
                                 <div class="gemini-content">
-                                    <p>Further analysis after initial feedback:</p>
-                                    <ul>
-                                        <li>Confirmed PAH patterns consistent with extraterrestrial origin</li>
-                                        <li>Identified additional sulfur-containing compounds (IDs 42-45)</li>
-                                        <li>Ruled out contamination in sample 3, confirmed for sample 5</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Gemini results...</p>
                                     <p class="model-badge gemini">Gemini 2.0 Flash</p>
                                 </div>
                                 <div class="claude-content">
-                                    <p>Follow-up analysis incorporating feedback demonstrates:</p>
-                                    <ul>
-                                        <li>PAH patterns exhibit D/H ratios (0.92-1.23) consistent with extraterrestrial formation processes</li>
-                                        <li>Mass fragments corresponding to novel organosulfur compounds detected in IDs 42-45, with characteristic fragmentation patterns</li>
-                                        <li>Sample 3 shows pristine extraterrestrial signature (99.3% confidence), while sample 5 contains 8.2% terrestrial material</li>
-                                    </ul>
+                                    <!-- Content will be loaded automatically -->
+                                    <p class="loading">Loading Claude results...</p>
                                     <p class="model-badge claude">Claude 3.5 Sonnet</p>
                                 </div>
                             </div>
@@ -758,6 +756,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/results-loader.js"></script>
     <script>
         // Toggle between models in the hypothesis evaluation table
         document.querySelectorAll('.model-btn').forEach(button => {

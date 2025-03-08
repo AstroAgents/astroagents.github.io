@@ -1,0 +1,8 @@
+📝 Planner Instructions:
+{
+    "Agent1_instructions": "Focus on analyzing PAH distribution patterns in meteorite samples. Specifically examine compounds with IDs 1, 2, 7, 8, 12, 13, 15, 42, 43, and 45. Investigate the progression from simple to complex PAHs (naphthalene → methylnaphthalenes → fluoranthene/pyrene) and develop hypotheses about their formation mechanisms in extraterrestrial environments.",
+    
+    "Agent2_instructions": "Investigate sulfur-containing organic compounds and their relationships in meteorite samples. Analyze compounds with IDs 14, 27, and related molecular structures. Compare the distribution of these compounds between different meteorite types (CM2 vs CI) and develop hypotheses about sulfur incorporation into organic compounds during early solar system processes.",
+    
+    "Agent3_instructions": "Study the distribution patterns of complex cyclic and aromatic compounds in both meteorite and soil samples. Focus on compounds with IDs 11, 23, 25, 32, 33, 35, 36, 37, and 44. Develop hypotheses about the differences in molecular complexity between abiotic and biotic samples, particularly focusing on formation pathways of complex ring structures."
+}

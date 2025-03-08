@@ -1,0 +1,25 @@
+🧬 Scientist 1 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated naphthalenes (IDs 2, 8, 15) in meteorites but not in soil samples suggests that abiotic methylation of PAHs occurs through distinct chemical pathways in space that are not prevalent in Earth's biotic systems. This indicates a potential chemical marker for distinguishing abiotic from biotic origins of PAHs.",
+            "key_datapoints": "IDs 2 (2-Methyl naphthalene), 8 (1-Methyl naphthalene), and 15 (Trimethyl naphthalene) found in Orgueil, ALH 83100, Murchison, and other meteorites but absent in soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of sulfur-containing aromatics (IDs 14, 27) exclusively in meteorite samples suggests that sulfur incorporation into aromatic structures may be a distinctive feature of abiotic chemical synthesis in space, potentially serving as a marker for extraterrestrial organic chemistry.",
+            "key_datapoints": "ID 14 (Dibenzo thiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-Trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of higher molecular weight PAHs like fluoranthene and pyrene (IDs 12, 13) primarily in meteorites suggests that abiotic PAH formation in space favors specific molecular weight ranges and structural arrangements that differ from those typically produced by biological processes on Earth.",
+            "key_datapoints": "ID 12 (Fluoranthene) in ALH 83100, LON 94101, LEW 85311; ID 13 (Pyrene) in Orgueil, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The exclusive presence of certain alkylated indanes and acenaphthenes (IDs 11, 23, 33) in meteorites suggests that specific hydrogenation and alkylation pathways of aromatic systems are unique to abiotic synthesis in space environments.",
+            "key_datapoints": "ID 11 (Indane), ID 23 (Methylindan), and ID 33 (Acenaphthene) found only in meteorite samples ALH 83100, LON 94101, LEW 85311"
+        }
+    ]
+}

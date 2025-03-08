@@ -1,0 +1,25 @@
+🧬 Scientist 1 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that abiotic methylation of PAHs occurs through unique chemical pathways in space that are distinct from biological methylation processes on Earth.",
+            "key_datapoints": "ID 2,8 (methylnaphthalenes) found in meteorites Orgueil, ALH 83100, Murchison; ID 15 (trimethylnaphthalene) in Orgueil, Jbilet Winselwan, LEW 85311; Notably absent in most soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of dibenzothiophene (C12H8S) and 1,2,4-trithiolane (C2H4S3) exclusively in meteorite samples suggests a distinct sulfur incorporation pathway in abiotic PAH formation, possibly linked to cosmic ray or UV-induced sulfurization of organic matter in space.",
+            "key_datapoints": "ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of high molecular weight PAHs (fluoranthene and pyrene) exclusively in meteorites suggests that abiotic PAH formation in space favors condensation reactions leading to larger ring systems, while biological PAH production on Earth tends toward smaller aromatic compounds.",
+            "key_datapoints": "ID 12 (fluoranthene) and ID 13 (pyrene) found only in meteorites ALH 83100, LON 94101, LEW 85311, Orgueil; Smaller PAHs like ID 7 (toluene) more common in soil samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The exclusive presence of 1,2,3,4-tetrahydro phenanthrene in meteorites suggests that partial hydrogenation of PAHs is a significant process in space chemistry, possibly occurring through interaction with solar wind hydrogen or other reduced species.",
+            "key_datapoints": "ID 36 (1,2,3,4-tetrahydro phenanthrene) found only in Orgueil and Jbilet Winselwan meteorites; Contrasts with fully aromatic PAHs in soil samples"
+        }
+    ]
+}

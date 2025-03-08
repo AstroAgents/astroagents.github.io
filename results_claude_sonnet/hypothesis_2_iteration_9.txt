@@ -1,0 +1,25 @@
+🧬 Scientist 2 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of both naphthalene (C10H8) and its methylated derivatives (C11H10) exclusively in meteorites and ancient geological samples (Green River Shale), but not in modern soils, suggests these PAHs are preserved molecular fossils from abiotic synthesis rather than recent biological activity.",
+            "key_datapoints": "ID 1,2,8 showing naphthalene and methylnaphthalenes in Orgueil, ALH 83100, Murchison, and other meteorites plus Green River Shale, but absent in modern soils like Iceland, GSFC, Utah"
+        },
+        {
+            "id": "H_two", 
+            "statement": "The co-occurrence of fluoranthene (C16H10) and pyrene (C16H10) specifically in CM2 meteorites (ALH 83100, LON 94101, LEW 85311) suggests these four-ring PAHs form through a linked synthetic pathway under early solar system conditions rather than independent routes.",
+            "key_datapoints": "ID 12,13 showing both compounds present together in ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of sulfur-containing aromatics like dibenzothiophene (C12H8S) and 1,2,4-trithiolane (C2H4S3) exclusively in meteorites suggests sulfur incorporation into PAHs occurred in the early solar system through specific chemical pathways that are not active in modern terrestrial environments.",
+            "key_datapoints": "ID 14,27 showing sulfur compounds in meteorites Orgueil, ALH 83100, LEW 85311, Aguas Zarcas but absent in all soil samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The detection of ergost-14-ene exclusively in lignite soil and Murchison soil, but not in the Murchison meteorite itself, indicates this sterane biomarker is a terrestrial contaminant rather than an indigenous meteoritic compound.",
+            "key_datapoints": "ID 28 showing ergost-14-ene only in lignite and Murchison soil samples but not in the Murchison meteorite"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of methylnaphthalene isomers (2-Methyl naphthalene and 1-Methyl naphthalene) in Orgueil suggests a potential commonality in the formation environment of smaller PAHs in some carbonaceous chondrites, but differences in processing or source material are indicated by the absence of similar isomers in other carbonaceous chondrites (ALH 83100, Murchison, and LEW 85311).",
+            "key_datapoints": "Presence of both 2-Methyl naphthalene (ID 2) and 1-Methyl naphthalene (ID 8) in Orgueil, but only 2-Methyl naphthalene (ID 2) present in ALH 83100, Murchison, and LEW 85311."
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The similar presence of dimethyl cyclohexane (C8H16) in LEW 85311 and EET 96029 suggests that these Antarctic meteorites may originate from a similar parent body or experienced similar alteration processes affecting smaller, more volatile molecules.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25) is exclusively present in LEW 85311 and EET 96029."
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of Indane (C9H10) in ALH 83100, LON 94101, and LEW 85311 suggests a shared formation or alteration pathway for smaller aromatic hydrocarbons in these Antarctic meteorites, distinct from Orgueil, Aguas Zarcas, and Jbilet Winselwan, where it is absent.",
+            "key_datapoints": "Exclusive presence of Indane (ID 11) in ALH 83100, LON 94101, and LEW 85311, while absent in Orgueil, Aguas Zarcas, and Jbilet Winselwan."
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The detection of the sulfur-containing molecule 1,2,4-Trithiolane (C2H4S3) in Aguas Zarcas and LEW 85311 suggests similar sulfur incorporation pathways under aqueous alteration conditions on their respective parent bodies, despite their different terrestrial histories.",
+            "key_datapoints": "1,2,4-Trithiolane (ID 27) detected only in Aguas Zarcas and LEW 85311."
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The presence of specific PAHs is more indicative of source than aqueous alteration, as fluoranthene and pyrene are the most abundant PAHs in most meteorites, regardless of alteration level. The size and presence of these PAHs indicate that these molecules are either primordial or result from similar formation mechanisms across different parent bodies.",
+            "key_datapoints": "Fluoranthene, Pyrene, Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The detection of low-mass PAHs (e.g., Naphthalene) and alkylated derivatives in the Orgueil meteorite, despite its high degree of aqueous alteration, suggests that either these compounds were recently formed on the parent body (potentially through aqueous alteration of organic macromolecules) or that terrestrial contamination is more prevalent in this meteorite despite the cleaning process.",
+            "key_datapoints": "Naphthalene, 2-Methyl naphthalene, 1-Methyl naphthalene, Orgueil"
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The identification of 1,2,3,4-tetrahydro phenanthrene in Orgueil and Jbilet Winselwan may suggest that it serves as an intermediate in the production of more complex PAHs, while also suggesting that the pathway to produce it is not present in the other meteorites.",
+            "key_datapoints": "ID 36, Orgueil, Jbilet Winselwan"
+        },
+        {
+            "id": "H_final_eight",
+            "statement": "The presence of toluene (C7H8), indane (C9H10), and dimethyl cyclohexane (C8H16) specifically in the Antarctic meteorites ALH 83100, LON 94101, and LEW 85311 indicates a unique pre-terrestrial formation environment on their parent body that favored the synthesis and preservation of these relatively simple cyclic and aromatic hydrocarbons, irrespective of subsequent aqueous alteration levels. This suggests a distinct chemical pathway or environmental condition on the parent body of these Antarctic meteorites compared to other carbonaceous chondrites, leading to the preferential formation and/or preservation of these specific compounds.",
+            "key_datapoints": "Toluene (92.0 m/z) in ALH 83100, LON 94101, Murchison, LEW 85311; Indane (118.0 m/z) in ALH 83100, LON 94101, LEW 85311; Dimethyl cyclohexane (55.0 m/z) in LEW 85311, EET 96029."
+        },
+        {
+            "id": "H_final_nine",
+            "statement": "The co-occurrence of 1,2,4-Trithiolane (C2H4S3) with Naphthalene (C10H8) and 2-Methyl naphthalene (C11H10) in both Aguas Zarcas and LEW 85311 suggests a shared formation mechanism or source environment that facilitates the co-synthesis or co-deposition of sulfur-containing heterocycles with simple PAHs. The presence of both types of molecules could be related to specific redox conditions or catalytic surfaces present during their formation on the parent body.",
+            "key_datapoints": "1,2,4-Trithiolane (124.0 m/z) in Aguas Zarcas, LEW 85311; Naphthalene (102.0 m/z) in Aguas Zarcas and LEW 85311; 2-Methyl naphthalene (142.0 m/z) in Aguas Zarcas and LEW 85311."
+        },
+        {
+            "id": "H_final_ten",
+            "statement": "The co-existence of Fluoranthene (C16H10) and Pyrene (C16H10) in the Antarctic meteorites ALH 83100, LON 94101, and LEW 85311, suggests that these PAHs are co-synthesized or co-deposited by similar processes or that one converts into the other. This could be tested by searching for thermodynamic relationships between these compounds.",
+            "key_datapoints": "Detection of both Fluoranthene (202.0 m/z) and Pyrene (202.0 m/z) in ALH 83100, LON 94101, and LEW 85311."
+        }
+    ]
+}

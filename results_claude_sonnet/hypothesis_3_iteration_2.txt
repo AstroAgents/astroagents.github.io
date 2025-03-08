@@ -1,0 +1,25 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "ID 2 (2-methylnaphthalene), ID 8 (1-methylnaphthalene), ID 15 (trimethylnaphthalene) found mainly in meteorites Orgueil, ALH 83100, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_two",
+            "statement": "The exclusive presence of sulfur-containing aromatics (dibenzothiophene, trithiolane) in meteorite samples indicates that sulfur incorporation into aromatic structures is a unique characteristic of abiotic synthesis in meteoritic parent bodies, possibly through gas-phase reactions in the solar nebula.",
+            "key_datapoints": "ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The co-occurrence of fluoranthene and pyrene specifically in meteorite samples suggests these 4-ring PAHs form through high-temperature gas-phase reactions in space rather than biological processes, as evidenced by their absence in biologically-influenced soil samples.",
+            "key_datapoints": "ID 12 (fluoranthene) in ALH 83100, LON 94101, LEW 85311; ID 13 (pyrene) in Orgueil, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of terpene-like compounds exclusively in soil samples suggests these complex branched molecules require biological synthesis pathways and cannot form through abiotic processes in meteoritic parent bodies.",
+            "key_datapoints": "ID 4, ID 17, ID 18 (possible terpenes) found only in Iceland Soil, Atacama, Utah soil, GSFC soil"
+        }
+    ]
+}

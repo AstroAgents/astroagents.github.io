@@ -1,0 +1,69 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The detection of specific aromatic compounds, such as fluoranthene, pyrene, and their alkylated derivatives, in both the Orgueil meteorite and the Antarctic meteorites ALH 83100, LON 94101, and LEW 85311 suggests a common extraterrestrial source and a preservation pathway independent of the terrestrial environment.  The co-occurrence of these compounds across diverse sample types points to robust formation mechanisms in the interstellar medium or within meteorite parent bodies.",
+            "key_datapoints": "Fluoranthene (ID 12), Pyrene (ID 13), ALH 83100, LON 94101, LEW 85311, Orgueil"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The presence of indane (C9H10, ID 11) and methylindan (C10H12, ID 23) solely in the Antarctic meteorites ALH 83100, LON 94101, and LEW 85311 suggests a unique formation or preservation environment specific to these meteorites, potentially related to their Antarctic terrestrial residence. The absence of these compounds in the Orgueil meteorite, despite the presence of other common PAHs, indicates a divergent history or source.",
+            "key_datapoints": "Indane (ID 11), Methylindan (ID 23), ALH 83100, LON 94101, LEW 85311, absence in Orgueil"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The co-occurrence of naphthalene (C10H8, ID 1), 2-methyl naphthalene (C11H10, ID 2), and 1-methyl naphthalene (C11H10, ID 8) in meteorites with low processing and in some processed terrestrial soils suggests that these compounds may be relatively stable under a range of conditions, but that they are also readily produced by both biotic and abiotic processes.  The presence of these compounds together does not provide a strong biosignature, and may instead point to a common precursor or formation pathway.",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), 1-Methyl naphthalene (ID 8), Orgueil, ALH 83100, LON 94101, Aguas Zarcas, Murchison, Jbilet Winselwan, LEW 85311, Green River Shale soil, Lignite Soil"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The presence of possible terpene or sesquiterpene compounds (IDs 4 and 18) in Iceland Soil and Rio Tinto Soil suggests a unique source related to the specific geochemistry of these locations (e.g., unique biological activity or specific mineral composition). The absence of these compounds in other samples indicates that they are not ubiquitous and may be linked to specific environmental conditions.",
+            "key_datapoints": "IDs 4 and 18, Iceland Soil, Rio Tinto Soil"
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The consistent presence of the polysubstituted alkylbenzene C12H18 (ID 5) in the Iceland Soil, Atacama, GSFC soil Soil, and Murchison Soil suggests a common environmental process or source for this compound. The absence of this compound in the other samples suggests that the environmental processes required for C12H18 are not universal.",
+            "key_datapoints": "ID 5, Iceland Soil, Atacama, GSFC soil Soil, Murchison Soil"
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The presence of 1,2,3,4-tetrahydro phenanthrene (C14H14, ID 36) and the presence of oxygenated species 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O, ID 44) only in Orgueil and LEW 85311, which are both aqueously altered, indicate that there is a potential link between aqueous alteration and these organic compounds.",
+            "key_datapoints": "ID 36, ID 44, Orgueil, LEW 85311"
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The identification of tetracyclic triterpene, Ergost-14-ene, (5?)- (C28H48, ID 28) in Lignite Soil and Murchison Soil suggests a possible link between the sources of organic compounds in these vastly different materials. It might be an indication that these triterpenes are more stable than others.",
+            "key_datapoints": "ID 28, Lignite Soil, Murchison Soil"
+        },
+        {
+            "id": "H_final_eight",
+            "statement": "The detection of toluene (C7H8) in the ordinary chondrites ALH 83100, LON 94101, Murchison, and LEW 85311, but not in the carbonaceous chondrites Aguas Zarcas and Jbilet Winselwan, suggests that the formation or preservation of toluene may be favored by the distinct mineral matrix and redox conditions specific to ordinary chondrites, and/or that the source precursors are distinct.",
+            "key_datapoints": "Toluene (ID 7) is present in ALH 83100, LON 94101, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_final_nine",
+            "statement": "The presence of specific alkylated naphthalenes (Trimethyl naphthalene and Polysubstituted alkylnaphthalene with the formula C13H12) in the Antarctic samples, ALH 83100 and LEW 85311, could indicate that these compounds are derived from a common source on the Antarctic ice sheet, or are particularly stable under Antarctic conditions, leading to their selective preservation or concentration.",
+            "key_datapoints": "Trimethyl naphthalene (ID 15) in ALH 83100, LEW 85311; Polysubstituted alkylnaphthalene with the formula C13H12 (ID 32) in ALH 83100, LEW 85311."
+        },
+        {
+            "id": "H_final_ten",
+            "statement": "The co-occurrence of specific unknown peaks (IDs 4, 5, 10, 17, 18, 19, 21, 22, 38, 39, 40, 41) in the Icelandic, Atacama, and GSFC soils suggests that these compounds are products of modern terrestrial microbial metabolism that are favored by the arid and volcanic conditions present in these locations and are likely to be produced in situ rather than being deposited from a distal source.",
+            "key_datapoints": "IDs 4, 5, 10, 17, 18, 19, 21, 22, 38, 39, 40, 41 in Icelandic, Atacama, and GSFC soils."
+        },
+        {
+            "id": "H_final_eleven",
+            "statement": "The detection of 1,2,4-Trithiolane exclusively in Aguas Zarcas and LEW 85311, which are both CM-type meteorites, indicates that this compound might be related to specific alteration processes or precursor molecules that are unique to the CM parent body and is more likely to be formed from the degradation of organosulfur compound",
+            "key_datapoints": "1,2,4-Trithiolane (ID 27) is present in Aguas Zarcas and LEW 85311"
+        },
+        {
+            "id": "H_final_twelve",
+            "statement": "The co-occurrence of C12H10 (Biphenyl) and C13H14 (Trimethyl naphthalene) in Orgueil and LEW 85311, while lacking in the other samples, points towards a unique formation or preservation environment on the parent body of LEW 85311 and Orgueil for these specific aromatic compounds.",
+            "key_datapoints": "Biphenyl (ID 43, C12H10), Trimethyl naphthalene (ID 15, C13H14), Orgueil, LEW 85311."
+        },
+        {
+            "id": "H_final_thirteen",
+            "statement": "The detection of 1,2,3,4-tetrahydro phenanthrene (C14H14) and 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O) in only Orgueil and Jbilet Winselwan indicates that there could be a specific formation pathway or precursor present, or a unique set of environmental conditions on their respective parent bodies, that favor the formation and preservation of these compounds, but this is not common to all carbonaceous chondrites.",
+            "key_datapoints": "1,2,3,4-tetrahydro phenanthrene (ID 36, C14H14), 1H-Phenalen-1-one or 9H-Fluoren-9-one (ID 44, C13H8O), Orgueil, Jbilet Winselwan."
+        }
+    ]
+}

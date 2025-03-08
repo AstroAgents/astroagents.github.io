@@ -1,0 +1,52 @@
+🧬 Scientist 1 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of both 1-Methyl naphthalene and 2-Methyl naphthalene in Orgueil, ALH 83100, and Murchison suggests a common formation environment and/or similar parent body processes for these meteorites, evidenced by the co-existence of alkylated and non-alkylated PAHs; this contrasts with formation processes involving just one isomer.",
+            "key_datapoints": "1-Methyl naphthalene (ID 8), 2-Methyl naphthalene (ID 2), Orgueil, ALH 83100, Murchison, LEW 85311."
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of Naphthalene, 2-Methyl naphthalene, and 1-Methyl naphthalene in Orgueil, ALH 83100, LON 94101, and LEW 85311, all of which are Antarctic samples, indicates that these compounds are either resistant to Antarctic weathering or are indicative of a common extraterrestrial source that predates the Antarctic depositional environment. The common detection suggests preservation occurs regardless of specific Antarctic conditions.",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), 1-Methyl naphthalene (ID 8), Orgueil, ALH 83100, LON 94101, LEW 85311, Antarctic Soil."
+        },
+        {
+            "id": "H_three",
+            "statement": "The detection of Dimethyl cyclohexane (ID 25) in LEW 85311 and EET 96029 suggests a similar formation or alteration pathway between these two Antarctic meteorites, potentially related to unique local conditions on their respective parent bodies or Antarctic terrestrial alteration processes.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25),  LEW 85311, EET 96029, Antarctic meteorites."
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of internal contaminants from the GC column (IDs 3, 6, 21, and 22) in both biotic (soils) and abiotic (meteorites) samples indicates that the column bleed is consistent and independent of the sample origin. A further conclusion is that higher temperature of the GC column is not enough to elute those features, since they appear in most of the samples.",
+            "key_datapoints": "Ids 3, 6, 21, 22, Iceland Soil, ALH 83100, LON 94101, Aguas Zarcas, Jbilet Winselwan, EET 96029, Green River Shale soil, Lignite Soil, Utah soil Soil, GSFC soil Soil, Murchison Soil, Antarctica Soil, LEW 85311, Internal contaminant from the GC column."
+        },
+        {
+            "id": "H_five",
+            "statement": "The presence of the same phthalate contaminants (ID 9 and 24) in both biotic (terrestrial soils) and abiotic (meteorites) samples indicates a widespread environmental contamination, suggesting that phthalates are pervasive and can easily contaminate samples regardless of their origin, and highlights the challenges of identifying indigenous organics in extraterrestrial samples.",
+            "key_datapoints": "Phthalate (IDs 9, 24),  Rio Tinto Soil, GSFC soil Soil, Murchison Soil, Aguas Zarcas, Jbilet Winselwan,  environmental contamination"
+        },
+        {
+            "id": "H_six",
+            "statement": "The identification of Indane (C9H10) (ID 11) and Fluoranthene (C16H10) (ID 12) in ALH 83100, LON 94101, and LEW 85311 suggests a common formation history or alteration process affecting these Antarctic CM2 meteorites, influencing the distribution of specific PAHs beyond just naphthalene derivatives.",
+            "key_datapoints": "Indane (C9H10) (ID 11), Fluoranthene (C16H10) (ID 12), ALH 83100, LON 94101, LEW 85311, Antarctic meteorites"
+        },
+        {
+            "id": "H_seven",
+            "statement": "The co-occurrence of the same ‘Unknown’ compounds (IDs 10, 19, 34, 38, 39, 40, 41) in different biotic and abiotic samples, despite variable levels of other compounds, suggests that these unknown species may be robust products of either (a) degradation pathways common to a wide range of precursor molecules or (b) synthesis pathways that are active in diverse environments.",
+            "key_datapoints": "Unknown compounds (IDs 10, 19, 34, 38, 39, 40, 41),  Iceland Soil, Atacama, GSFC soil Soil, Utah soil Soil, Aguas Zarcas, Jbilet Winselwan,  Green River Shale soil, Lignite Soil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_eight",
+            "statement": "The detection of 1,2,3,4-tetrahydro phenanthrene (C14H14) (ID 36) alongside Dibenzo thiophene (C12H8S) (ID 14) in Orgueil and Jbilet Winselwan indicates a potential link between the formation of hydroaromatic PAHs and sulfur incorporation within these meteorites, implying a shared environment that favors both hydrogenation and sulfurization.",
+            "key_datapoints": "1,2,3,4-tetrahydro phenanthrene (C14H14) (ID 36), Dibenzo thiophene (C12H8S) (ID 14), Orgueil, Jbilet Winselwan"
+        },
+         {
+            "id": "H_nine",
+            "statement": "The specific detection of Tetrame thylindene (C13H18) (ID 20) in Iceland and GSFC soil only may indicate a unique contribution from terrestrial biology that forms this compound. The absence in any of the meteorites may point to it as a robust biomarker on Earth.",
+            "key_datapoints": "Tetrame thylindene (C13H18) (ID 20), Iceland Soil, GSFC soil Soil,  meteorites,  terrestrial biology"
+        }
+    ]
+}
+```

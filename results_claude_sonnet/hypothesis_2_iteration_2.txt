@@ -1,0 +1,25 @@
+🧬 Scientist 2 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of dibenzothiophene (ID 14) and 1,2,4-trithiolane (ID 27) exclusively in meteorite samples suggests that sulfur incorporation into aromatic structures occurred through abiotic processes in the early solar system rather than through biological pathways.",
+            "key_datapoints": "ID 14 found in Orgueil, ALH 83100, LEW 85311; ID 27 found in Aguas Zarcas, LEW 85311; notably absent in all soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of naphthalene (ID 1) and its methylated derivatives (IDs 2, 8, 15) primarily in meteorite samples, with decreasing abundance as methylation increases, indicates a non-biological formation pathway involving sequential free-radical methylation reactions in the solar nebula.",
+            "key_datapoints": "ID 1 (naphthalene) in 9 samples, ID 2/8 (methylnaphthalenes) in 7 samples, ID 15 (trimethylnaphthalene) in only 3 meteorite samples"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of high molecular weight PAHs like fluoranthene (ID 12) and pyrene (ID 13) exclusively in meteorites suggests these compounds formed through high-temperature gas-phase reactions in the solar nebula rather than through biological processes, as evidenced by their absence in biologically-influenced soil samples.",
+            "key_datapoints": "ID 12 found in ALH 83100, LON 94101, LEW 85311; ID 13 in Orgueil, LON 94101, LEW 85311; absent in all soil samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The exclusive presence of ergost-14-ene (ID 28) in soil samples suggests it serves as a reliable biomarker for distinguishing between biotic and abiotic organic matter sources, as it is likely derived from biological steroid synthesis pathways.",
+            "key_datapoints": "ID 28 found only in Lignite Soil and Murchison Soil, absent in all meteorite samples"
+        }
+    ]
+}

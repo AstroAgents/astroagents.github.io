@@ -1,0 +1,30 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of specific PAH distributions, particularly the co-occurrence of naphthalene (C10H8), fluoranthene (C16H10), and pyrene (C16H10) in meteorites but not in terrestrial samples, suggests a unique abiotic synthesis pathway in meteoritic parent bodies that differs from biological PAH formation.",
+            "key_datapoints": "IDs 1, 12, 13 found in meteorites (Orgueil, ALH 83100, LON 94101, LEW 85311) but absent in most soil samples except Green River Shale which has experienced geological processing of biological material"
+        },
+        {
+            "id": "H_two",
+            "statement": "The detection of organosulfur compounds (1,2,4-trithiolane and dibenzothiophene) exclusively in meteoritic samples suggests that sulfur incorporation into organic compounds occurred through unique chemical pathways in the early solar system, possibly catalyzed by mineral surfaces under reducing conditions.",
+            "key_datapoints": "IDs 14, 27 found only in meteoritic samples (Orgueil, ALH 83100, Aguas Zarcas, LEW 85311)"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of alkylated PAHs (methylnaphthalenes, trimethylnaphthalene) predominantly in meteorites suggests that alkylation processes occurred in parent bodies through specific radical mechanisms, rather than biological methylation pathways seen in terrestrial samples.",
+            "key_datapoints": "IDs 2, 8, 15, 37 found mainly in meteorites (Orgueil, ALH 83100, Murchison, Jbilet Winselwan, LEW 85311)"
+        },
+        {
+            "id": "H_four",
+            "statement": "The exclusive presence of certain cyclic compounds (indane, acenaphthene, 1,2,3,4-tetrahydrophenanthrene) in meteorites indicates a specific abiotic cyclization pathway that forms multiple ring systems under early solar system conditions.",
+            "key_datapoints": "IDs 11, 33, 36 found only in meteoritic samples (ALH 83100, LON 94101, LEW 85311, Orgueil, Jbilet Winselwan)"
+        },
+        {
+            "id": "H_five",
+            "statement": "The presence of terpene-like compounds exclusively in terrestrial samples (Iceland Soil, Atacama, Utah soil) suggests these complex branched molecules require biological synthesis pathways and are not readily formed through abiotic processes in meteoritic parent bodies.",
+            "key_datapoints": "IDs 4, 17, 18 found only in soil samples (Iceland Soil, Atacama, Utah soil, Rio Tinto Soil)"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+🧬 Scientist 3 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The high presence of oxygen-containing PAHs in Ivuna suggests parent body aqueous alteration involved oxidation processes that enriched oxygen-containing PAHs relative to standard PAHs. This is supported by the limited presence of oxygen-containing PAHs in other samples, suggesting aqueous alteration was either less prominent, or different in nature.",
+            "key_datapoints": "Ivuna, C14H10O, C16H10O",
+        },
+        {
+            "id": "H_two",
+            "statement": "The detection of 1,2,4-Trithiolane in Aguas Zarcas and LEW 85311, but the absence of dimethyl cyclohexane, indicates that there were unique sulfurization processes on their parent body. The presence of the specific trithiolane indicates that sulfurization was selective and that there were specific conditions on the parent bodies to form it. The high concentration of dimethyl cyclohexane in LEW 85311 and EET 96029 compared to the other meteorites suggests a distinct formation or preservation environment of small, volatile alicyclics on their parent body.",
+            "key_datapoints": "1,2,4-Trithiolane, Dimethyl cyclohexane, Aguas Zarcas, LEW 85311, EET 96029",
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of toluene and 1-methyl naphthalene in the Orgueil and Murchison meteorites, and the absence of indane, fluoranthene, pyrene, and dibenzo thiophene, is indicative of high levels of aqueous alteration on the parent body. The higher water solubility of toluene and 1-methyl naphthalene would allow these compounds to be easily mobilized and detected, while the other compounds, due to their lower solubility, would be less prominent.",
+            "key_datapoints": "Orgueil, Murchison, Toluene, 1-Methyl naphthalene, Indane, Fluoranthene, Pyrene, Dibenzo thiophene",
+        },
+        {
+            "id": "H_four",
+            "statement": "The detection of diethyl phthalate in the Rio Tinto Soil, GSFC soil, and Murchison Soil samples, but not in the carbonaceous chondrites, suggests that phthalates are a terrestrial contaminant. This is likely due to the use of plastics in the handling of these samples, as phthalates are common plasticizers.",
+            "key_datapoints": "Rio Tinto Soil, GSFC soil, Murchison Soil, Phthalate, carbonaceous chondrites",
+        },
+        {
+            "id": "H_five",
+            "statement": "The co-occurrence of acenaphthene, dimethyl pyrene and polysubstituted alkylnaphthalene in ALH 83100 and LEW 85311 suggests a shared petrogenesis or parent body fluid alteration history where these compounds were produced together. The presence of indane, fluoranthene, pyrene, and dibenzo thiophene in these samples, but absence in the other carbonaceous chondrites suggests unique formation conditions.",
+            "key_datapoints": "ALH 83100, LEW 85311, Acenaphthene, Dimethylpyrene, Polysubstituted alkylnaphthalene, Indane, Fluoranthene, Pyrene, Dibenzo thiophene",
+        }
+    ]
+}
+```

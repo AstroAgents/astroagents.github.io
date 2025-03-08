@@ -1,0 +1,39 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of specific organic compounds, particularly low molecular weight PAHs and alkylbenzenes, in both abiotic (meteorite) and biotic (terrestrial soil) samples suggest that these compounds may be a common product of both abiotic and biotic processes. Note that the source of energy that drives these processes are very distinct.",
+            "key_datapoints": "Naphthalene, 2-Methyl naphthalene, 1-Methyl naphthalene, toluene, Indane, Dimethyl cyclohexane, Methylindan, Dichlorobenzene; Presence in Orgueil, ALH 83100, LON 94101, LEW 85311, Green River Shale soil, Lignite Soil, Iceland Soil, Atacama Soil, Utah Soil, and GSFC soil."
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of fluoranthene and pyrene in both abiotic and biotic samples implies a common formation pathway independent of biological origin. Their consistent presence in the analyzed samples suggests these PAHs are either very stable, easily formed, or both.",
+            "key_datapoints": "Fluoranthene and Pyrene; presence in ALH 83100, LON 94101, LEW 85311, and in Orgueil."
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of certain higher-mass features in the meteoritic samples and some terrestrial samples but not all, such as dimethylpyrene (C18H14), which are not observed in all samples may suggest that the formation of these compounds is matrix-dependent and is not a general outcome of the synthesis of PAHs, or may be below detection limits.",
+            "key_datapoints": "Dimethylpyrene (C18H14); presence in Orgueil and LEW 85311."
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The identification of potential terpene or sesquiterpene fragments (low confidence) in some of the soil samples, especially those from Iceland and Rio Tinto, may suggest that the soil samples have a biological origin.",
+            "key_datapoints": "m/z 138.0 (Iceland Soil, Atacama, Utah soil Soil, GSFC soil Soil); m/z 70.0 and 95.0 (Iceland Soil, Rio Tinto Soil)."
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The detection of 1,2,4-Trithiolane (C2H4S3) in Aguas Zarcas and LEW 85311 indicates the presence of sulfur-containing compounds in these meteorites, which could be related to aqueous alteration processes or sulfur cycling on the parent bodies.",
+            "key_datapoints": "1,2,4-Trithiolane (C2H4S3); presence in Aguas Zarcas and LEW 85311."
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The presence of toluene (C7H8) in ALH 83100, LON 94101, Murchison, and LEW 85311 meteorites suggests a common formation or alteration process on the parent bodies of these meteorites, potentially related to the breakdown of more complex organic molecules into simpler aromatic hydrocarbons.",
+            "key_datapoints": "Toluene (C7H8), ALH 83100, LON 94101, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The presence of  1,2,3,4-tetrahydro phenanthrene (C14H14)  and 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O) in Orgueil and LEW 85311, but not in the other meteorites, indicates that hydrothermal processing may have favored their formation pathways. They are more aqueously altered.",
+            "key_datapoints": "1,2,3,4-tetrahydro phenanthrene (C14H14), 1H-Phenalen-1-one or 9H-Fluoren-9-one (C13H8O), Orgueil, LEW 85311"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+🧬 Scientist 1 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated naphthalenes (IDs 2, 8, 15) in meteorites but not in terrestrial soils suggests that abiotic methylation of PAHs occurs through distinct chemical pathways in space that are not prevalent in Earth's biosphere. This indicates a potential chemical marker for distinguishing abiotic from biotic organic matter.",
+            "key_datapoints": "ID 2 (2-Methyl naphthalene), ID 8 (1-Methyl naphthalene), ID 15 (Trimethyl naphthalene) found in Orgueil, ALH 83100, Murchison, LEW 85311 meteorites but absent in all soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of sulfur-containing aromatics (dibenzothiophene, trithiolane) exclusively in meteorite samples suggests that sulfur incorporation into PAHs was a significant abiotic process in the early solar system, possibly catalyzed by mineral surfaces under reducing conditions.",
+            "key_datapoints": "ID 14 (Dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-Trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of fluoranthene and pyrene (IDs 12, 13) exclusively in meteorites, coupled with their absence in terrestrial samples, suggests these 4-ring PAHs formed through specific high-temperature gas-phase reactions in the solar nebula rather than through biological processes.",
+            "key_datapoints": "ID 12 (Fluoranthene) in ALH 83100, LON 94101, LEW 85311; ID 13 (Pyrene) in Orgueil, LON 94101, LEW 85311; absent in all soil samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The detection of dimethylpyrene (ID 45) exclusively in meteorites suggests that larger PAHs (>4 rings) underwent selective methylation in space, possibly through ion-molecule reactions in cold interstellar environments, rather than through biological processes.",
+            "key_datapoints": "ID 45 (Dimethylpyrene) found only in Orgueil and LEW 85311 meteorites"
+        }
+    ]
+}

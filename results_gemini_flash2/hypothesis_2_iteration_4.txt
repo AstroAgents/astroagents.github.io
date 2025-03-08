@@ -1,0 +1,32 @@
+🧬 Scientist 2 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "In carbonaceous chondrites, the presence of smaller PAHs (e.g., Naphthalene) and a lower degree of alkylation in larger PAHs (e.g., Fluoranthene and Pyrene) indicates a lower level of aqueous alteration on the parent body. This suggests that aqueous alteration promotes the formation and/or preservation of larger, less volatile PAHs at the expense of smaller, more volatile ones and limits the extent of alkylation.",
+            "key_datapoints": "Chwichiya 002 (C3.00u) has a high abundance of smaller PAHs (C14H10) and a lower degree of alkylation; Ivuna, ALH 83100, LON 94101, and LEW 85311 have a high abundance of larger PAHs (Fluoranthene and Pyrene)."
+        },
+        {
+            "id": "H_two",
+            "statement": "The low detection frequency of thiophenes in most of the meteorites, with the exception of a few CM2s (Mukundpura, Aguas Zarcas, Murray, Murchison) and Tarda (C2u), suggests that the conditions for thiophene formation or preservation are specific and localized on meteorite parent bodies, potentially linked to the presence of sulfur-rich fluids during aqueous alteration or specific redox conditions. This implies that areas with high concentrations of thiophenes may have experienced unique aqueous or redox conditions.",
+            "key_datapoints": "Thiophenes detected only in Orgueil, Jbilet Winselwan and Lew 85311; Thiophenes detected consistently only in Mukundpura, Aguas Zarcas, Murray, Murchison and Tarda."
+        },
+        {
+            "id": "H_three",
+            "statement": "The detection of Toluene, Indane, Methylindan, Dimethyl cyclohexane, and Dichlorobenzene in both the abiotic (meteorites) and biotic (terrestrial soils) samples suggests that these compounds might result from simple thermal decomposition of organic matter or from ubiquitous organic contaminants, and thus may not be reliable indicators of biogenicity or specific geological processes without additional supporting data.",
+            "key_datapoints": "These compounds are found in both abiotic and biotic samples (See row IDs 7, 11, 23, 25, 29)."
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of internal GC column contaminants in both terrestrial and extraterrestrial samples highlight the need for caution when interpreting trace organic signatures, particularly in extraterrestrial samples where the abundance of indigenous organic compounds can be very low. The presence of the same contaminants in similar retention time ranges in both sample types indicate that they were introduced during the analytical process.",
+            "key_datapoints": "Internal contaminants are highlighted in red in the table and occur in both terrestrial and meteorite samples, Specifically IDs 3, 6, 21, 22."
+        },
+        {
+            "id": "H_five",
+            "statement": "The identification of possible terpenes and/or sesquiterpenes in the Iceland Soil, Atacama, GSFC soil, and Utah soil, and their absence in the meteoritic samples, suggest that the presence of these compounds may be a potential biomarker for modern terrestrial contamination or specific to certain biology, and not indicative of prebiotic chemistry.",
+            "key_datapoints": "IDs 4, 10, 17, 18, and 19 are only found in the terrestrial samples, and identified as possible terpenes or sesquiterpenes."
+        }
+    ]
+}
+```

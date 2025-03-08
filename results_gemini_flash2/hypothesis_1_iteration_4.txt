@@ -1,0 +1,37 @@
+🧬 Scientist 1 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The detection of toluene, dimethyl cyclohexane, methylindan, acenaphthene, and trimethyl naphthalene in the carbonaceous chondrites (Orgueil, ALH 83100, LEW 85311, LON 94101, Aguas Zarcas, Jbilet Winselwan, Murchison, and EET 96029) suggests that these volatile, low-molecular-weight aromatic and cycloaliphatic hydrocarbons are common products of abiotic organic synthesis within meteorite parent bodies. These compounds may represent a baseline of organic molecules to which further complexification can occur. This contrasts with the soils, which lack consistent detection of these compounds.",
+            "key_datapoints": "Toluene, Dimethyl cyclohexane, Methylindan, Acenaphthene, Trimethyl naphthalene;  Orgueil, ALH 83100, LEW 85311, LON 94101, Aguas Zarcas, Jbilet Winselwan, Murchison, EET 96029."
+        },
+        {
+            "id": "H_two",
+            "statement": "The presence of fluoranthene and pyrene, along with alkylated naphthalenes, in ALH 83100, LON 94101, and LEW 85311, suggests that these polycyclic aromatic hydrocarbons (PAHs) and their alkylated derivatives were synthesized during the formation and aqueous alteration of the parent asteroids. The co-occurrence of these PAHs may point to a shared origin and/or similar formation conditions within the asteroid's environment.",
+            "key_datapoints": "Fluoranthene, Pyrene, Alkylated naphthalenes; ALH 83100, LON 94101, LEW 85311."
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of internal contaminants (compounds from the GC column) at m/z 355.0, 416.0, 249.0, and 432.0 in many samples indicates that the background signal should be carefully considered in the detection of trace compounds, and they are abundant and persistent in the analytical system.  Because these contaminants occur across both biotic and abiotic samples, they are likely ubiquitous in the testing environment and must be carefully accounted for in future analyses.",
+            "key_datapoints": "Internal contaminants at m/z 355.0, 416.0, 249.0, 432.0; Iceland Soil, Jarosite Soil, Antarctica Soil, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil, Orgueil, Murchison, LEW 85311, ALH 83100, LON 94101, Aguas Zarcas, Jbilet Winselwan, EET 96029."
+        },
+        {
+            "id": "H_four",
+            "statement": "The co-occurrence of naphthalene, 2-methyl naphthalene, and 1-methyl naphthalene in Orgueil, ALH 83100, LON 94101, and LEW 85311 suggests that these compounds may originate from a common source or formation pathway within these meteorites. The similar retention times (RT1, RT2) support this idea.",
+            "key_datapoints": "Naphthalene, 2-Methyl naphthalene, 1-Methyl naphthalene; Orgueil, ALH 83100, LON 94101, LEW 85311."
+        },
+        {
+            "id": "H_five",
+            "statement": "The detection of possible terpene or sesquiterpene (ID 4, 17, 18) in the Iceland, Atacama and Rio Tinto soils indicates that the compounds are relatively resilient in disparate terrestrial environments. The limited distribution of these compounds could relate to specific formation conditions.",
+            "key_datapoints": "Possible terpene or sesquiterpene; Iceland Soil, Atacama, GSFC soil Soil, Utah soil Soil, Rio Tinto Soil."
+        },
+        {
+            "id": "H_six",
+            "statement": "The detection of Dichlorobenzene (C6H4Cl2) and a possible match for Bicyclo[2.2.1]heptan-2-one, 1,7,7-trimethyl-, (1S)- (C10H16O) and o-Cymene (C13H12), specifically in the Orgueil and Murchison meteorites, suggests that these two meteorites may have been subject to similar, or even identical contamination events from Earth. The co-occurrence of these peaks, and their absence from other meteorites, points to a shared terrestrial history.",
+            "key_datapoints": "Dichlorobenzene (C6H4Cl2), Bicyclo[2.2.1]heptan-2-one, 1,7,7-trimethyl-, (1S)- (C10H16O), o-Cymene (C13H12); Orgueil, Murchison"
+        }
+    ]
+}
+```

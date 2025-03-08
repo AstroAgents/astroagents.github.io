@@ -1,0 +1,24 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "ID 2 (2-methylnaphthalene), ID 8 (1-methylnaphthalene), ID 15 (trimethylnaphthalene) found mainly in meteorites Orgueil, ALH 83100, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of organosulfur compounds (dibenzothiophene, trithiolane) specifically in meteorite samples suggests that sulfur incorporation into organic compounds was an important abiotic process in the early solar system, possibly catalyzed by metal sulfides present in the meteorite parent bodies.",
+            "key_datapoints": "ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of 1,2,3,4-tetrahydro phenanthrene (ID 36) exclusively in Orgueil and Jbilet Winselwan, along with their unique dimethylpyrene content (ID 45), suggests these meteorites experienced similar parent body processing conditions that were distinct from other carbonaceous chondrites.",
+            "key_datapoints": "ID 36 (1,2,3,4-tetrahydro phenanthrene) and ID 45 (dimethylpyrene) in Orgueil and Jbilet Winselwan; Distribution pattern distinct from other meteorites"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The co-occurrence of phenanthrene/anthracene with their oxygenated derivatives (1H-Phenalen-1-one/9H-Fluoren-9-one) specifically in meteorites suggests an abiotic oxidation pathway that operates in space but not in terrestrial environments.",
+            "key_datapoints": "ID 42 (phenanthrene/anthracene) and ID 44 (1H-Phenalen-1-one/9H-Fluoren-9-one) found together in Orgueil and LEW 85311"
+        }
+    ]
+}

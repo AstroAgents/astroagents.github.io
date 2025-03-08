@@ -1,0 +1,29 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalene) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "ID 2 (2-methylnaphthalene), ID 8 (1-methylnaphthalene), ID 15 (trimethylnaphthalene) found mainly in meteorites Orgueil, ALH 83100, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of organosulfur compounds (dibenzothiophene, trithiolane) specifically in meteorite samples suggests that sulfur incorporation into organic compounds was an important abiotic process in the early solar system, possibly catalyzed by metal sulfides present in the meteorite parent bodies.",
+            "key_datapoints": "ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-trithiolane) in Aguas Zarcas, LEW 85311; notably absent in all soil samples"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of high molecular weight PAHs (fluoranthene, pyrene) exclusively in meteorites but not in soil samples indicates that these compounds form through high-temperature gas-phase reactions in space rather than through biological processes.",
+            "key_datapoints": "ID 12 (fluoranthene) and ID 13 (pyrene) found only in meteorites ALH 83100, LON 94101, Orgueil, LEW 85311"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The presence of partially hydrogenated aromatic compounds (indane, acenaphthene, tetrahydrophenanthrene) specifically in meteorites suggests a stepwise PAH formation process in space involving both aromatic ring formation and partial hydrogenation steps.",
+            "key_datapoints": "ID 11 (indane) in ALH 83100, LON 94101, LEW 85311; ID 33 (acenaphthene) in ALH 83100, LEW 85311; ID 36 (tetrahydrophenanthrene) in Orgueil, Jbilet Winselwan"
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The presence of terpene-like compounds exclusively in soil samples (particularly from extreme environments like Iceland and Atacama) suggests these molecules are reliable biosignatures even in harsh conditions that might be analogous to other planetary environments.",
+            "key_datapoints": "ID 4, ID 17, ID 18 (possible terpenes/sesquiterpenes) found only in soil samples from Iceland, Atacama, Utah, and GSFC"
+        }
+    ]
+}

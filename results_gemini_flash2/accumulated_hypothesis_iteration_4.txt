@@ -1,0 +1,39 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The detection of toluene, dimethyl cyclohexane, methylindan, acenaphthene, and trimethyl naphthalene in the carbonaceous chondrites (Orgueil, ALH 83100, LEW 85311, LON 94101, Aguas Zarcas, Jbilet Winselwan, Murchison, and EET 96029) suggests that these volatile, low-molecular-weight aromatic and cycloaliphatic hydrocarbons are common products of abiotic organic synthesis within meteorite parent bodies. These compounds may represent a baseline of organic molecules to which further complexification can occur. This contrasts with the soils, which lack consistent detection of these compounds.",
+            "key_datapoints": "Toluene, Dimethyl cyclohexane, Methylindan, Acenaphthene, Trimethyl naphthalene;  Orgueil, ALH 83100, LEW 85311, LON 94101, Aguas Zarcas, Jbilet Winselwan, Murchison, EET 96029."
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The presence of fluoranthene and pyrene, along with alkylated naphthalenes, in ALH 83100, LON 94101, and LEW 85311, suggests that these polycyclic aromatic hydrocarbons (PAHs) and their alkylated derivatives were synthesized during the formation and aqueous alteration of the parent asteroids. The co-occurrence of these PAHs may point to a shared origin and/or similar formation conditions within the asteroid's environment.",
+            "key_datapoints": "Fluoranthene, Pyrene, Alkylated naphthalenes; ALH 83100, LON 94101, LEW 85311."
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The co-occurrence of naphthalene, 2-methyl naphthalene, and 1-methyl naphthalene in Orgueil, ALH 83100, LON 94101, and LEW 85311 suggests that these compounds may originate from a common source or formation pathway within these meteorites. The similar retention times (RT1, RT2) support this idea.",
+            "key_datapoints": "Naphthalene, 2-Methyl naphthalene, 1-Methyl naphthalene; Orgueil, ALH 83100, LON 94101, LEW 85311."
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The detection of possible terpene or sesquiterpene (ID 4, 17, 18) in the Iceland, Atacama and Rio Tinto soils indicates that the compounds are relatively resilient in disparate terrestrial environments. The limited distribution of these compounds could relate to specific formation conditions.",
+            "key_datapoints": "Possible terpene or sesquiterpene; Iceland Soil, Atacama, GSFC soil Soil, Utah soil Soil, Rio Tinto Soil."
+        },
+        {
+            "id": "H_final_five",
+            "statement": "In carbonaceous chondrites, the presence of smaller PAHs (e.g., Naphthalene) and a lower degree of alkylation in larger PAHs (e.g., Fluoranthene and Pyrene) indicates a lower level of aqueous alteration on the parent body. This suggests that aqueous alteration promotes the formation and/or preservation of larger, less volatile PAHs at the expense of smaller, more volatile ones and limits the extent of alkylation.",
+            "key_datapoints": "Chwichiya 002 (C3.00u) has a high abundance of smaller PAHs (C14H10) and a lower degree of alkylation; Ivuna, ALH 83100, LON 94101, and LEW 85311 have a high abundance of larger PAHs (Fluoranthene and Pyrene)."
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The low detection frequency of thiophenes in most of the meteorites, with the exception of a few CM2s (Mukundpura, Aguas Zarcas, Murray, Murchison) and Tarda (C2u), suggests that the conditions for thiophene formation or preservation are specific and localized on meteorite parent bodies, potentially linked to the presence of sulfur-rich fluids during aqueous alteration or specific redox conditions. This implies that areas with high concentrations of thiophenes may have experienced unique aqueous or redox conditions.",
+            "key_datapoints": "Thiophenes detected only in Orgueil, Jbilet Winselwan and Lew 85311; Thiophenes detected consistently only in Mukundpura, Aguas Zarcas, Murray, Murchison and Tarda."
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The presence of higher concentrations of naphthalene and 2-methylnaphthalene in Orgueil versus other meteorites, along with the unique detection of Dichlorobenzene, suggests a distinct formation environment or history for Orgueil's organic compounds, potentially involving halogenation processes or a unique source material not shared by the other meteorites.",
+            "key_datapoints": "Orgueil, Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), Dichlorobenzene (ID 29), all other meteorites"
+        }
+    ]
+}

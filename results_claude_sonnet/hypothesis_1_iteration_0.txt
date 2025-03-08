@@ -1,0 +1,30 @@
+🧬 Scientist 1 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated naphthalenes (2-methyl naphthalene, 1-methyl naphthalene, trimethyl naphthalene) exclusively in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "IDs 2, 8, 15 found in meteorites (Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311) but absent in all soil samples"
+        },
+        {
+            "id": "H_two", 
+            "statement": "The co-occurrence of fluoranthene and pyrene (IDs 12,13) specifically in Antarctic meteorites suggests these PAHs form through similar abiotic mechanisms under cold conditions, possibly through ion-molecule reactions in interstellar ice analogs.",
+            "key_datapoints": "IDs 12,13 found together in Antarctic meteorites ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of organosulfur compounds (dibenzo thiophene, 1,2,4-trithiolane) exclusively in meteorites indicates that sulfur incorporation into organic compounds occurs through unique abiotic pathways in space, possibly catalyzed by mineral surfaces.",
+            "key_datapoints": "IDs 14,27 found only in meteorite samples Orgueil, ALH 83100, LEW 85311, Aguas Zarcas"
+        },
+        {
+            "id": "H_four",
+            "statement": "The detection of terpene-like compounds exclusively in soil samples but not in meteorites suggests these complex branched molecules require biological processes for their synthesis and are reliable biomarkers for distinguishing biotic from abiotic samples.",
+            "key_datapoints": "IDs 4,17,18 found only in soil samples (Iceland, Atacama, Utah, GSFC soils)"
+        },
+        {
+            "id": "H_five",
+            "statement": "The presence of oxidized PAHs (1H-Phenalen-1-one/9H-Fluoren-9-one) specifically in Orgueil and LEW 85311 meteorites suggests these compounds form through unique parent body aqueous alteration processes rather than biological activity.",
+            "key_datapoints": "ID 44 found only in Orgueil and LEW 85311 meteorites"
+        }
+    ]
+}

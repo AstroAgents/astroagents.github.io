@@ -1,0 +1,64 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "Aqueous alteration on carbonaceous chondrite parent bodies leads to the degradation of larger PAHs into smaller, more volatile compounds, which are then lost to space or become localized in regions of low aqueous activity. The increase in smaller compounds results in lower m/z distributions in HR-L2MS analysis.",
+            "key_datapoints": "Chwichiya 002 (C3.00u): Dominance of C14H10, lack of larger PAHs. Ivuna (CI1) and NWA 12328 (CM1): Dominance of larger PAHs, low signal of smaller PAHs. See also the general trend of increased smaller PAH size with decreasing aqueous alteration."
+        },
+        {
+            "id": "H_final_two",
+            "statement": "Hydrothermal activity, through Fischer-Tropsch type reactions, produces a wide range of aliphatic and aromatic hydrocarbons and their derivatives, but has a limited effect on the production of specific biomarkers (such as the long chains of carbon structures).",
+            "key_datapoints": "High abundance of aliphatic hydrocarbons in Green River Shale soil and Lignite soil in contrast to smaller peaks from PAH signals."
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The detection of oxygenated PAHs in the most aqueously altered meteorites indicates oxidative stress, which is consistent with the idea that oxidation is one of the most important factors in the degradation of organic matter in CCs.",
+            "key_datapoints": "Ivuna (CI1) and NWA 12328 (CM1) higher oxygenated PAHs peaks compared to other samples."
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The presence of a high proportion of compounds with positive mass defects in organic-rich soils indicates the presence of heteroatoms, in particular nitrogen and oxygen, suggesting that these compounds are different from the PAHs found in meteorites.",
+            "key_datapoints": "Most of the peaks detected in Iceland soil, Rio Tinto Soil, GSFC soil Soil, and Utah Soil have positive mass defects, while the majority of the peaks detected in meteorites are hydrocarbon PAHs."
+        },
+        {
+            "id": "H_final_five",
+            "statement": "In CM2 chondrites, the degree of aqueous alteration correlates with the ratio of 1-Methyl naphthalene to 2-Methyl naphthalene, serving as a potential proxy for the extent of parent body processing. Specifically, a lower 1-Methyl naphthalene to 2-Methyl naphthalene ratio indicates higher degree of aqueous alteration.",
+            "key_datapoints": "CM2 chondrites, Naphthalene, 1-Methyl naphthalene, 2-Methyl naphthalene, ALH 83100, LON 94101, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The presence of Indane (C9H10) in ALH 83100, LON 94101, and LEW 85311, suggests a unique formation pathway or source specific to the Antarctic CM chondrites that is distinct from the formation environment of Orgueil and other CM chondrites.",
+            "key_datapoints": "Indane (C9H10), ALH 83100, LON 94101, LEW 85311, Orgueil, Murchison, Aguas Zarcas, Jbilet Winselwan, EET 96029"
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The co-occurrence of Fluoranthene (C16H10) and Pyrene (C16H10) with Dibenzo thiophene (C12H8S) in Orgueil, ALH 83100, and LEW 85311 points towards a shared origin or formation environment where sulfurization processes are active, leading to the incorporation of sulfur into aromatic compounds.",
+            "key_datapoints": "Fluoranthene (C16H10), Pyrene (C16H10), Dibenzo thiophene (C12H8S), Orgueil, ALH 83100, LEW 85311"
+        },
+        {
+            "id": "H_final_eight",
+            "statement": "The presence of alkylated naphthalenes in both the biotic Green River Shale soil and the abiotic carbonaceous chondrites indicates that alkylation processes are not unique to biotic environments and may be influenced by abiotic factors such as aqueous alteration.",
+            "key_datapoints": "Alkylated naphthalenes, Green River Shale soil, Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311"
+        },
+        {
+            "id": "H_final_nine",
+            "statement": "The presence of toluene (C7H8) and indane (C9H10) in Antarctic meteorites (ALH 83100, LON 94101, and LEW 85311) suggests a pre-solar origin where these simple aromatics formed in the interstellar medium and were incorporated into the meteorite parent body during its formation. The detection of these compounds, which are not as readily linked to biological processes, provides evidence of the survival of pre-solar material within these meteorites.",
+            "key_datapoints": "Toluene (ID 7), Indane (ID 11), ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_final_ten",
+            "statement": "The co-occurrence of naphthalene (C10H8) and 2-methylnaphthalene (C11H10) in both Orgueil and the Antarctic meteorites (ALH 83100, LON 94101, and LEW 85311), suggests a common formation pathway on the meteorite parent body, likely involving the low-temperature gas-phase reaction of phenyl radicals with vinylacetylene as described by Parker et al. This contrasts with the high-temperature combustion synthesis of PAHs in terrestrial environments.",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_final_eleven",
+            "statement": "The absence of fluoranthene (C16H10) and pyrene (C16H10) in the most aqueously altered meteorite, Aguas Zarcas, suggests that aqueous alteration processes on meteorite parent bodies may selectively degrade larger PAHs, leading to a relative enrichment of smaller PAHs. The presence of naphthalene in Aguas Zarcas, however, implies that it is more resistant to this degradation.",
+            "key_datapoints": "Fluoranthene (ID 12), Pyrene (ID 13), Naphthalene (ID 1), Aguas Zarcas"
+        },
+        {
+            "id": "H_final_twelve",
+            "statement": "The identification of distinct, low-confidence terpene or sesquiterpene-like compounds (ID 4, ID 17, ID 18) uniquely within the Iceland Soil, Atacama, and GSFC soil samples implies the presence of unique, low-abundance, and high-volatility biological compounds. The presence of these distinct compounds may be related to the unique local biosphere or microbial sources of organic compounds that are highly sensitive to degradation and diagenesis, making them hard to identify, which is why they're of low confidence.",
+            "key_datapoints": "ID 4, ID 17, ID 18, Iceland Soil, Atacama, GSFC soil Soil"
+        }
+    ]
+}

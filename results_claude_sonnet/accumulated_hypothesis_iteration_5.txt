@@ -1,0 +1,24 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The presence of methylated naphthalenes (IDs 2, 8, 15) in meteorites but not in soil samples suggests that abiotic methylation of PAHs occurs through distinct chemical pathways in space that are not prevalent in Earth's biotic systems. This indicates a potential chemical marker for distinguishing abiotic from biotic origins of PAHs.",
+            "key_datapoints": "IDs 2 (2-Methyl naphthalene), 8 (1-Methyl naphthalene), and 15 (Trimethyl naphthalene) found in Orgueil, ALH 83100, Murchison, and other meteorites but absent in soil samples"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of dibenzothiophene with fluoranthene and pyrene specifically in meteorite samples suggests that sulfur incorporation into PAHs in space requires high-energy conditions that also favor the formation of 4-ring PAHs, potentially through radical mechanisms in cold environments.",
+            "key_datapoints": "ID 14 (dibenzothiophene), ID 12 (fluoranthene), ID 13 (pyrene) found together in Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of phenanthrene/anthracene (ID 42) and 1H-Phenalen-1-one/9H-Fluoren-9-one (ID 44) exclusively in Orgueil and LEW 85311 suggests a unique oxidative pathway in these meteorites that converts PAHs to their oxygenated derivatives, potentially indicating distinct parent body processing conditions.",
+            "key_datapoints": "IDs 42 and 44 found only in Orgueil and LEW 85311; related to oxidation of PAH structures"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The detection of possible terpenes exclusively in soil samples indicates that complex branched isoprenoid structures require enzymatic biosynthesis and are not readily formed through abiotic processes in space, making them reliable biomarkers.",
+            "key_datapoints": "IDs 4, 17, 18 (possible terpenes) found only in soil samples (Iceland Soil, Atacama, Utah soil, GSFC soil)"
+        }
+    ]
+}

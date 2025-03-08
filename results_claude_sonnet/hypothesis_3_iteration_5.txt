@@ -1,0 +1,30 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that abiotic methylation of PAHs occurs through specific chemical pathways in space that differ from biological methylation processes on Earth.",
+            "key_datapoints": "IDs 2,8 (methylnaphthalenes) in meteorites Orgueil, ALH 83100, Murchison; ID 15 (trimethylnaphthalene) in Orgueil, Jbilet Winselwan, LEW 85311; absence of these compounds in soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of dibenzothiophene with fluoranthene and pyrene specifically in meteorite samples suggests that sulfur incorporation into PAHs in space requires high-energy conditions that also favor the formation of 4-ring PAHs, potentially through radical mechanisms in cold environments.",
+            "key_datapoints": "ID 14 (dibenzothiophene), ID 12 (fluoranthene), ID 13 (pyrene) found together in Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The exclusive presence of ergost-14-ene in soil samples but not meteorites, coupled with its known biological origin, serves as a reliable biomarker to distinguish between terrestrial and extraterrestrial organic matter sources.",
+            "key_datapoints": "ID 28 (ergost-14-ene) found only in Lignite Soil and Murchison Soil, absent in all meteorite samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of 1,2,4-trithiolane specifically in meteorites suggests that cyclic organosulfur compounds form through unique low-temperature abiotic processes in space, possibly involving hydrogen sulfide and small organic molecules, rather than through biological sulfur metabolism.",
+            "key_datapoints": "ID 27 (1,2,4-trithiolane) found only in meteorites Aguas Zarcas and LEW 85311"
+        },
+        {
+            "id": "H_five",
+            "statement": "The detection of possible terpenes exclusively in soil samples indicates that complex branched isoprenoid structures require enzymatic biosynthesis and are not readily formed through abiotic processes in space, making them reliable biomarkers.",
+            "key_datapoints": "IDs 4, 17, 18 (possible terpenes) found only in soil samples (Iceland Soil, Atacama, Utah soil, GSFC soil)"
+        }
+    ]
+}

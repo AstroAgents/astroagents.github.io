@@ -1,0 +1,30 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that abiotic methylation of PAHs occurs through distinct chemical pathways in space that are not prevalent in Earth's biological systems.",
+            "key_datapoints": "ID 2,8 (methylnaphthalenes) in meteorites Orgueil, ALH 83100, Murchison; ID 15 (trimethylnaphthalene) in Orgueil, Jbilet Winselwan, LEW 85311; Absence of these compounds in soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of dibenzothiophene with fluoranthene and pyrene specifically in meteorite samples suggests that sulfur incorporation into PAHs may be linked to high-temperature abiotic synthesis processes in the early solar system, rather than biological activity.",
+            "key_datapoints": "ID 14 (dibenzothiophene), ID 12 (fluoranthene), ID 13 (pyrene) all found in meteorite samples Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The exclusive presence of terpenes and sesquiterpenes in soil samples but not in meteorites indicates these compounds could serve as reliable biomarkers to distinguish between biotic and abiotic organic matter sources, particularly in planetary exploration.",
+            "key_datapoints": "ID 4, 17, 18 (terpenes/sesquiterpenes) found only in Iceland Soil, Atacama, Utah soil, GSFC soil; absent in all meteorite samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of 1,2,4-trithiolane exclusively in meteorite samples suggests that cyclic organosulfur compounds form through unique abiotic processes in space environments, potentially involving radical chemistry with H2S or other sulfur species.",
+            "key_datapoints": "ID 27 (1,2,4-trithiolane) found only in Aguas Zarcas and LEW 85311 meteorites; absent in all soil samples"
+        },
+        {
+            "id": "H_five",
+            "statement": "The detection of ergost-14-ene in both lignite soil and Murchison soil, but not in meteorites, suggests this sterane derivative is exclusively formed through biological processes and its presence in meteorite samples would indicate terrestrial contamination.",
+            "key_datapoints": "ID 28 (ergost-14-ene) found only in Lignite Soil and Murchison Soil; notably absent in actual meteorite samples"
+        }
+    ]
+}

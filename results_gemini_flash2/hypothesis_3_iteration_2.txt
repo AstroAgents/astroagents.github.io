@@ -1,0 +1,32 @@
+🧬 Scientist 3 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of toluene (C7H8) and indane (C9H10) in Antarctic meteorites (ALH 83100, LON 94101, and LEW 85311) suggests a pre-solar origin where these simple aromatics formed in the interstellar medium and were incorporated into the meteorite parent body during its formation. The detection of these compounds, which are not as readily linked to biological processes, provides evidence of the survival of pre-solar material within these meteorites.",
+            "key_datapoints": "Toluene (ID 7), Indane (ID 11), ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of naphthalene (C10H8) and 2-methylnaphthalene (C11H10) in both Orgueil and the Antarctic meteorites (ALH 83100, LON 94101, and LEW 85311), suggests a common formation pathway on the meteorite parent body, likely involving the low-temperature gas-phase reaction of phenyl radicals with vinylacetylene as described by Parker et al. This contrasts with the high-temperature combustion synthesis of PAHs in terrestrial environments.",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), Orgueil, ALH 83100, LON 94101, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The absence of fluoranthene (C16H10) and pyrene (C16H10) in the most aqueously altered meteorite, Aguas Zarcas, suggests that aqueous alteration processes on meteorite parent bodies may selectively degrade larger PAHs, leading to a relative enrichment of smaller PAHs. The presence of naphthalene in Aguas Zarcas, however, implies that it is more resistant to this degradation.",
+            "key_datapoints": "Fluoranthene (ID 12), Pyrene (ID 13), Naphthalene (ID 1), Aguas Zarcas"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of internal contaminants originating from the GC column in the biotic soil samples (Iceland Soil, Jarosite Soil, Antarctica Soil, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil, and GSFC soil) indicates that these soils have undergone more interactions with the terrestrial environment. This is further supported by the high detection of phthalates, which are likely to be environmental contaminants, also originating from terrestrial sources.",
+            "key_datapoints": "ID 3, ID 6, ID 21, ID 22, ID 9,  Iceland Soil, Jarosite Soil, Antarctica Soil, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil, GSFC soil"
+        },
+        {
+            "id": "H_five",
+            "statement": "The identification of distinct, low-confidence terpene or sesquiterpene-like compounds (ID 4, ID 17, ID 18) uniquely within the Iceland Soil, Atacama, and GSFC soil samples implies the presence of unique, low-abundance, and high-volatility biological compounds. The presence of these distinct compounds may be related to the unique local biosphere or microbial sources of organic compounds that are highly sensitive to degradation and diagenesis, making them hard to identify, which is why they're of low confidence.",
+            "key_datapoints": "ID 4, ID 17, ID 18, Iceland Soil, Atacama, GSFC soil Soil"
+        }
+    ]
+}
+```

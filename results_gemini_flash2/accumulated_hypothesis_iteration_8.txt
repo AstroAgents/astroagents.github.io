@@ -1,0 +1,44 @@
+{
+    "hypothesis": [
+        {
+            "id": "H_final_one",
+            "statement": "The co-occurrence of naphthalene (ID 1) and 2-methyl naphthalene (ID 2) in meteorites (Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311) and a terrestrial shale (Green River Shale soil) suggests a common formation or preservation mechanism across diverse environments. This could imply that relatively simple PAHs are either easily synthesized abiotically or are robust enough to persist despite geological processing on Earth and different parent body alteration on asteroids.",
+            "key_datapoints": "Naphthalene (ID 1), 2-Methyl naphthalene (ID 2), Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311, Green River Shale soil"
+        },
+        {
+            "id": "H_final_two",
+            "statement": "The co-occurrence of Toluene (ID 7), 1-Methyl naphthalene (ID 8), Fluoranthene (ID 12), Pyrene (ID 13) and Dibenzo thiophene (ID 14) in meteorites (Orgueil, ALH 83100, LON 94101, Murchison, LEW 85311) suggests a shared origin in the interstellar medium, where they were formed under similar conditions. The absence of large PAHs is consistent with the low temperature formation of these compounds.",
+            "key_datapoints": "Toluene (ID 7), 1-Methyl naphthalene (ID 8), Fluoranthene (ID 12), Pyrene (ID 13), Dibenzo thiophene (ID 14), Orgueil, ALH 83100, LON 94101, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_final_three",
+            "statement": "The presence of Dimethyl cyclohexane (ID 25) in LEW 85311 and EET 96029 could indicate the presence of short side chains in larger PAHs. The process could be caused by the cracking of larger PAH molecules, which would be consistent with both hydrothermal and UV irradiation.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25), LEW 85311, EET 96029"
+        },
+        {
+            "id": "H_final_four",
+            "statement": "The presence of 1,2,3,4-tetrahydro phenanthrene (ID 36) in Orgueil and Jbilet Winselwan suggests that the partial hydrogenation of aromatics is a common process in meteorites, irrespective of their alteration history. The hydrogenation could occur through gas-grain reactions in the interstellar medium or by aqueous alteration on the meteorite parent body.",
+            "key_datapoints": "1,2,3,4-tetrahydro phenanthrene (ID 36), Orgueil, Jbilet Winselwan"
+        },
+        {
+            "id": "H_final_five",
+            "statement": "The detection of 1,2,4-Trithiolane (ID 27; C2H4S3) in Aguas Zarcas and LEW 85311 suggests the presence of organosulfur compounds in these meteorites. The absence of this compound in the rest of the meteorite samples may reflect differences in parent body processes or aqueous alteration. This hypothesis is based on the published literature.",
+            "key_datapoints": "1,2,4-Trithiolane (ID 27), Aguas Zarcas, LEW 85311."
+        },
+        {
+            "id": "H_final_six",
+            "statement": "The detection of similar and specific compounds in the ALH 83100, LON 94101, and LEW 85311 Antarctic meteorites suggests similar parent body processes or common source regions for these meteorites, despite their varying collection locations and dates. This is based on the presence of Methylindan (ID 23; C10H12), Fluorene/diphenylene methane (C13H10) (ID 32), and Acenaphthene (ID 33; C12H10).",
+            "key_datapoints": "Methylindan (ID 23), Polysubstituted alkylnaphthalene with the formula C13H12 (ID 32), Acenaphthene (ID 33), ALH 83100, LON 94101, LEW 85311."
+        },
+        {
+            "id": "H_final_seven",
+            "statement": "The absence of the tetracyclic aromatic compounds (C18H10) fluoranthene and pyrene (ID 12 and 13) in the thermally metamorphosed EET 96029 meteorite, but presence of the lower mass fragments like methylindan (ID 23, C10H12), may imply that thermal metamorphism causes the cracking of larger aromatics into smaller species. This may also imply that smaller aromatics are easier to make under intense thermal conditions.",
+            "key_datapoints": "Fluoranthene (ID 12, C16H10) and Pyrene (ID 13, C16H10) present in ALH 83100, LON 94101, LEW 85311. Methylindan (ID 23, C10H12) present in ALH 83100, LON 94101. EET 96029, CK5 chondrite, is thermally metamorphosed."
+        },
+        {
+            "id": "H_final_eight",
+            "statement": "The presence of the peak at m/z 218.0 (ID 34) in both Orgueil and Jbilet Winselwan, but absent in the other meteorites, suggests that the molecule producing this peak may be linked to aqueous alteration, impact shock, or a combination of both processes as these are the two defining events for these meteorites. However, because the molecule is unknown, no further inferences can be made.",
+            "key_datapoints": "m/z 218.0 (ID 34) present in both Orgueil and Jbilet Winselwan, Unknown molecule formula."
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+🧬 Scientist 2 hypothesis:
+```json
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "Aqueous alteration on carbonaceous chondrite parent bodies preferentially incorporates smaller PAHs (e.g., Naphthalene, Toluene) into the meteorite, while depleting the larger PAHs, as those PAHs are more likely to undergo aqueous reactions and be removed. This is supported by the observation that Orgueil, a highly aqueously altered meteorite, contains Naphthalene and Toluene, but lacks Fluoranthene and Pyrene.",
+            "key_datapoints": "Orgueil contains Naphthalene (ID 1) and Toluene (ID 7), but lacks Fluoranthene and Pyrene (both ID 12 and 13)."
+        },
+        {
+            "id": "H_two",
+            "statement": "The presence of Dimethyl Cyclohexane (C8H16) specifically in LEW 85311 and EET 96029 suggests that this compound may be a product of a specific alteration pathway that these Antarctic CM2 meteorites experienced, distinct from other CM2 meteorites. This could be due to unique terrestrial alteration processes related to the Antarctic environment, or it could be due to a unique aqueous alteration environment that has been altered or erased in other meteorites.",
+            "key_datapoints": "Dimethyl cyclohexane (ID 25) is only found in LEW 85311 and EET 96029."
+        },
+        {
+            "id": "H_three",
+            "statement": "The co-occurrence of Fluoranthene (ID 12) or Pyrene (ID 13) and 1,2,4-Trithiolane (C2H4S3, ID 27) in ALH 83100 and LEW 85311 suggests that this sulfur-containing compound may be a product of aqueous alteration of fluoranthene and pyrene.",
+            "key_datapoints": "1,2,4-Trithiolane (ID 27) is present in ALH 83100 and LEW 85311 which also contain Fluoranthene (ID 12) or Pyrene (ID 13)."
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of the Internal Contaminant from the GC column (ID 3, 6, 21, 22) in multiple soil samples indicates that the soils may be contaminated with components from the GC column, specifically the Iceland Soil, Green River Shale soil, Lignite Soil, Utah Soil, GSFC soil, and Murchison Soil. This may have occurred during preparation or analysis.",
+            "key_datapoints": "Internal contaminant from the GC column (ID 3) found in Iceland Soil, Jarosite Soil, Antarctica Soil, Green River Shale soil, Lignite Soil, Utah soil Soil, Murchison Soil, Orgueil, Murchison, LEW 85311. Internal contaminant from the GC column (ID 6) found in Iceland Soil, ALH 83100, LON 94101, Aguas Zarcas, Jbilet Winselwan, EET 96029.  Internal contaminant from the GC column (ID 21) found in Iceland Soil, GSFC soil Soil. Internal contaminant from the GC column (ID 22) found in Iceland Soil, Utah soil Soil."
+        },
+        {
+            "id": "H_five",
+            "statement": "The co-occurrence of multiple unknown compounds in Iceland Soil, Atacama, and GSFC soil suggests that these soils share similar depositional environments and/or source material.  This is based on the fact that they all contain ID 4, 5, and 10, which are uncharacterized species.",
+            "key_datapoints": "ID 4, 5, and 10 occur in Iceland Soil, Atacama, and GSFC soil."
+        }
+    ]
+}
+```

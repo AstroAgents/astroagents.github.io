@@ -1,0 +1,25 @@
+🧬 Scientist 1 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "IDs 2,8 (methylnaphthalenes) found in meteorites Orgueil, ALH 83100, Murchison; ID 15 (trimethylnaphthalene) in Orgueil, Jbilet Winselwan, LEW 85311; notably absent in soil samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of sulfur-containing aromatics (dibenzothiophene, trithiolane) exclusively in meteorite samples suggests these compounds form through abiotic sulfurization of PAHs in the presence of H2S/HS- under early solar system conditions.",
+            "key_datapoints": "ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The selective presence of high molecular weight PAHs (fluoranthene, pyrene, dimethylpyrene) in meteorites but not soils indicates these compounds form through high-temperature gas-phase reactions in the solar nebula rather than biological processes.",
+            "key_datapoints": "IDs 12,13 (fluoranthene, pyrene) in meteorites ALH 83100, LON 94101, LEW 85311, Orgueil; ID 45 (dimethylpyrene) in Orgueil, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of terpene-like compounds exclusively in soil samples suggests these are reliable biomarkers that can distinguish between biotic and abiotic origins of organic matter in extraterrestrial samples.",
+            "key_datapoints": "IDs 4,17,18 (possible terpenes) found only in biotic samples like Iceland Soil, Atacama, Utah soil, GSFC soil"
+        }
+    ]
+}

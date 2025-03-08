@@ -1,0 +1,25 @@
+🧬 Scientist 2 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of 1,2,4-trithiolane (ID 27) exclusively in Aguas Zarcas and LEW 85311 meteorites, coupled with dibenzothiophene (ID 14) in Orgueil, ALH 83100, and LEW 85311, suggests that sulfur-containing aromatics may serve as indicators of minimal terrestrial weathering and oxidation in meteorites. This is supported by the absence of these compounds in heavily weathered samples.",
+            "key_datapoints": "ID 27 (1,2,4-trithiolane) in Aguas Zarcas and LEW 85311; ID 14 (dibenzothiophene) in Orgueil, ALH 83100, and LEW 85311; Absence in terrestrial samples"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of fluoranthene (ID 12) and pyrene (ID 13) primarily in Antarctic meteorites (ALH 83100, LON 94101, LEW 85311) suggests these PAHs may be preserved better in cold environments. Their absence in most non-Antarctic meteorites and terrestrial samples indicates potential thermal degradation in warmer conditions.",
+            "key_datapoints": "ID 12 (fluoranthene) and ID 13 (pyrene) in Antarctic meteorites ALH 83100, LON 94101, LEW 85311; Absence in most non-Antarctic samples"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of 1,2,3,4-tetrahydro phenanthrene (ID 36) exclusively in Orgueil and Jbilet Winselwan, along with their unique dimethylpyrene content (ID 45), suggests these meteorites experienced similar parent body processing conditions that were distinct from other carbonaceous chondrites.",
+            "key_datapoints": "ID 36 (1,2,3,4-tetrahydro phenanthrene) and ID 45 (dimethylpyrene) in Orgueil and Jbilet Winselwan; Distribution pattern distinct from other meteorites"
+        },
+        {
+            "id": "H_four",
+            "statement": "The exclusive detection of ergost-14-ene (ID 28) in lignite soil and Murchison soil, but not in the Murchison meteorite itself, indicates this compound is a reliable marker for terrestrial biological contamination in meteorite samples.",
+            "key_datapoints": "ID 28 (ergost-14-ene) present only in lignite soil and Murchison soil; Absent in Murchison meteorite and other extraterrestrial samples"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+🧬 Scientist 3 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of methylated PAHs (e.g., methylnaphthalenes, trimethylnaphthalenes) predominantly in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.",
+            "key_datapoints": "ID 2 (2-methylnaphthalene), ID 8 (1-methylnaphthalene), ID 15 (trimethylnaphthalene) found mainly in meteorites Orgueil, ALH 83100, Murchison, LEW 85311"
+        },
+        {
+            "id": "H_two",
+            "statement": "The co-occurrence of sulfur-containing aromatics (dibenzothiophene, trithiolane) exclusively in meteorite samples suggests that sulfur incorporation into aromatic structures is a distinctive feature of abiotic synthesis in meteoritic parent bodies, potentially driven by the presence of reactive sulfur species in the early solar system.",
+            "key_datapoints": "ID 14 (dibenzothiophene) in Orgueil, ALH 83100, LEW 85311; ID 27 (1,2,4-trithiolane) in Aguas Zarcas, LEW 85311"
+        },
+        {
+            "id": "H_three",
+            "statement": "The presence of high molecular weight PAHs (fluoranthene, pyrene) exclusively in meteorites suggests that extended PAH formation requires high-energy abiotic processes typical of space environments rather than biological processes, which tend to produce smaller aromatic compounds.",
+            "key_datapoints": "ID 12 (fluoranthene) and ID 13 (pyrene) found only in meteorites ALH 83100, LON 94101, Orgueil, LEW 85311"
+        },
+        {
+            "id": "H_four",
+            "statement": "The exclusive presence of certain cyclic compounds (indane, methylindan, tetrahydrophenanthrene) in meteorites suggests a specific abiotic synthetic pathway involving sequential ring formation and reduction that is unique to space chemistry and distinct from biological aromatic synthesis.",
+            "key_datapoints": "ID 11 (indane), ID 23 (methylindan), ID 36 (tetrahydrophenanthrene) found only in meteorite samples"
+        }
+    ]
+}

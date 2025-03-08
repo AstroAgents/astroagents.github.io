@@ -1,0 +1,8 @@
+📝 Planner Instructions:
+{
+    "Agent1_instructions": "Focus on analyzing PAH distribution patterns in meteorites, specifically examining compounds with IDs 1, 2, 7, 8, 12, 13, 15, 42, 43, and 45. Compare the alkylation patterns between different meteorite groups and develop hypotheses about their formation mechanisms. Pay special attention to the differences between CM meteorites (Murchison, ALH 83100) versus CI meteorites (Orgueil) in terms of their PAH distributions.",
+    
+    "Agent2_instructions": "Investigate sulfur-containing and oxygen-containing organic compounds (IDs 14, 27, 30, 44) across different sample types. Compare their distribution between meteoritic and soil samples, and develop hypotheses about the role of these heteroatom-containing compounds in prebiotic chemistry. Focus particularly on the presence of compounds like dibenzothiophene and trithiolane.",
+    
+    "Agent3_instructions": "Study the hydrogenation state variations in related compounds across samples, focusing on IDs 33, 36, 42, and 37. Compare partially hydrogenated species (like 1,2,3,4-tetrahydrophenanthrene) versus their fully aromatic counterparts (like phenanthrene) in different meteorite groups. Develop hypotheses about what these patterns reveal about parent body conditions and organic matter processing."
+}

@@ -1,0 +1,25 @@
+🧬 Scientist 2 hypothesis:
+{
+    "hypothesis": [
+        {
+            "id": "H_one",
+            "statement": "The presence of dibenzothiophene (ID 14) and 1,2,4-trithiolane (ID 27) exclusively in meteorite samples suggests that sulfur-containing aromatics and heterocycles were synthesized through abiotic processes in the early solar system, likely through the incorporation of sulfur into PAH frameworks under reducing conditions.",
+            "key_datapoints": "ID 14 found in Orgueil, ALH 83100, LEW 85311; ID 27 found in Aguas Zarcas, LEW 85311; notably absent in all soil samples"
+        },
+        {
+            "id": "H_two", 
+            "statement": "The co-occurrence of naphthalene (ID 1) and its methylated derivatives (IDs 2, 8, 15) in meteorites but not in most soil samples indicates that alkylation of PAHs occurred through specific abiotic pathways in the solar nebula, rather than through biological processes.",
+            "key_datapoints": "IDs 1, 2, 8, 15 found predominantly in meteorites (Orgueil, ALH 83100, Murchison, etc.); minimal presence in soils except Green River Shale and Lignite"
+        },
+        {
+            "id": "H_three",
+            "statement": "The exclusive detection of fluoranthene (ID 12) and pyrene (ID 13) in meteorite samples but not in soil samples suggests these 4-ring PAHs were synthesized through high-temperature gas-phase reactions in the solar nebula, rather than through biological processes or thermal alteration of biological material.",
+            "key_datapoints": "ID 12 found in ALH 83100, LON 94101, LEW 85311; ID 13 found in Orgueil, LON 94101, LEW 85311; absent in all soil samples"
+        },
+        {
+            "id": "H_four",
+            "statement": "The presence of ergost-14-ene (ID 28) exclusively in soil samples suggests it serves as a reliable biomarker for distinguishing biologically-derived organic matter from abiotic meteoritic organics, as it is likely derived from the degradation of biological sterols.",
+            "key_datapoints": "ID 28 found only in Lignite Soil and Murchison Soil; absent in all meteorite samples"
+        }
+    ]
+}
