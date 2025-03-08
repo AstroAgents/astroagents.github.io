@@ -1006,6 +1006,72 @@
             font-style: italic;
             margin-top: 15px;
         }
+        
+        .pagination-info span {
+            margin: 0 5px;
+        }
+        
+        #current-page, #total-pages {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .model-indicator {
+            font-weight: 500;
+            color: #555;
+            font-style: italic;
+            background-color: rgba(var(--accent-color-rgb), 0.1);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .hypothesis-evaluation-section {
+                padding: 1rem;
+            }
+            
+            .pagination-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        .pagination-info {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+        }
+        
+        .rows-per-page {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+        }
+        
+        .rows-per-page label {
+            margin-right: 8px;
+            font-size: 0.9em;
+        }
+        
+        .rows-per-page select {
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .rows-per-page select:hover {
+            border-color: var(--accent-color);
+        }
+        
+        .pagination-info span {
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
@@ -1795,6 +1861,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="agent-output">
                             <h3>Output</h3>
                             <div class="output-content iteration-1">
@@ -1968,73 +2035,50 @@
                 <table class="evaluation-table">
                     <thead>
                         <tr>
+                            <th width="5%">Iteration</th>
+                            <th width="10%">Hypothesis ID</th>
                             <th width="25%">Statement</th>
                             <th width="20%">Comments</th>
                             <th width="15%">Key data/points</th>
-                            <th>Novelty</th>
-                            <th>Consistency with Existing Knowledge</th>
-                            <th>Clarity & Precision</th>
-                            <th>Empirical Support from the data</th>
-                            <th>Scope & Generalizability</th>
-                            <th>Predictive Power</th>
+                            <th width="25%">Evaluation Scores</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>The presence of methylated naphthalenes (2-methylnaphthalene, 1-methyl naphthalene, 1-ethyl naphthalene) exclusively in meteorite samples but not in soil samples suggests that alkylation of PAHs occurs through abiotic processes in space rather than through biological activity.</td>
-                            <td>Yes, but it would suggest that formation of this particular molecule is an abiotic process, it doesn't necessarily extend to alkylation of all PAHs</td>
-                            <td>IDs 2, 8, 15 found in meteorites (Orgueil, ALH 83100, LON 94101, Murchison, Jbilet Winselwan, LEW 85311) but absent in all soil samples</td>
-                            <td class="score">2</td>
-                            <td class="score">8</td>
-                            <td class="score">6</td>
-                            <td class="score">8</td>
-                            <td class="score">8</td>
-                            <td class="score">8</td>
-                        </tr>
-                        <tr class="model-specific gemini" style="display: none;">
-                            <td>The distribution of alkylated PAHs in meteorite samples shows a decreasing pattern with increasing carbon number, suggesting formation through random chemical processes rather than biological pathways.</td>
-                            <td>Correct observation with valid interpretation, though alternative explanations could exist</td>
-                            <td>Relative abundance patterns in IDs 1-12 showing systematic decrease with increasing alkylation</td>
-                            <td class="score">3</td>
-                            <td class="score">7</td>
-                            <td class="score">7</td>
-                            <td class="score">7</td>
-                            <td class="score">6</td>
-                            <td class="score">6</td>
-                        </tr>
-                        <tr>
-                            <td>Oxygen-containing aromatic compounds (e.g., naphthols, phenols) found in meteorite samples are likely formed through aqueous alteration processes on the parent body rather than in interstellar space.</td>
-                            <td>Well supported by data and consistent with known parent body processes</td>
-                            <td>IDs 14, 27, 30 showing correlation with other aqueous alteration markers</td>
-                            <td class="score">5</td>
-                            <td class="score">9</td>
-                            <td class="score">8</td>
-                            <td class="score">7</td>
-                            <td class="score">7</td>
-                            <td class="score">8</td>
-                        </tr>
-                        <tr class="model-specific gemini" style="display: none;">
-                            <td>Sulfur-containing aromatic compounds in meteorites indicate processing in reducing environments different from Earth's oxidizing conditions.</td>
-                            <td>Generally accurate but could be more specific about formation conditions</td>
-                            <td>IDs 42-45 showing unique S-containing compounds absent in terrestrial samples</td>
-                            <td class="score">4</td>
-                            <td class="score">8</td>
-                            <td class="score">5</td>
-                            <td class="score">7</td>
-                            <td class="score">6</td>
-                            <td class="score">7</td>
-                        </tr>
+                        <!-- Table content will be dynamically loaded from CSV files -->
                     </tbody>
                 </table>
+                <!-- Pagination Controls -->
+                <div class="pagination-controls">
+                    <button id="prev-page" class="pagination-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                    <div class="pagination-info">
+                        <span>Page</span>
+                        <span id="current-page">1</span>
+                        <span>of</span>
+                        <span id="total-pages">1</span>
+                        <span>•</span>
+                        <span id="model-indicator" class="model-indicator">Claude 3.5 Sonnet</span>
+                    </div>
+                    <div class="rows-per-page">
+                        <label for="page-size">Rows:</label>
+                        <select id="page-size">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <button id="next-page" class="pagination-btn"><i class="fas fa-chevron-right"></i> Next</button>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 AstroAgents - ICLR 2025</p>
+        <p>&copy; 2023 AstroAgents</p>
     </footer>
 
     <script src="js/results-loader.js"></script>
+    <script src="js/hypotheses-loader.js"></script>
     <script src="js/script.js"></script>
     <script>
         // Toggle between models in the hypothesis evaluation table
@@ -2044,16 +2088,134 @@
                 document.querySelectorAll('.model-btn').forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Show/hide relevant table rows
-                const modelType = this.getAttribute('data-model');
-                if (modelType === 'gemini') {
-                    document.querySelectorAll('.model-specific.gemini').forEach(row => row.style.display = 'table-row');
-                    document.querySelectorAll('.model-specific.claude').forEach(row => row.style.display = 'none');
-                } else {
-                    document.querySelectorAll('.model-specific.gemini').forEach(row => row.style.display = 'none');
-                    document.querySelectorAll('.model-specific.claude').forEach(row => row.style.display = 'table-row');
-                }
+                // Update pagination to show the current model's data
+                updatePagination();
             });
+        });
+        
+        // Pagination functionality
+        let currentPages = {
+            claude: 1,
+            gemini: 1
+        };
+        let rowsPerPage = 5; // Default number of rows to display per page
+        
+        function updatePagination() {
+            // Get currently active model
+            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
+            const currentPage = currentPages[modelType];
+            
+            // Get all rows for the current model
+            const allModelRows = Array.from(document.querySelectorAll(`.model-specific.${modelType}`));
+            
+            // Calculate total pages
+            const totalPages = Math.ceil(allModelRows.length / rowsPerPage);
+            document.getElementById('total-pages').textContent = totalPages || 1;
+            document.getElementById('current-page').textContent = currentPage;
+            
+            // Add model indicator to the pagination
+            document.getElementById('model-indicator').textContent = modelType === 'claude' ? 'Claude 3.5 Sonnet' : 'Gemini 2.0 Flash';
+            
+            // Update button states
+            document.getElementById('prev-page').disabled = currentPage <= 1;
+            document.getElementById('next-page').disabled = currentPage >= totalPages || totalPages === 0;
+            
+            // First, hide ALL rows
+            document.querySelectorAll('.model-specific').forEach(row => {
+                row.style.display = 'none';
+            });
+            
+            // Show only rows for current page of current model
+            const startIndex = (currentPage - 1) * rowsPerPage;
+            const endIndex = Math.min(startIndex + rowsPerPage, allModelRows.length);
+            
+            for (let i = startIndex; i < endIndex; i++) {
+                if (allModelRows[i]) {
+                    allModelRows[i].style.display = 'table-row';
+                }
+            }
+        }
+        
+        // Add event listeners for pagination controls
+        document.getElementById('prev-page').addEventListener('click', function() {
+            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
+            if (currentPages[modelType] > 1) {
+                currentPages[modelType]--;
+                updatePagination();
+            }
+        });
+        
+        document.getElementById('next-page').addEventListener('click', function() {
+            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
+            const allModelRows = document.querySelectorAll(`.model-specific.${modelType}`);
+            const totalPages = Math.ceil(allModelRows.length / rowsPerPage);
+            
+            if (currentPages[modelType] < totalPages) {
+                currentPages[modelType]++;
+                updatePagination();
+            }
+        });
+        
+        // Handle page size changes
+        document.getElementById('page-size').addEventListener('change', function() {
+            rowsPerPage = parseInt(this.value);
+            
+            // Reset to first page for both models to avoid confusion
+            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
+            currentPages[modelType] = 1;
+            
+            updatePagination();
+        });
+        
+        // Initialize pagination after data is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit for the data to load
+            setTimeout(function() {
+                // Set initial model (Claude is active by default)
+                const initialModel = document.querySelector('.model-btn.active').getAttribute('data-model');
+                
+                // Call updatePagination to set up initial view
+                updatePagination();
+                
+                // Also apply pagination when the page is scrolled (in case any scripts re-show rows)
+                window.addEventListener('scroll', function() {
+                    requestAnimationFrame(function() {
+                        // Only re-apply pagination if we detect all rows are showing
+                        const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
+                        const allModelRows = document.querySelectorAll(`.model-specific.${modelType}`);
+                        const visibleRows = document.querySelectorAll(`.model-specific.${modelType}[style*="display: table-row"]`);
+                        
+                        if (visibleRows.length > rowsPerPage) {
+                            updatePagination();
+                        }
+                    });
+                });
+                
+                // Override any other scripts that might show all rows
+                const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (mutation.type === 'attributes' && 
+                            mutation.attributeName === 'style' &&
+                            mutation.target.classList.contains('model-specific')) {
+                            
+                            requestAnimationFrame(function() {
+                                const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
+                                const visibleRows = document.querySelectorAll(`.model-specific.${modelType}[style*="display: table-row"]`);
+                                
+                                if (visibleRows.length > rowsPerPage) {
+                                    updatePagination();
+                                }
+                            });
+                        }
+                    });
+                });
+                
+                // Observe style changes on table rows
+                document.querySelectorAll('.model-specific').forEach(function(row) {
+                    observer.observe(row, { attributes: true, attributeFilter: ['style'] });
+                });
+                
+            }, 1000); // Longer delay to ensure data is fully loaded
         });
     </script>
     <style>
@@ -2165,9 +2327,105 @@
             opacity: 0.7;
         }
         
+        /* Pagination controls styling */
+        .pagination-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .pagination-btn {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pagination-btn:hover:not(:disabled) {
+            background-color: rgba(var(--accent-color-rgb), 0.1);
+        }
+        
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .pagination-btn i {
+            margin: 0 5px;
+        }
+        
+        .pagination-info {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+        }
+        
+        .pagination-info span {
+            margin: 0 5px;
+        }
+        
+        #current-page, #total-pages {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .model-indicator {
+            font-weight: 500;
+            color: #555;
+            font-style: italic;
+            background-color: rgba(var(--accent-color-rgb), 0.1);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+        
+        .rows-per-page {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+        }
+        
+        .rows-per-page label {
+            margin-right: 8px;
+            font-size: 0.9em;
+        }
+        
+        .rows-per-page select {
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .rows-per-page select:hover {
+            border-color: var(--accent-color);
+        }
+        
         @media (max-width: 768px) {
             .hypothesis-evaluation-section {
                 padding: 1rem;
+            }
+            
+            .pagination-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .pagination-info, .rows-per-page {
+                margin: 8px 0;
             }
         }
     </style>
