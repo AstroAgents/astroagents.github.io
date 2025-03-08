@@ -114,6 +114,78 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Main Navigation
+    const mainNavBtns = document.querySelectorAll('.main-nav-btn');
+    const contentSections = document.querySelectorAll('.content-section');
+    const sectionControls = document.querySelectorAll('.section-controls');
+
+    // Function to handle section navigation
+    function handleSectionNavigation(btn) {
+        // If already active, do nothing
+        if (btn.classList.contains('active')) return;
+
+        console.log('Navigation button clicked:', btn.id);
+
+        // Update active state for nav buttons
+        mainNavBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Get section ID from data attribute
+        const sectionId = btn.getAttribute('data-section');
+        console.log('Switching to section:', sectionId);
+        
+        // Hide all sections and show the selected one
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+            if (section.id === sectionId + '-section') {
+                section.classList.add('active');
+                console.log('Activated section:', section.id);
+            }
+        });
+
+        // Update controls in the header
+        sectionControls.forEach(control => {
+            control.classList.remove('active');
+            if (control.id === sectionId + '-controls') {
+                control.classList.add('active');
+                console.log('Activated controls:', control.id);
+            }
+        });
+    }
+
+    // Initialize section navigation with separate attachments for reliability
+    function attachNavigationHandlers() {
+        console.log('Attaching navigation handlers to', mainNavBtns.length, 'buttons');
+        
+        // Directly target each button by ID for reliability
+        const workflowBtn = document.getElementById('workflow-nav-btn');
+        const hypothesesBtn = document.getElementById('hypotheses-nav-btn');
+        
+        if (workflowBtn) {
+            console.log('Adding click handler to workflow button');
+            workflowBtn.addEventListener('click', function() {
+                handleSectionNavigation(this);
+            });
+        }
+        
+        if (hypothesesBtn) {
+            console.log('Adding click handler to hypotheses button');
+            hypothesesBtn.addEventListener('click', function() {
+                handleSectionNavigation(this);
+            });
+        }
+        
+        // Also attach to all buttons with the class as a fallback
+        mainNavBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                handleSectionNavigation(this);
+            });
+        });
+    }
+    
+    // Call this function to ensure the handlers are attached
+    attachNavigationHandlers();
+
     // DOM Elements
     const agentNavBtns = document.querySelectorAll('.agent-nav-btn');
     const agentContents = document.querySelectorAll('.agent-content');
@@ -330,5 +402,196 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         return maxIteration;
+    }
+
+    // Hypotheses Section Controls
+    const hypothesesModelSelect = document.getElementById('hyp-model-select');
+    const rowsPrevBtn = document.getElementById('rows-prev');
+    const rowsNextBtn = document.getElementById('rows-next');
+    const pageDisplay = document.getElementById('page-display');
+    
+    // Initialize hypotheses controls
+    if (hypothesesModelSelect) {
+        console.log('Setting up hypotheses model selector');
+        hypothesesModelSelect.addEventListener('change', function() {
+            const selectedModel = this.value;
+            console.log('Header model selector changed to:', selectedModel);
+            
+            // Update the table to show the selected model's data
+            updateHypothesesTable(selectedModel);
+        });
+    }
+    
+    // Pagination for hypotheses table
+    if (rowsPrevBtn && rowsNextBtn && pageDisplay) {
+        let currentPage = 1;
+        const rowsPerPage = 5; // Changed from 10 to 5 rows per page
+        
+        rowsPrevBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePageDisplay();
+                updateTablePagination();
+            }
+        });
+        
+        rowsNextBtn.addEventListener('click', () => {
+            const totalPages = Math.ceil(getTotalHypothesesRows() / rowsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePageDisplay();
+                updateTablePagination();
+            }
+        });
+        
+        function updatePageDisplay() {
+            pageDisplay.textContent = `Page ${currentPage}`;
+            
+            // Update button states
+            rowsPrevBtn.disabled = currentPage === 1;
+            const totalPages = Math.ceil(getTotalHypothesesRows() / rowsPerPage);
+            rowsNextBtn.disabled = currentPage >= totalPages;
+        }
+        
+        function updateTablePagination() {
+            console.log('Updating table pagination, current page:', currentPage);
+            
+            // Get all available rows (rows for the current selected model)
+            const availableRows = document.querySelectorAll('.evaluation-table tbody tr[data-available="true"]');
+            console.log('Total available rows:', availableRows.length);
+            
+            // Hide all rows first
+            availableRows.forEach(row => row.style.display = 'none');
+            
+            // Calculate which rows to display for the current page
+            const startIndex = (currentPage - 1) * rowsPerPage;
+            const endIndex = Math.min(startIndex + rowsPerPage, availableRows.length);
+            console.log(`Showing rows from index ${startIndex} to ${endIndex-1}`);
+            
+            // Show only the rows for the current page
+            for (let i = startIndex; i < endIndex; i++) {
+                if (availableRows[i]) {
+                    availableRows[i].style.display = 'table-row';
+                    console.log('Showing row:', i);
+                }
+            }
+            
+            // Update button states
+            updatePageDisplay();
+        }
+        
+        function getTotalHypothesesRows() {
+            // Get count of rows for the current selected model
+            const availableRows = document.querySelectorAll('.evaluation-table tbody tr[data-available="true"]');
+            return availableRows.length;
+        }
+        
+        // Initialize pagination
+        updatePageDisplay();
+        updateTablePagination();
+    }
+    
+    function updateHypothesesTable(model) {
+        console.log('Updating hypotheses table for model:', model);
+        
+        // First, mark all rows of the selected model as available by setting a custom attribute
+        const tableRows = document.querySelectorAll('.evaluation-table tbody tr');
+        tableRows.forEach(row => {
+            // Hide all rows initially
+            row.style.display = 'none';
+            
+            // Mark rows of the selected model as available
+            if (row.classList.contains(model)) {
+                row.setAttribute('data-available', 'true');
+            } else {
+                row.setAttribute('data-available', 'false');
+            }
+        });
+        
+        // Reset to page 1 when switching models
+        if (typeof currentPage !== 'undefined') {
+            currentPage = 1;
+        }
+        
+        // Apply pagination
+        if (typeof updateTablePagination === 'function') {
+            updateTablePagination();
+        } else {
+            console.error('updateTablePagination function not available');
+        }
+    }
+    
+    // Make sure global functions are accessible outside this scope
+    window.updateHypothesesTable = updateHypothesesTable;
+    
+    // Global initialization function
+    function initializeUI() {
+        console.log('Initializing UI...');
+        
+        // Initialize workflow section
+        updateIterationDisplay();
+        updateIterationContent();
+        setModelClass();
+        
+        // Set initial section display (ensure workflow section is shown by default)
+        const workflowSection = document.getElementById('workflow-section');
+        const hypothesesSection = document.getElementById('hypotheses-section');
+        if (workflowSection && hypothesesSection) {
+            workflowSection.classList.add('active');
+            hypothesesSection.classList.remove('active');
+            console.log('Set initial section visibility');
+        }
+        
+        // Set initial controls display
+        const workflowControls = document.getElementById('workflow-controls');
+        const hypothesesControls = document.getElementById('hypotheses-controls');
+        if (workflowControls && hypothesesControls) {
+            workflowControls.classList.add('active');
+            hypothesesControls.classList.remove('active');
+            console.log('Set initial controls visibility');
+        }
+        
+        // Set up the initial model for hypotheses (should be Claude by default)
+        const hypothesesModelSelect = document.getElementById('hyp-model-select');
+        if (hypothesesModelSelect) {
+            // Ensure Claude is selected
+            hypothesesModelSelect.value = 'claude';
+            // Initialize the table with Claude data
+            if (typeof updateHypothesesTable === 'function') {
+                updateHypothesesTable('claude');
+            }
+        }
+        
+        // Make sure navigation handlers are attached
+        attachNavigationHandlers();
+        
+        console.log('UI initialization complete');
+    }
+    
+    // Initialize everything once the DOM is fully loaded
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        console.log('Document already loaded, initializing immediately');
+        setTimeout(() => {
+            initializeUI();
+            
+            // Set default model availability after a small delay to ensure data is loaded
+            setTimeout(() => {
+                // Mark claude rows as available by default (since it's the default model)
+                const claudeRows = document.querySelectorAll('.evaluation-table tbody tr.claude');
+                claudeRows.forEach(row => row.setAttribute('data-available', 'true'));
+                
+                // Mark gemini rows as unavailable
+                const geminiRows = document.querySelectorAll('.evaluation-table tbody tr.gemini');
+                geminiRows.forEach(row => row.setAttribute('data-available', 'false'));
+                
+                // Apply initial pagination
+                if (typeof updateTablePagination === 'function') {
+                    updateTablePagination();
+                }
+            }, 500);
+        }, 0);
+    } else {
+        console.log('Adding DOMContentLoaded listener');
+        window.addEventListener('DOMContentLoaded', initializeUI);
     }
 }); 

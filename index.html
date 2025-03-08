@@ -1035,6 +1035,10 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            
+            .pagination-info, .rows-per-page {
+                margin: 8px 0;
+            }
         }
         
         .pagination-info {
@@ -1071,6 +1075,79 @@
         
         .pagination-info span {
             margin: 0 5px;
+        }
+        
+        /* Styles for the hypothesis evaluation section */
+        .hypothesis-evaluation-section {
+            padding: 2rem;
+            background-color: var(--bg-color);
+            margin-top: 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hypothesis-evaluation-section {
+                padding: 1rem;
+            }
+            
+            .pagination-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .pagination-info, .rows-per-page {
+                margin: 8px 0;
+            }
+        }
+        
+        .pagination-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 10px;
+        }
+        
+        .pagination-controls button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(var(--accent-color-rgb), 0.1);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination-controls button:hover:not(:disabled) {
+            background-color: rgba(var(--accent-color-rgb), 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .pagination-controls button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .pagination-controls span {
+            font-weight: 500;
+            min-width: 90px;
+            text-align: center;
+        }
+        
+        /* Make pagination controls match iteration selector on mobile */
+        @media (max-width: 768px) {
+            .pagination-controls {
+                flex-direction: row;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -1188,227 +1265,261 @@
             <img src="images/logo.png" alt="AstroAgents Logo" class="logo">
         </div>
         <div class="controls">
-            <div class="model-selector">
-                <label for="model-select">Model:</label>
-                <select id="model-select">
-                    <option value="gemini">Gemini 2.0 Flash</option>
-                    <option value="claude">Claude 3.5 Sonnet</option>
-                </select>
+            <!-- Workflow section controls -->
+            <div id="workflow-controls" class="section-controls active">
+                <div class="model-selector">
+                    <label for="model-select">Model:</label>
+                    <select id="model-select">
+                        <option value="gemini">Gemini 2.0 Flash</option>
+                        <option value="claude">Claude 3.5 Sonnet</option>
+                    </select>
+                </div>
+                <div class="iteration-selector">
+                    <button id="prev-iteration" title="Previous Iteration"><i class="fas fa-arrow-left"></i></button>
+                    <span id="iteration-display">Iteration 1</span>
+                    <button id="next-iteration" title="Next Iteration"><i class="fas fa-arrow-right"></i></button>
+                </div>
             </div>
-            <div class="iteration-selector">
-                <button id="prev-iteration" title="Previous Iteration"><i class="fas fa-arrow-left"></i></button>
-                <span id="iteration-display">Iteration 1</span>
-                <button id="next-iteration" title="Next Iteration"><i class="fas fa-arrow-right"></i></button>
+            
+            <!-- Hypotheses section controls -->
+            <div id="hypotheses-controls" class="section-controls">
+                <div class="model-selector">
+                    <label for="hyp-model-select">Model:</label>
+                    <select id="hyp-model-select" onchange="switchHypothesesModel(this.value)">
+                        <option value="claude">Claude 3.5 Sonnet</option>
+                        <option value="gemini">Gemini 2.0 Flash</option>
+                    </select>
+                </div>
+                <div class="pagination-controls" style="
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+            ">
+                    <button id="rows-prev" title="Previous Page" onclick="paginateHypotheses('prev')" disabled><i class="fas fa-arrow-left"></i></button>
+                    <span id="page-display">Page 1</span>
+                    <button id="rows-next" title="Next Page" onclick="paginateHypotheses('next')"><i class="fas fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </header>
 
-    <main id="main-content">
-        <div class="workflow-container">
-            <div class="agent-navigation">
-                <button class="agent-nav-btn active" data-agent="data-analyst">
-                    <div class="agent-icon data-analyst-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <span>Data Analyst</span>
-                </button>
-                <button class="agent-nav-btn" data-agent="planner">
-                    <div class="agent-icon planner-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <span>Planner</span>
-                </button>
-                <button class="agent-nav-btn" data-agent="scientist-1">
-                    <div class="agent-icon scientist-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <span>Scientist 1</span>
-                </button>
-                <button class="agent-nav-btn" data-agent="scientist-2">
-                    <div class="agent-icon scientist-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <span>Scientist 2</span>
-                </button>
-                <button class="agent-nav-btn" data-agent="scientist-3">
-                    <div class="agent-icon scientist-icon">
-                        <i class="fas fa-atom"></i>
-                    </div>
-                    <span>Scientist 3</span>
-                </button>
-                <button class="agent-nav-btn" data-agent="accumulator">
-                    <div class="agent-icon accumulator-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <span>Accumulator</span>
-                </button>
-                <button class="agent-nav-btn" data-agent="literature">
-                    <div class="agent-icon literature-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <span>Literature Review</span>
-                </button>
-                <button class="agent-nav-btn" data-agent="critic">
-                    <div class="agent-icon critic-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <span>Critic</span>
-                </button>
-            </div>
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+        <button id="workflow-nav-btn" class="main-nav-btn active" data-section="workflow">
+            <i class="fas fa-project-diagram"></i> Workflow
+        </button>
+        <button id="hypotheses-nav-btn" class="main-nav-btn" data-section="hypotheses" onclick="switchToHypotheses()">
+            <i class="fas fa-lightbulb"></i> Generated Hypotheses
+        </button>
+    </nav>
 
-            <div class="agent-content-container">
-                <!-- Data Analyst Agent Content -->
-                <div class="agent-content active" id="data-analyst">
-                    <div class="agent-header">
+    <main id="main-content">
+        <!-- Workflow Section -->
+        <div id="workflow-section" class="content-section active">
+            <div class="workflow-container">
+                <div class="agent-navigation">
+                    <button class="agent-nav-btn active" data-agent="data-analyst">
                         <div class="agent-icon data-analyst-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h2>Data Analyst</h2>
-                    </div>
-                    <div class="agent-description">
-                        <ul>
-                            <li>Examines mass spectrometry data to uncover key patterns</li>
-                            <li>Identifies significant patterns and trends in the dataset</li>
-                            <li>Highlights unexpected findings and anomalies</li>
-                            <li>Recognizes potential environmental contamination</li>
-                            <li>Refines analysis based on critic feedback</li>
-                        </ul>
-                    </div>
-                    <div class="agent-io">
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="data-table">
-                                <h4>Mass Spectrometry Data:</h4>
-
-                                <div class="analyst-context">
-                                    <h5>Analyst Role:</h5>
-                                    <p>You are a sophisticated analytical scientist specializing in astrobiological data analysis, with deep expertise in meteorites. Your knowledge is based on but not limited to the following:</p>
-                                    
-                                    <h5>Background Context:</h5>
-                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
-                                    
-                                    <h5>Your tasks include:</h5>
-                                    <ol>
-                                        <li>Identifying significant patterns and trends in the dataset, especially PAH distributions and alkylation patterns.</li>
-                                        <li>Identifying possible environmental contamination in the samples, considering terrestrial vs. extraterrestrial signatures.</li>
-                                        <li>Highlighting unexpected or unusual findings, particularly regarding temperature indicators.</li>
-                                        <li>Comparing data subsets where relevant, especially between different meteorite classes.</li>
-                                        <li><strong>MOST IMPORTANTLY:</strong> Incorporating critic feedback to guide your analysis.</li>
-                                    </ol>
-                                    
-                                    <h5>Input Data:</h5>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>M/Z</th>
-                                                <th>RTs</th>
-                                                <th>Compound</th>
-                                                <th>Samples</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>128</td>
-                                                <td>(68 min, 1.2s)</td>
-                                                <td>Naphthalene</td>
-                                                <td>Orgueil Lignite</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>142</td>
-                                                <td>(72 min, 1.4s)</td>
-                                                <td>Methylnaphthalene</td>
-                                                <td>Orgueil, Murchison</td>
-                                            </tr>
-                                            <tr>
-                                                <td>...</td>
-                                                <td>...</td>
-                                                <td>...</td>
-                                                <td>...</td>
-                                                <td>...</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    
-                                    <h5>Critic Feedback:</h5>
-                                    <p><strong>CRITIC FEEDBACK GOES HERE</strong></p>
-                                    
-                                    <p class="analysis-instructions">Provide a refined analysis based on the above, with special emphasis on addressing critic feedback.
-                                    Pay particular attention to rewarded aspects and avoid patterns similar to criticized aspects.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Planner Agent Content -->
-                <div class="agent-content" id="planner">
-                    <div class="agent-header">
+                        <span>Data Analyst</span>
+                    </button>
+                    <button class="agent-nav-btn" data-agent="planner">
                         <div class="agent-icon planner-icon">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
-                        <h2>Planner</h2>
+                        <span>Planner</span>
+                    </button>
+                    <button class="agent-nav-btn" data-agent="scientist-1">
+                        <div class="agent-icon scientist-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <span>Scientist 1</span>
+                    </button>
+                    <button class="agent-nav-btn" data-agent="scientist-2">
+                        <div class="agent-icon scientist-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <span>Scientist 2</span>
+                    </button>
+                    <button class="agent-nav-btn" data-agent="scientist-3">
+                        <div class="agent-icon scientist-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <span>Scientist 3</span>
+                    </button>
+                    <button class="agent-nav-btn" data-agent="accumulator">
+                        <div class="agent-icon accumulator-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <span>Accumulator</span>
+                    </button>
+                    <button class="agent-nav-btn" data-agent="literature">
+                        <div class="agent-icon literature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <span>Literature Review</span>
+                    </button>
+                    <button class="agent-nav-btn" data-agent="critic">
+                        <div class="agent-icon critic-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <span>Critic</span>
+                    </button>
+                </div>
+
+                <div class="agent-content-container">
+                    <!-- Data Analyst Agent Content -->
+                    <div class="agent-content active" id="data-analyst">
+                        <div class="agent-header">
+                            <div class="agent-icon data-analyst-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h2>Data Analyst</h2>
+                        </div>
+                        <div class="agent-description">
+                            <ul>
+                                <li>Examines mass spectrometry data to uncover key patterns</li>
+                                <li>Identifies significant patterns and trends in the dataset</li>
+                                <li>Highlights unexpected findings and anomalies</li>
+                                <li>Recognizes potential environmental contamination</li>
+                                <li>Refines analysis based on critic feedback</li>
+                            </ul>
+                        </div>
+                        <div class="agent-io">
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="data-table">
+                                    <h4>Mass Spectrometry Data:</h4>
+
+                                    <div class="analyst-context">
+                                        <h5>Analyst Role:</h5>
+                                        <p>You are a sophisticated analytical scientist specializing in astrobiological data analysis, with deep expertise in meteorites. Your knowledge is based on but not limited to the following:</p>
+                                        
+                                        <h5>Background Context:</h5>
+                                        <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                        
+                                        <h5>Your tasks include:</h5>
+                                        <ol>
+                                            <li>Identifying significant patterns and trends in the dataset, especially PAH distributions and alkylation patterns.</li>
+                                            <li>Identifying possible environmental contamination in the samples, considering terrestrial vs. extraterrestrial signatures.</li>
+                                            <li>Highlighting unexpected or unusual findings, particularly regarding temperature indicators.</li>
+                                            <li>Comparing data subsets where relevant, especially between different meteorite classes.</li>
+                                            <li><strong>MOST IMPORTANTLY:</strong> Incorporating critic feedback to guide your analysis.</li>
+                                        </ol>
+                                        
+                                        <h5>Input Data:</h5>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>M/Z</th>
+                                                    <th>RTs</th>
+                                                    <th>Compound</th>
+                                                    <th>Samples</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>128</td>
+                                                    <td>(68 min, 1.2s)</td>
+                                                    <td>Naphthalene</td>
+                                                    <td>Orgueil Lignite</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>142</td>
+                                                    <td>(72 min, 1.4s)</td>
+                                                    <td>Methylnaphthalene</td>
+                                                    <td>Orgueil, Murchison</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>...</td>
+                                                    <td>...</td>
+                                                    <td>...</td>
+                                                    <td>...</td>
+                                                    <td>...</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <h5>Critic Feedback:</h5>
+                                        <p><strong>CRITIC FEEDBACK GOES HERE</strong></p>
+                                        
+                                        <p class="analysis-instructions">Provide a refined analysis based on the above, with special emphasis on addressing critic feedback.
+                                        Pay particular attention to rewarded aspects and avoid patterns similar to criticized aspects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
+                                </div>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="agent-description">
-                        <p>Based on data analysis from the data analyst agent, delegates specific segments of the input data to a team of three scientist agents for in-depth exploration and focus. Generates detailed instructions for each scientist in a structured JSON format.</p>
-                    </div>
-                    <div class="agent-io">
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="planner-context">
-                                <h5>Planner Role:</h5>
-                                <p>You are an experienced scientific planner and coordinator. Based on the data analysis provided below, your task is to delegate specific areas within the input data across a team of three scientists for in-depth exploration and investigation.</p>
-                                
-                                <h5>Input Data:</h5>
-                                <p><strong>INPUT DATA GOES HERE</strong></p>
-                                
-                                <h5>Data Analysis:</h5>
-                                <p><strong>DATA ANALYST OUTPUT GOES HERE</strong></p>
-                                
-                                <h5>Important:</h5>
-                                <ol>
-                                    <li>Just focus on the data analysis and divide the among three agents.</li>
-                                    <li>The agents are not able to run tools, they only generate hypotheses based on the area that you delegate to them.</li>
-                                    <li>Make sure to include the ID of the compounds in the task split.</li>
-                                    <li>DO NOT include GC or environmental contamination in your task split, the user already knows about it.</li>
-                                    <li>DO NOT assign any tasks about making the data better and doing further analysis.</li>
-                                </ol>
-                                
-                                <p class="task-instructions">Based on the above, provide specific instructions for each of the three scientists, clearly indicating what aspect of the data they should focus on.</p>
-                                
-                                <div class="format-instructions">
-                                    <p>Your response must be ONLY a valid JSON object with the following format, with no additional text before or after:</p>
+
+                    <!-- Planner Agent Content -->
+                    <div class="agent-content" id="planner">
+                        <div class="agent-header">
+                            <div class="agent-icon planner-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h2>Planner</h2>
+                        </div>
+                        <div class="agent-description">
+                            <p>Based on data analysis from the data analyst agent, delegates specific segments of the input data to a team of three scientist agents for in-depth exploration and focus. Generates detailed instructions for each scientist in a structured JSON format.</p>
+                        </div>
+                        <div class="agent-io">
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="planner-context">
+                                    <h5>Planner Role:</h5>
+                                    <p>You are an experienced scientific planner and coordinator. Based on the data analysis provided below, your task is to delegate specific areas within the input data across a team of three scientists for in-depth exploration and investigation.</p>
                                     
-                                    <pre class="json-format">
+                                    <h5>Input Data:</h5>
+                                    <p><strong>INPUT DATA GOES HERE</strong></p>
+                                    
+                                    <h5>Data Analysis:</h5>
+                                    <p><strong>DATA ANALYST OUTPUT GOES HERE</strong></p>
+                                    
+                                    <h5>Important:</h5>
+                                    <ol>
+                                        <li>Just focus on the data analysis and divide the among three agents.</li>
+                                        <li>The agents are not able to run tools, they only generate hypotheses based on the area that you delegate to them.</li>
+                                        <li>Make sure to include the ID of the compounds in the task split.</li>
+                                        <li>DO NOT include GC or environmental contamination in your task split, the user already knows about it.</li>
+                                        <li>DO NOT assign any tasks about making the data better and doing further analysis.</li>
+                                    </ol>
+                                    
+                                    <p class="task-instructions">Based on the above, provide specific instructions for each of the three scientists, clearly indicating what aspect of the data they should focus on.</p>
+                                    
+                                    <div class="format-instructions">
+                                        <p>Your response must be ONLY a valid JSON object with the following format, with no additional text before or after:</p>
+                                        
+                                        <pre class="json-format">
 {
     "Agent1_instructions": "Detailed instructions for 
     what Scientist 1 should focus on.",
@@ -1417,91 +1528,91 @@
     "Agent3_instructions": "Detailed instructions for
     what Scientist 3 should focus on."
 }
-                                    </pre>
-                                    
-                                    <p>Ensure the JSON is properly formatted.</p>
+                                        </pre>
+                                        
+                                        <p>Ensure the JSON is properly formatted.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Scientist 1 Content -->
-                <div class="agent-content" id="scientist-1">
-                    <div class="agent-header">
-                        <div class="agent-icon scientist-icon">
-                            <i class="fas fa-flask"></i>
+                    <!-- Scientist 1 Content -->
+                    <div class="agent-content" id="scientist-1">
+                        <div class="agent-header">
+                            <div class="agent-icon scientist-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h2>Scientist 1</h2>
                         </div>
-                        <h2>Scientist 1</h2>
-                    </div>
-                    <div class="agent-description">
-                        <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
-                    </div>
-                    <div class="agent-io">
-                        <!-- Content for Scientist 1 -->
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="input-content">
-                                <div class="scientist-context">
-                                    <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>You are Scientist <strong>1</strong>.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
-                                    
-                                    <p>Your job is to:</p>
-                                    <ol>
-                                        <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
-                                        <li>You must be original and novel, while considering established formation mechanisms.</li>
-                                        <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
-                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
-                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
-                                    </ol>
-                                    
-                                    <h5>Background Context:</h5>
-                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
-                                    
-                                    <h5>Input Data:</h5>
-                                    <p><strong>INPUT DATA GOES HERE</strong></p>
-                                    
-                                    <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
-                                    <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
-                                    <pre class="json-format">
+                        <div class="agent-description">
+                            <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
+                        </div>
+                        <div class="agent-io">
+                            <!-- Content for Scientist 1 -->
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="input-content">
+                                    <div class="scientist-context">
+                                        <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>You are Scientist <strong>1</strong>.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
+                                        
+                                        <p>Your job is to:</p>
+                                        <ol>
+                                            <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
+                                            <li>You must be original and novel, while considering established formation mechanisms.</li>
+                                            <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
+                                            <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                            <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                        </ol>
+                                        
+                                        <h5>Background Context:</h5>
+                                        <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                        
+                                        <h5>Input Data:</h5>
+                                        <p><strong>INPUT DATA GOES HERE</strong></p>
+                                        
+                                        <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
+                                        <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
+                                        <pre class="json-format">
 {
     "hypothesis": [
         {
@@ -1514,89 +1625,89 @@
         }
     ]
 }
-                                    </pre>
+                                        </pre>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Scientist 2 Content -->
-                <div class="agent-content" id="scientist-2">
-                    <!-- Similar structure as Scientist 1 -->
-                    <div class="agent-header">
-                        <div class="agent-icon scientist-icon">
-                            <i class="fas fa-vial"></i>
+                    <!-- Scientist 2 Content -->
+                    <div class="agent-content" id="scientist-2">
+                        <!-- Similar structure as Scientist 1 -->
+                        <div class="agent-header">
+                            <div class="agent-icon scientist-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <h2>Scientist 2</h2>
                         </div>
-                        <h2>Scientist 2</h2>
-                    </div>
-                    <div class="agent-description">
-                        <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
-                    </div>
-                    <div class="agent-io">
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="input-content">
-                                <div class="scientist-context">
-                                    <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>You are Scientist <strong>2</strong>.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
-                                    
-                                    <p>Your job is to:</p>
-                                    <ol>
-                                        <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
-                                        <li>You must be original and novel, while considering established formation mechanisms.</li>
-                                        <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
-                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
-                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
-                                    </ol>
-                                    
-                                    <h5>Background Context:</h5>
-                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
-                                    
-                                    <h5>Input Data:</h5>
-                                    <p><strong>INPUT DATA GOES HERE</strong></p>
-                                    
-                                    <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
-                                    <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
-                                    <pre class="json-format">
+                        <div class="agent-description">
+                            <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
+                        </div>
+                        <div class="agent-io">
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="input-content">
+                                    <div class="scientist-context">
+                                        <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>You are Scientist <strong>2</strong>.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
+                                        
+                                        <p>Your job is to:</p>
+                                        <ol>
+                                            <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
+                                            <li>You must be original and novel, while considering established formation mechanisms.</li>
+                                            <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
+                                            <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                            <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                        </ol>
+                                        
+                                        <h5>Background Context:</h5>
+                                        <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                        
+                                        <h5>Input Data:</h5>
+                                        <p><strong>INPUT DATA GOES HERE</strong></p>
+                                        
+                                        <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
+                                        <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
+                                        <pre class="json-format">
 {
     "hypothesis": [
         {
@@ -1609,89 +1720,89 @@
         }
     ]
 }
-                                    </pre>
+                                        </pre>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Scientist 3 Content -->
-                <div class="agent-content" id="scientist-3">
-                    <!-- Similar structure as Scientists 1 & 2 -->
-                    <div class="agent-header">
-                        <div class="agent-icon scientist-icon">
-                            <i class="fas fa-atom"></i>
+                    <!-- Scientist 3 Content -->
+                    <div class="agent-content" id="scientist-3">
+                        <!-- Similar structure as Scientists 1 & 2 -->
+                        <div class="agent-header">
+                            <div class="agent-icon scientist-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <h2>Scientist 3</h2>
                         </div>
-                        <h2>Scientist 3</h2>
-                    </div>
-                    <div class="agent-description">
-                        <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
-                    </div>
-                    <div class="agent-io">
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="input-content">
-                                <div class="scientist-context">
-                                    <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>You are Scientist <strong>3</strong>.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
-                                    
-                                    <p>Your job is to:</p>
-                                    <ol>
-                                        <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
-                                        <li>You must be original and novel, while considering established formation mechanisms.</li>
-                                        <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
-                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
-                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
-                                    </ol>
-                                    
-                                    <h5>Background Context:</h5>
-                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
-                                    
-                                    <h5>Input Data:</h5>
-                                    <p><strong>INPUT DATA GOES HERE</strong></p>
-                                    
-                                    <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
-                                    <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
-                                    <pre class="json-format">
+                        <div class="agent-description">
+                            <p>Operates within its assigned domain, generates hypotheses in a structured JSON format. Each hypothesis includes a statement describing the proposed idea and supporting evidence from key data points.</p>
+                        </div>
+                        <div class="agent-io">
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="input-content">
+                                    <div class="scientist-context">
+                                        <p>You are a sophisticated astrobiologist and prebiotic chemist specializing in meteoritic organic compounds.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>You are Scientist <strong>3</strong>.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>Instructions: <strong>AGENT_INSTRUCTION</strong>.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p class="important-note">IMPORTANT: Only focus on the data that is assigned to you.</p>
+                                        
+                                        <p>Your job is to:</p>
+                                        <ol>
+                                            <li>Generate all hypotheses and conclusions from the <strong>Input Data</strong>.</li>
+                                            <li>You must be original and novel, while considering established formation mechanisms.</li>
+                                            <li>Make conclusions ONLY based on the <strong>Input Data</strong> and the <strong>Instructions</strong>.</li>
+                                            <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                            <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                        </ol>
+                                        
+                                        <h5>Background Context:</h5>
+                                        <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                        
+                                        <h5>Input Data:</h5>
+                                        <p><strong>INPUT DATA GOES HERE</strong></p>
+                                        
+                                        <p>Based on the above, generate new hypotheses and conclusions as necessary.</p>
+                                        <p>You must respond ONLY with a valid JSON object in the following format, with no additional text before or after:</p>
+                                        <pre class="json-format">
 {
     "hypothesis": [
         {
@@ -1704,82 +1815,82 @@
         }
     ]
 }
-                                    </pre>
+                                        </pre>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Accumulator Agent Content -->
-                <div class="agent-content" id="accumulator">
-                    <div class="agent-header">
-                        <div class="agent-icon accumulator-icon">
-                            <i class="fas fa-layer-group"></i>
+                    <!-- Accumulator Agent Content -->
+                    <div class="agent-content" id="accumulator">
+                        <div class="agent-header">
+                            <div class="agent-icon accumulator-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h2>Accumulator Agent</h2>
                         </div>
-                        <h2>Accumulator Agent</h2>
-                    </div>
-                    <div class="agent-description">
-                        <ul>
-                            <li>Processes the combined output from all three scientist agents</li>
-                            <li>Performs hypothesis deduplication by identifying and consolidating substantially similar hypotheses</li>
-                            <li>Ensures a streamlined and non-redundant set of hypotheses for further investigation</li>
-                        </ul>
-                    </div>
-                    <div class="agent-io">
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="input-content">
-                                <div class="accumulator-context">
-                                    <p>You are an expert astrobiologist and scientific reviewer tasked with evaluating multiple hypotheses generated by different astrobiology scientists. Your job is to combine concatenate the hypotheses and conclusions from the three scientists and discard any repetitive hypotheses.</p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>You have received the following hypotheses from three separate scientists:</p>
-                                    
-                                    <p><strong>A JSON LISTING ALL HYPOTHESES GENERATED GOES HERE.</strong></p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>Your task is to:</p>
-                                    <ol>
-                                        <li>Review each hypothesis critically</li>
-                                        <li>Concatenate the hypotheses and conclusions from the three scientists</li>
-                                        <li>Discard repetitive hypotheses</li>
-                                        <li>Make sure to include more than one hypothesis in the final hypothesis list</li>
-                                        <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
-                                        <li>DO NOT recommend any hypothesis about making the data better.</li>
-                                    </ol>
-                                    
-                                    <p>Provide your response ONLY as a valid JSON object in the following format, with no additional text before or after:</p>
-                                    <pre class="json-format">
+                        <div class="agent-description">
+                            <ul>
+                                <li>Processes the combined output from all three scientist agents</li>
+                                <li>Performs hypothesis deduplication by identifying and consolidating substantially similar hypotheses</li>
+                                <li>Ensures a streamlined and non-redundant set of hypotheses for further investigation</li>
+                            </ul>
+                        </div>
+                        <div class="agent-io">
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="input-content">
+                                    <div class="accumulator-context">
+                                        <p>You are an expert astrobiologist and scientific reviewer tasked with evaluating multiple hypotheses generated by different astrobiology scientists. Your job is to combine concatenate the hypotheses and conclusions from the three scientists and discard any repetitive hypotheses.</p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>You have received the following hypotheses from three separate scientists:</p>
+                                        
+                                        <p><strong>A JSON LISTING ALL HYPOTHESES GENERATED GOES HERE.</strong></p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>Your task is to:</p>
+                                        <ol>
+                                            <li>Review each hypothesis critically</li>
+                                            <li>Concatenate the hypotheses and conclusions from the three scientists</li>
+                                            <li>Discard repetitive hypotheses</li>
+                                            <li>Make sure to include more than one hypothesis in the final hypothesis list</li>
+                                            <li>DO NOT include GC or environmental contamination in your hypothesis, the user already knows about it.</li>
+                                            <li>DO NOT recommend any hypothesis about making the data better.</li>
+                                        </ol>
+                                        
+                                        <p>Provide your response ONLY as a valid JSON object in the following format, with no additional text before or after:</p>
+                                        <pre class="json-format">
 {
     "hypothesis": [
         {
@@ -1789,231 +1900,232 @@
         }
     ]
 }
-                                    </pre>
+                                        </pre>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Literature Review Agent Content -->
-                <div class="agent-content" id="literature">
-                    <div class="agent-header">
-                        <div class="agent-icon literature-icon">
-                            <i class="fas fa-book"></i>
+                    <!-- Literature Review Agent Content -->
+                    <div class="agent-content" id="literature">
+                        <div class="agent-header">
+                            <div class="agent-icon literature-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h2>Literature Review</h2>
                         </div>
-                        <h2>Literature Review</h2>
-                    </div>
-                    <div class="agent-description">
-                        <p>Utilizes Semantic Scholar to locate relevant research papers for each hypothesis, retrieving and analyzing up to five pertinent paper snippets per query. Processes search results by extracting key insights, synthesizing information, and presenting a clear, concise summary while highlighting significant findings and potential conflicts.</p>
-                    </div>
-                    <div class="agent-io">
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="input-content">
-                                <div class="literature-context">
-                                    <p>You are a specialized literature review agent analyzing scientific literature search results.</p>
-                                    
-                                    <p>Your tasks include:</p>
-                                    <ol>
-                                        <li>Analyzing the search results provided below.</li>
-                                        <li>Extracting and synthesizing key insights.</li>
-                                        <li>Formatting your summary clearly and concisely.</li>
-                                        <li>Highlighting significant findings and noting any conflicting evidence.</li>
-                                    </ol>
-                                    
-                                    <h5>Query:</h5>
-                                    
-                                    <p><strong>THE LIST OF HYPOTHESIS STATEMENTS GOES HERE.</strong></p>
-                                    
-                                    <h5>Search Results:</h5>
-                                    
-                                    <p><strong>SEARCH RESULTS GOES HERE.</strong></p>
-                                    
-                                    <p class="literature-instructions">Provide a well-organized summary addressing the query, key discoveries, research gaps, and include any relevant citations.</p>
+                        <div class="agent-description">
+                            <p>Utilizes Semantic Scholar to locate relevant research papers for each hypothesis, retrieving and analyzing up to five pertinent paper snippets per query. Processes search results by extracting key insights, synthesizing information, and presenting a clear, concise summary while highlighting significant findings and potential conflicts.</p>
+                        </div>
+                        <div class="agent-io">
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="input-content">
+                                    <div class="literature-context">
+                                        <p>You are a specialized literature review agent analyzing scientific literature search results.</p>
+                                        
+                                        <p>Your tasks include:</p>
+                                        <ol>
+                                            <li>Analyzing the search results provided below.</li>
+                                            <li>Extracting and synthesizing key insights.</li>
+                                            <li>Formatting your summary clearly and concisely.</li>
+                                            <li>Highlighting significant findings and noting any conflicting evidence.</li>
+                                        </ol>
+                                        
+                                        <h5>Query:</h5>
+                                        
+                                        <p><strong>THE LIST OF HYPOTHESIS STATEMENTS GOES HERE.</strong></p>
+                                        
+                                        <h5>Search Results:</h5>
+                                        
+                                        <p><strong>SEARCH RESULTS GOES HERE.</strong></p>
+                                        
+                                        <p class="literature-instructions">Provide a well-organized summary addressing the query, key discoveries, research gaps, and include any relevant citations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
+                                </div>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
 
-                <!-- Critic Agent Content -->
-                <div class="agent-content" id="critic">
-                    <div class="agent-header">
-                        <div class="agent-icon critic-icon">
-                            <i class="fas fa-balance-scale"></i>
+                    <!-- Critic Agent Content -->
+                    <div class="agent-content" id="critic">
+                        <div class="agent-header">
+                            <div class="agent-icon critic-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h2>Critic</h2>
                         </div>
-                        <h2>Critic</h2>
-                    </div>
-                    <div class="agent-description">
-                        <p>Evaluates each hypothesis based on its consistency with experimental data, scientific rigor, theoretical basis from selected papers, and integration with external literature gathered by the literature review agent. Particularly focuses on assessing the novelty and specificity of claims, providing structured feedback to guide the next round of hypothesis refinement.</p>
-                    </div>
-                    <div class="agent-io">
-                        <div class="agent-input">
-                            <h3>Input</h3>
-                            <div class="input-content">
-                                <div class="critic-context">
-                                    <p>You are an expert scientist in astrobiology and prebiotic chemistry, with deep expertise in PAH analysis and meteoritic organic chemistry.</p>
-                                    
-                                    <h5>Background Context:</h5>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p>Your task is to provide a detailed, scientifically rigorous critique of the proposed hypothesis and the associated data analysis. Note that if the <strong>hypotheses</strong> are not exactly aligned with the data, you should discard the hypothesis and generate a new one.</p>
-                                    
-                                    <p>Your critique must include:</p>
-                                    
-                                    <ol>
-                                        <li>
-                                            <strong>Alignment with the data:</strong>
-                                            <ul>
-                                                <li>Assess the alignment of the hypothesis with the data.</li>
-                                                <li>Evaluate if the proposed mechanisms align with observed PAH distributions and temperature indicators.</li>
-                                                <li>Consider if the hypothesis accounts for both chemical and physical processes in meteorite parent bodies.</li>
-                                                <li>If the hypothesis is not exactly aligned with the data, you should discard it and generate a new one.</li>
-                                            </ul>
-                                        </li>
+                        <div class="agent-description">
+                            <p>Evaluates each hypothesis based on its consistency with experimental data, scientific rigor, theoretical basis from selected papers, and integration with external literature gathered by the literature review agent. Particularly focuses on assessing the novelty and specificity of claims, providing structured feedback to guide the next round of hypothesis refinement.</p>
+                        </div>
+                        <div class="agent-io">
+                            <div class="agent-input">
+                                <h3>Input</h3>
+                                <div class="input-content">
+                                    <div class="critic-context">
+                                        <p>You are an expert scientist in astrobiology and prebiotic chemistry, with deep expertise in PAH analysis and meteoritic organic chemistry.</p>
                                         
-                                        <li>
-                                            <strong>Scientific Evaluation:</strong>
-                                            <ul>
-                                                <li>Assess the theoretical foundations and empirical basis of each hypothesis.</li>
-                                                <li>Evaluate temperature constraints implied by PAH distributions.</li>
-                                                <li>Consider parent body processes like aqueous alteration.</li>
-                                                <li>Identify any assumptions that may not be well supported by the data.</li>
-                                                <li>Point out specific weaknesses in the data analysis or experimental design.</li>
-                                            </ul>
-                                        </li>
+                                        <h5>Background Context:</h5>
                                         
-                                        <li>
-                                            <strong>Integration with Literature:</strong>
-                                            <ul>
-                                                <li>Critically compare the hypothesis against current research findings.</li>
-                                                <li>Evaluate consistency with known PAH formation mechanisms.</li>
-                                                <li>Consider implications of PAH distributions for formation conditions.</li>
-                                                <li>Identify gaps in the existing literature that the hypothesis addresses or ignores.</li>
-                                                <li>Propose additional sources or studies that could reinforce or challenge the claims.</li>
-                                            </ul>
-                                        </li>
+                                        <div class="spacer"></div>
                                         
-                                        <li><strong>IMPORTANT:</strong> Novelty and originality are highly rewarded based on literature review. Punish <strong>hypotheses</strong> that are not novel or original.</li>
-                                        <li>Punish hypothesis statements that are vague and too general. Reward specific and detailed <strong>hypotheses</strong> based on the data and analysis.</li>
-                                        <li>Avoid suggesting any improvements to the input data. Only critique the <strong>hypotheses</strong>.</li>
-                                    </ol>
-                                    
-                                    <h5>Input Data:</h5>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p><strong>INPUT DATA</strong></p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <h5>Literature Review:</h5>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p><strong>LITERATURE REVIEW GOES HERE</strong></p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <h5>Hypothesis:</h5>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p><strong>ACCUMULATED HYPOTHESES GOES HERE</strong></p>
-                                    
-                                    <div class="spacer"></div>
-                                    
-                                    <p class="critique-instructions">Provide your critique in a clear and structured format, ensuring that your comments are actionable and aimed at improving the hypothesis and data analysis.</p>
-                                    
-                                    <p>Your scientific critique:</p>
+                                        <p><strong>SELECTED PAPERS FOR BACKGROUND CONTEXT GOES HERE</strong></p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p>Your task is to provide a detailed, scientifically rigorous critique of the proposed hypothesis and the associated data analysis. Note that if the <strong>hypotheses</strong> are not exactly aligned with the data, you should discard the hypothesis and generate a new one.</p>
+                                        
+                                        <p>Your critique must include:</p>
+                                        
+                                        <ol>
+                                            <li>
+                                                <strong>Alignment with the data:</strong>
+                                                <ul>
+                                                    <li>Assess the alignment of the hypothesis with the data.</li>
+                                                    <li>Evaluate if the proposed mechanisms align with observed PAH distributions and temperature indicators.</li>
+                                                    <li>Consider if the hypothesis accounts for both chemical and physical processes in meteorite parent bodies.</li>
+                                                    <li>If the hypothesis is not exactly aligned with the data, you should discard it and generate a new one.</li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li>
+                                                <strong>Scientific Evaluation:</strong>
+                                                <ul>
+                                                    <li>Assess the theoretical foundations and empirical basis of each hypothesis.</li>
+                                                    <li>Evaluate temperature constraints implied by PAH distributions.</li>
+                                                    <li>Consider parent body processes like aqueous alteration.</li>
+                                                    <li>Identify any assumptions that may not be well supported by the data.</li>
+                                                    <li>Point out specific weaknesses in the data analysis or experimental design.</li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li>
+                                                <strong>Integration with Literature:</strong>
+                                                <ul>
+                                                    <li>Critically compare the hypothesis against current research findings.</li>
+                                                    <li>Evaluate consistency with known PAH formation mechanisms.</li>
+                                                    <li>Consider implications of PAH distributions for formation conditions.</li>
+                                                    <li>Identify gaps in the existing literature that the hypothesis addresses or ignores.</li>
+                                                    <li>Propose additional sources or studies that could reinforce or challenge the claims.</li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><strong>IMPORTANT:</strong> Novelty and originality are highly rewarded based on literature review. Punish <strong>hypotheses</strong> that are not novel or original.</li>
+                                            <li>Punish hypothesis statements that are vague and too general. Reward specific and detailed <strong>hypotheses</strong> based on the data and analysis.</li>
+                                            <li>Avoid suggesting any improvements to the input data. Only critique the <strong>hypotheses</strong>.</li>
+                                        </ol>
+                                        
+                                        <h5>Input Data:</h5>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p><strong>INPUT DATA</strong></p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <h5>Literature Review:</h5>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p><strong>LITERATURE REVIEW GOES HERE</strong></p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <h5>Hypothesis:</h5>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p><strong>ACCUMULATED HYPOTHESES GOES HERE</strong></p>
+                                        
+                                        <div class="spacer"></div>
+                                        
+                                        <p class="critique-instructions">Provide your critique in a clear and structured format, ensuring that your comments are actionable and aimed at improving the hypothesis and data analysis.</p>
+                                        
+                                        <p>Your scientific critique:</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="agent-output">
-                            <h3>Output</h3>
-                            <div class="output-content iteration-1">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                            <div class="agent-output">
+                                <h3>Output</h3>
+                                <div class="output-content iteration-1">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
-                                </div>
-                            </div>
-                            <div class="output-content iteration-2" style="display: none;">
-                                <div class="gemini-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Gemini results...</p>
-                                    <p class="model-badge gemini">Gemini 2.0 Flash</p>
-                                </div>
-                                <div class="claude-content">
-                                    <!-- Content will be loaded automatically -->
-                                    <p class="loading">Loading Claude results...</p>
-                                    <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                <div class="output-content iteration-2" style="display: none;">
+                                    <div class="gemini-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Gemini results...</p>
+                                        <p class="model-badge gemini">Gemini 2.0 Flash</p>
+                                    </div>
+                                    <div class="claude-content">
+                                        <!-- Content will be loaded automatically -->
+                                        <p class="loading">Loading Claude results...</p>
+                                        <p class="model-badge claude">Claude 3.5 Sonnet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2022,412 +2134,183 @@
             </div>
         </div>
 
-        <!-- Generated Hypothesis and Expert Evaluation Section -->
-        <div class="hypothesis-evaluation-section">
-            <h2 class="section-title">Generated Hypothesis and Expert Evaluation</h2>
-            
-            <div class="model-toggle">
-                <button class="model-btn active" data-model="claude">Claude 3.5 Sonnet</button>
-                <button class="model-btn" data-model="gemini">Gemini 2.0 Flash</button>
-            </div>
-            
-            <div class="table-container">
-                <table class="evaluation-table">
-                    <thead>
-                        <tr>
-                            <th width="5%">Iteration</th>
-                            <th width="10%">Hypothesis ID</th>
-                            <th width="25%">Statement</th>
-                            <th width="20%">Comments</th>
-                            <th width="15%">Key data/points</th>
-                            <th width="25%">Evaluation Scores</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Table content will be dynamically loaded from CSV files -->
-                    </tbody>
-                </table>
-                <!-- Pagination Controls -->
-                <div class="pagination-controls">
-                    <button id="prev-page" class="pagination-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
-                    <div class="pagination-info">
-                        <span>Page</span>
-                        <span id="current-page">1</span>
-                        <span>of</span>
-                        <span id="total-pages">1</span>
-                        <span>•</span>
-                        <span id="model-indicator" class="model-indicator">Claude 3.5 Sonnet</span>
-                    </div>
-                    <div class="rows-per-page">
-                        <label for="page-size">Rows:</label>
-                        <select id="page-size">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                        </select>
-                    </div>
-                    <button id="next-page" class="pagination-btn"><i class="fas fa-chevron-right"></i> Next</button>
+        <!-- Hypotheses Section -->
+        <div id="hypotheses-section" class="content-section">
+            <div class="hypothesis-evaluation-section">
+                <h2 class="section-title">Generated Hypothesis and Expert Evaluation</h2>
+                
+                <div class="table-container">
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th width="5%">Iteration</th>
+                                <th width="10%">Hypothesis ID</th>
+                                <th width="25%">Statement</th>
+                                <th width="20%">Comments</th>
+                                <th width="15%">Key data/points</th>
+                                <th width="25%">Evaluation Scores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table content will be dynamically loaded from CSV files -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+
     </main>
 
     <footer>
-        <p>&copy; 2023 AstroAgents</p>
+        <div class="footer-content">
+            <p>&copy; 2024 AstroAgents. All rights reserved.</p>
+            <p>
+                <a href="https://openreview.net/attachment?id=1WUCSNAjjB&name=pdf" target="_blank">Paper</a> |
+                <a href="https://github.com/amirgroup-codes/AstroAgents" target="_blank">GitHub</a>
+            </p>
+        </div>
     </footer>
 
     <script src="js/results-loader.js"></script>
     <script src="js/hypotheses-loader.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // Toggle between models in the hypothesis evaluation table
-        document.querySelectorAll('.model-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Update active button
-                document.querySelectorAll('.model-btn').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
+        // Initialize hypotheses when the document is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Document loaded, initializing hypotheses');
+            
+            // Check if CSV files exist
+            const csvFiles = [
+                './hypotheses/hypothesis_list_claude_sonnet_latest.csv',
+                './hypotheses/results_gemini_flash2_latest.csv'
+            ];
+            
+            Promise.all(csvFiles.map(file => 
+                fetch(file)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Failed to load ${file}: ${response.status}`);
+                        }
+                        return file + ' - OK';
+                    })
+                    .catch(error => {
+                        console.error(`Error checking CSV file: ${error.message}`);
+                        return file + ' - NOT FOUND';
+                    })
+            )).then(results => {
+                console.log('CSV file check results:', results);
                 
-                // Update pagination to show the current model's data
-                updatePagination();
+                // Wait a bit for data to load from CSV files
+                setTimeout(function() {
+                    // Initialize with Claude model by default
+                    switchHypothesesModel('claude');
+                }, 500);
             });
         });
         
-        // Pagination functionality
-        let currentPages = {
-            claude: 1,
-            gemini: 1
-        };
-        let rowsPerPage = 5; // Default number of rows to display per page
+        // Direct function for navigation fallback
+        function switchToHypotheses() {
+            console.log('switchToHypotheses function called');
+            
+            // Update navigation buttons
+            document.querySelectorAll('.main-nav-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('hypotheses-nav-btn').classList.add('active');
+            
+            // Show hypotheses section, hide workflow section
+            document.getElementById('workflow-section').classList.remove('active');
+            document.getElementById('hypotheses-section').classList.add('active');
+            
+            // Update header controls
+            document.getElementById('workflow-controls').classList.remove('active');
+            document.getElementById('hypotheses-controls').classList.add('active');
+        }
         
-        function updatePagination() {
-            // Get currently active model
-            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
-            const currentPage = currentPages[modelType];
+        // Function to handle model switching for hypotheses
+        function switchHypothesesModel(model) {
+            console.log('switchHypothesesModel called with model:', model);
             
-            // Get all rows for the current model
-            const allModelRows = Array.from(document.querySelectorAll(`.model-specific.${modelType}`));
-            
-            // Calculate total pages
-            const totalPages = Math.ceil(allModelRows.length / rowsPerPage);
-            document.getElementById('total-pages').textContent = totalPages || 1;
-            document.getElementById('current-page').textContent = currentPage;
-            
-            // Add model indicator to the pagination
-            document.getElementById('model-indicator').textContent = modelType === 'claude' ? 'Claude 3.5 Sonnet' : 'Gemini 2.0 Flash';
-            
-            // Update button states
-            document.getElementById('prev-page').disabled = currentPage <= 1;
-            document.getElementById('next-page').disabled = currentPage >= totalPages || totalPages === 0;
-            
-            // First, hide ALL rows
-            document.querySelectorAll('.model-specific').forEach(row => {
-                row.style.display = 'none';
+            // Mark rows as available/not available based on model
+            const allRows = document.querySelectorAll('.evaluation-table tbody tr');
+            allRows.forEach(row => {
+                row.style.display = 'none'; // Hide all rows first
+                
+                if (row.classList.contains(model)) {
+                    row.setAttribute('data-available', 'true');
+                } else {
+                    row.setAttribute('data-available', 'false');
+                }
             });
             
-            // Show only rows for current page of current model
-            const startIndex = (currentPage - 1) * rowsPerPage;
-            const endIndex = Math.min(startIndex + rowsPerPage, allModelRows.length);
+            // Reset current page to 1
+            window.currentHypothesesPage = 1;
             
+            // Apply pagination
+            showCurrentHypothesesPage();
+        }
+        
+        // Function to handle pagination
+        function paginateHypotheses(direction) {
+            console.log('paginateHypotheses called with direction:', direction);
+            
+            // Initialize or get current page
+            if (typeof window.currentHypothesesPage === 'undefined') {
+                window.currentHypothesesPage = 1;
+            }
+            
+            // Get available rows
+            const availableRows = document.querySelectorAll('.evaluation-table tbody tr[data-available="true"]');
+            const rowsPerPage = 5;
+            const totalPages = Math.ceil(availableRows.length / rowsPerPage);
+            
+            // Update current page
+            if (direction === 'prev' && window.currentHypothesesPage > 1) {
+                window.currentHypothesesPage--;
+            } else if (direction === 'next' && window.currentHypothesesPage < totalPages) {
+                window.currentHypothesesPage++;
+            }
+            
+            // Show current page
+            showCurrentHypothesesPage();
+        }
+        
+        // Helper function to display the current page
+        function showCurrentHypothesesPage() {
+            const currentPage = window.currentHypothesesPage || 1;
+            const rowsPerPage = 5;
+            
+            // Get available rows
+            const availableRows = document.querySelectorAll('.evaluation-table tbody tr[data-available="true"]');
+            const totalPages = Math.ceil(availableRows.length / rowsPerPage);
+            
+            // Hide all rows first
+            availableRows.forEach(row => row.style.display = 'none');
+            
+            // Calculate which rows to show
+            const startIndex = (currentPage - 1) * rowsPerPage;
+            const endIndex = Math.min(startIndex + rowsPerPage, availableRows.length);
+            
+            // Show rows for current page
             for (let i = startIndex; i < endIndex; i++) {
-                if (allModelRows[i]) {
-                    allModelRows[i].style.display = 'table-row';
+                if (availableRows[i]) {
+                    availableRows[i].style.display = 'table-row';
                 }
             }
+            
+            // Update page display
+            const pageDisplay = document.getElementById('page-display');
+            if (pageDisplay) {
+                pageDisplay.textContent = `Page ${currentPage}`;
+            }
+            
+            // Update button states
+            const prevButton = document.getElementById('rows-prev');
+            const nextButton = document.getElementById('rows-next');
+            
+            if (prevButton) prevButton.disabled = currentPage <= 1;
+            if (nextButton) nextButton.disabled = currentPage >= totalPages;
+            
+            console.log(`Showing page ${currentPage} of ${totalPages}`);
         }
-        
-        // Add event listeners for pagination controls
-        document.getElementById('prev-page').addEventListener('click', function() {
-            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
-            if (currentPages[modelType] > 1) {
-                currentPages[modelType]--;
-                updatePagination();
-            }
-        });
-        
-        document.getElementById('next-page').addEventListener('click', function() {
-            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
-            const allModelRows = document.querySelectorAll(`.model-specific.${modelType}`);
-            const totalPages = Math.ceil(allModelRows.length / rowsPerPage);
-            
-            if (currentPages[modelType] < totalPages) {
-                currentPages[modelType]++;
-                updatePagination();
-            }
-        });
-        
-        // Handle page size changes
-        document.getElementById('page-size').addEventListener('change', function() {
-            rowsPerPage = parseInt(this.value);
-            
-            // Reset to first page for both models to avoid confusion
-            const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
-            currentPages[modelType] = 1;
-            
-            updatePagination();
-        });
-        
-        // Initialize pagination after data is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Wait a bit for the data to load
-            setTimeout(function() {
-                // Set initial model (Claude is active by default)
-                const initialModel = document.querySelector('.model-btn.active').getAttribute('data-model');
-                
-                // Call updatePagination to set up initial view
-                updatePagination();
-                
-                // Also apply pagination when the page is scrolled (in case any scripts re-show rows)
-                window.addEventListener('scroll', function() {
-                    requestAnimationFrame(function() {
-                        // Only re-apply pagination if we detect all rows are showing
-                        const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
-                        const allModelRows = document.querySelectorAll(`.model-specific.${modelType}`);
-                        const visibleRows = document.querySelectorAll(`.model-specific.${modelType}[style*="display: table-row"]`);
-                        
-                        if (visibleRows.length > rowsPerPage) {
-                            updatePagination();
-                        }
-                    });
-                });
-                
-                // Override any other scripts that might show all rows
-                const observer = new MutationObserver(function(mutations) {
-                    mutations.forEach(function(mutation) {
-                        if (mutation.type === 'attributes' && 
-                            mutation.attributeName === 'style' &&
-                            mutation.target.classList.contains('model-specific')) {
-                            
-                            requestAnimationFrame(function() {
-                                const modelType = document.querySelector('.model-btn.active').getAttribute('data-model');
-                                const visibleRows = document.querySelectorAll(`.model-specific.${modelType}[style*="display: table-row"]`);
-                                
-                                if (visibleRows.length > rowsPerPage) {
-                                    updatePagination();
-                                }
-                            });
-                        }
-                    });
-                });
-                
-                // Observe style changes on table rows
-                document.querySelectorAll('.model-specific').forEach(function(row) {
-                    observer.observe(row, { attributes: true, attributeFilter: ['style'] });
-                });
-                
-            }, 1000); // Longer delay to ensure data is fully loaded
-        });
     </script>
-    <style>
-        /* Styles for the hypothesis evaluation section */
-        .hypothesis-evaluation-section {
-            padding: 2rem;
-            background-color: var(--bg-color);
-            margin-top: 2rem;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-        }
-        
-        .model-toggle {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .model-btn {
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            border: 1px solid var(--border-color);
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .model-btn.active {
-            background-color: var(--accent-color);
-            color: white;
-        }
-        
-        .table-container {
-            overflow-x: scroll;
-            max-width: 100%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        
-        /* Custom scrollbar styling for better visibility */
-        .table-container::-webkit-scrollbar {
-            height: 12px;
-        }
-        
-        .table-container::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 6px;
-        }
-        
-        .table-container::-webkit-scrollbar-thumb {
-            background-color: var(--accent-color);
-            border-radius: 6px;
-            border: 3px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        /* For Firefox */
-        .table-container {
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent-color) rgba(0, 0, 0, 0.05);
-        }
-        
-        .evaluation-table {
-            width: 100%;
-            min-width: 1200px; /* Ensures table doesn't get too squished */
-            border-collapse: collapse;
-            background-color: var(--card-bg);
-        }
-        
-        .evaluation-table th, 
-        .evaluation-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .evaluation-table th {
-            background-color: var(--header-bg);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        
-        .evaluation-table tbody tr:hover {
-            background-color: rgba(var(--accent-color-rgb), 0.1);
-        }
-        
-        .score {
-            text-align: center;
-            font-weight: bold;
-            position: relative;
-        }
-        
-        .score::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 20%;
-            right: 20%;
-            height: 4px;
-            border-radius: 2px;
-            background-color: var(--accent-color);
-            opacity: 0.7;
-        }
-        
-        /* Pagination controls styling */
-        .pagination-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .pagination-btn {
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            border: 1px solid var(--border-color);
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-        
-        .pagination-btn:hover:not(:disabled) {
-            background-color: rgba(var(--accent-color-rgb), 0.1);
-        }
-        
-        .pagination-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        
-        .pagination-btn i {
-            margin: 0 5px;
-        }
-        
-        .pagination-info {
-            display: flex;
-            align-items: center;
-            margin: 0 1rem;
-        }
-        
-        .pagination-info span {
-            margin: 0 5px;
-        }
-        
-        #current-page, #total-pages {
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-        
-        .model-indicator {
-            font-weight: 500;
-            color: #555;
-            font-style: italic;
-            background-color: rgba(var(--accent-color-rgb), 0.1);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.9em;
-        }
-        
-        .rows-per-page {
-            display: flex;
-            align-items: center;
-            margin: 0 1rem;
-        }
-        
-        .rows-per-page label {
-            margin-right: 8px;
-            font-size: 0.9em;
-        }
-        
-        .rows-per-page select {
-            padding: 2px 6px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            font-size: 0.9em;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .rows-per-page select:hover {
-            border-color: var(--accent-color);
-        }
-        
-        @media (max-width: 768px) {
-            .hypothesis-evaluation-section {
-                padding: 1rem;
-            }
-            
-            .pagination-controls {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .pagination-info, .rows-per-page {
-                margin: 8px 0;
-            }
-        }
-    </style>
 </body>
 </html> 

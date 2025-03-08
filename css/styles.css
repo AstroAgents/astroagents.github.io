@@ -1070,4 +1070,157 @@ button.clicked {
         display: block;
         margin-bottom: 5px;
     }
+}
+
+/* Main Navigation */
+.main-navigation {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    margin-bottom: 20px;
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+.main-nav-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative; /* For potential debugging */
+    z-index: 101; /* Make buttons clickable */
+    pointer-events: auto !important; /* Force clickability */
+}
+
+.main-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none; /* Ensure no underlining on hover */
+}
+
+.main-nav-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.main-nav-btn i {
+    margin-right: 8px;
+}
+
+/* Section Controls */
+.section-controls {
+    display: none;
+    width: 100%;
+}
+
+.section-controls.active {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Pagination controls */
+.pagination-controls {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-controls button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#page-display {
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hypotheses Specific Styles */
+#hypotheses-section .model-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#hypotheses-section .model-btn {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#hypotheses-section .model-btn:hover {
+    background-color: #e1e1e1;
+}
+
+#hypotheses-section .model-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination button:hover:not([disabled]) {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.pagination button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Style for the page display */
+#page-display {
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+/* Style for model-specific rows */
+.evaluation-table tr.claude,
+.evaluation-table tr.gemini {
+    display: none;
 } 
