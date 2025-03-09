@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstroAgents - A Multi-Agent AI for Hypothesis Generation from Mass Spectrometry Data</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.0.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .hero-button {
@@ -20,6 +20,45 @@
             backdrop-filter: blur(5px);
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-button i {
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+        
+        .hero-button:hover {
+            background: rgba(65, 65, 120, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .download-button {
+            background: linear-gradient(135deg, rgba(75, 0, 130, 0.7), rgba(25, 25, 80, 0.7));
+        }
+        
+        .download-button:hover {
+            background: linear-gradient(135deg, rgba(95, 10, 160, 0.8), rgba(35, 35, 100, 0.8));
+        }
+        
+        .github-button {
+            background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(20, 20, 40, 0.7));
+        }
+        
+        .github-button:hover {
+            background: linear-gradient(135deg, rgba(70, 70, 70, 0.8), rgba(30, 30, 60, 0.8));
+        }
+        
+        @media (max-width: 768px) {
+            .hero-button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            
+            .earth-image {
+                height: 400px;
+            }
         }
         
         /* CSS for the analyst context section */
@@ -182,30 +221,24 @@
         
         .earth-container {
             position: absolute;
-            bottom: -10%;
-            left: 0;
-            width: 100%;
+            bottom: 2%;
+            right: 2%;
+            width: auto;
             z-index: 1;
-            display: flex;
-            justify-content: center;
             pointer-events: none;
-            overflow: hidden;
-            animation: subtle-quake 6s 5.39s infinite, subtle-quake 8s 7.19s infinite, subtle-quake 7s 6.29s infinite, subtle-quake 9s 8.09s infinite, subtle-quake 5s 4.49s infinite;
         }
         
         .earth-image {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
+            width: auto;
+            height: 800px;
             opacity: 0.85;
             filter: drop-shadow(0 -10px 20px rgba(0, 100, 255, 0.3));
-            animation: earth-flash 6s 5.39s infinite, earth-flash 8s 7.19s infinite, earth-flash 7s 6.29s infinite, earth-flash 9s 8.09s infinite, earth-flash 5s 4.49s infinite;
         }
         
         /* Adjust meteorite animations to appear to fall toward Earth */
         .meteorite {
             animation-name: meteor-fall;
-            z-index: 2; /* Ensure meteorites appear above Earth but below content */
+            z-index: 2;
             position: absolute;
             filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.6));
             animation-iteration-count: infinite;
@@ -240,35 +273,35 @@
             animation-duration: 6s;
             animation-delay: 0s;
             left: 10%;
-            animation-name: meteor-fall-1;
+            animation-name: meteor-fall;
         }
         
         .meteorite-2 {
             animation-duration: 8s;
             animation-delay: 2s;
             left: 30%;
-            animation-name: meteor-fall-2;
+            animation-name: meteor-fall;
         }
         
         .meteorite-3 {
             animation-duration: 7s;
             animation-delay: 1s;
             left: 50%;
-            animation-name: meteor-fall-3;
+            animation-name: meteor-fall;
         }
         
         .meteorite-4 {
             animation-duration: 9s;
             animation-delay: 3s;
             left: 70%;
-            animation-name: meteor-fall-4;
+            animation-name: meteor-fall;
         }
         
         .meteorite-5 {
             animation-duration: 5s;
             animation-delay: 4s;
             left: 20%;
-            animation-name: meteor-fall-5;
+            animation-name: meteor-fall;
         }
         
         /* Custom path for each meteorite to match impact positions */
@@ -399,470 +432,6 @@
             100% {
                 opacity: 0;
                 transform: translate(15vw, 95vh) rotate(50deg) scale(0);
-            }
-        }
-        
-        .meteorites-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        .hero-button i {
-            margin-right: 8px;
-            font-size: 1.1em;
-        }
-        
-        .hero-button:hover {
-            background: rgba(65, 65, 120, 0.8);
-            transform: translateY(-3px);
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-        
-        .download-button {
-            background: linear-gradient(135deg, rgba(75, 0, 130, 0.7), rgba(25, 25, 80, 0.7));
-        }
-        
-        .download-button:hover {
-            background: linear-gradient(135deg, rgba(95, 10, 160, 0.8), rgba(35, 35, 100, 0.8));
-        }
-        
-        .github-button {
-            background: linear-gradient(135deg, rgba(50, 50, 50, 0.7), rgba(20, 20, 40, 0.7));
-        }
-        
-        .github-button:hover {
-            background: linear-gradient(135deg, rgba(70, 70, 70, 0.8), rgba(30, 30, 60, 0.8));
-        }
-        
-        @media (max-width: 768px) {
-            .hero-button {
-                padding: 8px 15px;
-                font-size: 0.9em;
-            }
-            
-            .earth-image {
-                max-width: 200%;
-            }
-            
-            .earth-container {
-                bottom: -5%;
-            }
-        }
-        
-        /* Loading and error styles */
-        .loading {
-            color: #888;
-            font-style: italic;
-        }
-        
-        .error {
-            color: #f44336;
-            font-weight: bold;
-            padding: 10px;
-            background-color: rgba(244, 67, 54, 0.1);
-            border-radius: 4px;
-        }
-        
-        /* Content formatting styles */
-        .agent-content .agent-output ul,
-        .agent-content .agent-output ol {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-        
-        .agent-content .agent-output li {
-            margin-bottom: 5px;
-        }
-        
-        .agent-content .agent-output p {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-        
-        .agent-content .agent-output h1,
-        .agent-content .agent-output h2,
-        .agent-content .agent-output h3,
-        .agent-content .agent-output h4 {
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }
-        
-        /* JSON formatting styles */
-        .json-viewer {
-            font-family: monospace;
-            background-color: rgba(0, 0, 0, 0.05);
-            border-radius: 6px;
-            padding: 15px;
-            margin: 10px 0;
-            overflow-x: auto;
-        }
-        
-        .agent-instructions {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .instruction-block {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 6px;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .instruction-block h3 {
-            margin-top: 0;
-            color: var(--accent-color);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding-bottom: 5px;
-        }
-        
-        .instruction-content {
-            white-space: pre-wrap;
-            line-height: 1.5;
-        }
-        
-        .json-property {
-            margin-left: 20px;
-            line-height: 1.5;
-        }
-        
-        .json-array-item {
-            margin-left: 20px;
-            line-height: 1.5;
-        }
-        
-        .json-property-name {
-            color: #0366d6;
-        }
-        
-        .json-string {
-            color: #219547;
-        }
-        
-        .json-number {
-            color: #1a1aa6;
-        }
-        
-        .json-boolean {
-            color: #1a1aa6;
-        }
-        
-        .json-null, .json-undefined {
-            color: #7a7a7a;
-        }
-        
-        .json-error {
-            background-color: rgba(255, 0, 0, 0.1);
-            padding: 10px;
-            border-radius: 4px;
-            position: relative;
-        }
-        
-        .error-message {
-            color: red;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        
-        /* JSON error formatting */
-        .json-block {
-            background-color: rgba(0, 0, 0, 0.05);
-            border-radius: 6px;
-            padding: 15px;
-            margin: 10px 0;
-        }
-        
-        .json-error-label {
-            color: #d93025;
-            font-weight: bold;
-            margin-bottom: 10px;
-            padding: 5px 10px;
-            background-color: rgba(217, 48, 37, 0.1);
-            border-radius: 4px;
-            display: inline-block;
-        }
-        
-        .json-raw {
-            background-color: rgba(0, 0, 0, 0.05);
-            padding: 10px;
-            border-radius: 4px;
-            font-family: monospace;
-            max-height: 200px;
-            overflow: auto;
-            white-space: pre-wrap;
-            margin-bottom: 15px;
-        }
-        
-        .json-fallback {
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-            line-height: 1.5;
-        }
-        
-        .json-fallback pre {
-            margin: 0;
-            white-space: pre-wrap;
-        }
-        
-        /* Improved JSON error display */
-        .json-error-label {
-            color: #d93025;
-            font-weight: bold;
-            margin-bottom: 10px;
-            padding: 5px 10px;
-            background-color: rgba(217, 48, 37, 0.1);
-            border-radius: 4px;
-            display: inline-block;
-        }
-        
-        .instruction-block {
-            margin-bottom: 15px;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-        
-        .json-note {
-            background-color: #f8f9fa;
-            border-left: 4px solid #74b9ff;
-            padding: 10px 15px;
-            margin: 10px 0;
-            font-style: italic;
-            color: #2c3e50;
-        }
-        
-        .json-block {
-            margin-bottom: 25px;
-        }
-        
-        /* Improve instruction block display */
-        .instruction-content {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            padding: 12px;
-            background-color: #f8f8f8;
-            border-radius: 6px;
-        }
-        
-        .hero-content {
-            z-index: 5; /* Ensure hero content stays on top */
-            position: relative;
-        }
-        
-        /* Make sure stars are visible but behind meteorites */
-        .background-star {
-            z-index: 1;
-        }
-        
-        /* Ensure the stars background is behind everything else */
-        .stars-background {
-            z-index: 0;
-        }
-        
-        /* Impact animations for meteorite collisions with Earth */
-        .impact {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,165,0,0.8) 30%, rgba(255,69,0,0.4) 70%, rgba(255,0,0,0) 100%);
-            transform: scale(0);
-            opacity: 0;
-            z-index: 3;
-            filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
-            position: relative; /* Ensure impacts can contain debris */
-        }
-        
-        .impact-1 {
-            left: 25%;
-            top: 0;
-            animation: impact 6s 5.39s infinite;
-        }
-        
-        .impact-2 {
-            left: 45%;
-            top: 5%;
-            animation: impact 8s 7.19s infinite;
-        }
-        
-        .impact-3 {
-            left: 65%;
-            top: -5%;
-            animation: impact 7s 6.29s infinite;
-        }
-        
-        .impact-4 {
-            left: 85%;
-            top: 0;
-            animation: impact 9s 8.09s infinite;
-        }
-        
-        .impact-5 {
-            left: 35%;
-            top: 10%;
-            animation: impact 5s 4.49s infinite;
-        }
-        
-        @keyframes impact {
-            0%, 85% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            90% {
-                transform: scale(0.5);
-                opacity: 0.7;
-            }
-            91% {
-                transform: scale(8);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(15);
-                opacity: 0;
-            }
-        }
-        
-        /* Earth quake animation */
-        @keyframes subtle-quake {
-            0%, 90%, 100% {
-                transform: translateX(0);
-            }
-            91%, 93%, 95%, 97% {
-                transform: translateX(-5px);
-            }
-            92%, 94%, 96%, 98% {
-                transform: translateX(5px);
-            }
-            99% {
-                transform: translateX(-1px);
-            }
-        }
-        
-        /* Debris/Sparks from impacts */
-        .debris {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            opacity: 0;
-            z-index: 4;
-            box-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.4);
-        }
-        
-        .impact-1 .debris-1 {
-            animation: debris-fly-1 6s 5.39s infinite;
-        }
-        
-        .impact-1 .debris-2 {
-            animation: debris-fly-2 6s 5.39s infinite;
-        }
-        
-        .impact-1 .debris-3 {
-            animation: debris-fly-3 6s 5.39s infinite;
-        }
-        
-        .impact-2 .debris-1 {
-            animation: debris-fly-1 8s 7.19s infinite;
-        }
-        
-        .impact-2 .debris-2 {
-            animation: debris-fly-2 8s 7.19s infinite;
-        }
-        
-        .impact-2 .debris-3 {
-            animation: debris-fly-3 8s 7.19s infinite;
-        }
-        
-        .impact-3 .debris-1 {
-            animation: debris-fly-1 7s 6.29s infinite;
-        }
-        
-        .impact-3 .debris-2 {
-            animation: debris-fly-2 7s 6.29s infinite;
-        }
-        
-        .impact-3 .debris-3 {
-            animation: debris-fly-3 7s 6.29s infinite;
-        }
-        
-        .impact-4 .debris-1 {
-            animation: debris-fly-1 9s 8.09s infinite;
-        }
-        
-        .impact-4 .debris-2 {
-            animation: debris-fly-2 9s 8.09s infinite;
-        }
-        
-        .impact-4 .debris-3 {
-            animation: debris-fly-3 9s 8.09s infinite;
-        }
-        
-        .impact-5 .debris-1 {
-            animation: debris-fly-1 5s 4.49s infinite;
-        }
-        
-        .impact-5 .debris-2 {
-            animation: debris-fly-2 5s 4.49s infinite;
-        }
-        
-        .impact-5 .debris-3 {
-            animation: debris-fly-3 5s 4.49s infinite;
-        }
-        
-        @keyframes debris-fly-1 {
-            0%, 90% {
-                transform: translate(0, 0) scale(0.5);
-                opacity: 0;
-            }
-            91% {
-                transform: translate(0, 0) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(30px, -50px) scale(0.2);
-                opacity: 0;
-            }
-        }
-        
-        @keyframes debris-fly-2 {
-            0%, 90% {
-                transform: translate(0, 0) scale(0.5);
-                opacity: 0;
-            }
-            91% {
-                transform: translate(0, 0) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-40px, -40px) scale(0.2);
-                opacity: 0;
-            }
-        }
-        
-        @keyframes debris-fly-3 {
-            0%, 90% {
-                transform: translate(0, 0) scale(0.5);
-                opacity: 0;
-            }
-            91% {
-                transform: translate(0, 0) scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-15px, -60px) scale(0.2);
-                opacity: 0;
             }
         }
         
@@ -1154,36 +723,9 @@
 <body>
     <!-- Hero Section with Moving Background -->
     <section class="hero-section">
-        <!-- Earth image at the bottom of the hero section -->
+        <!-- Earth image at the bottom right of the hero section -->
         <div class="earth-container">
             <img src="images/earth.svg" alt="Earth" class="earth-image">
-            
-            <!-- Impact animations -->
-            <div class="impact impact-1">
-                <div class="debris debris-1"></div>
-                <div class="debris debris-2"></div>
-                <div class="debris debris-3"></div>
-            </div>
-            <div class="impact impact-2">
-                <div class="debris debris-1"></div>
-                <div class="debris debris-2"></div>
-                <div class="debris debris-3"></div>
-            </div>
-            <div class="impact impact-3">
-                <div class="debris debris-1"></div>
-                <div class="debris debris-2"></div>
-                <div class="debris debris-3"></div>
-            </div>
-            <div class="impact impact-4">
-                <div class="debris debris-1"></div>
-                <div class="debris debris-2"></div>
-                <div class="debris debris-3"></div>
-            </div>
-            <div class="impact impact-5">
-                <div class="debris debris-1"></div>
-                <div class="debris debris-2"></div>
-                <div class="debris debris-3"></div>
-            </div>
         </div>
         
         <!-- White stars randomly placed throughout the hero section -->
@@ -1208,7 +750,6 @@
             <span>Explore the workflow</span>
         </a>
         
-        <div class="stars-background"></div>
         <!-- Animated Meteorites -->
         <div class="meteorites-container">
             <div class="meteorite meteorite-1">
@@ -1274,7 +815,7 @@
                         <option value="claude">Claude 3.5 Sonnet</option>
                     </select>
                 </div>
-                <div class="iteration-selector">
+                <div class="iteration-selector" style="margin-left: 10px;">
                     <button id="prev-iteration" title="Previous Iteration"><i class="fas fa-arrow-left"></i></button>
                     <span id="iteration-display">Iteration 1</span>
                     <button id="next-iteration" title="Next Iteration"><i class="fas fa-arrow-right"></i></button>
@@ -2171,9 +1712,9 @@
         </div>
     </footer>
 
-    <script src="js/results-loader.js"></script>
-    <script src="js/hypotheses-loader.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/results-loader.js?v=1.0.1"></script>
+    <script src="js/hypotheses-loader.js?v=1.0.1"></script>
+    <script src="js/script.js?v=1.0.1"></script>
     <script>
         // Initialize hypotheses when the document is loaded
         document.addEventListener('DOMContentLoaded', function() {
